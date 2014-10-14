@@ -1,0 +1,1616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<P4WTimetable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Type>L</Type>
+  <Path>Ultra/140929_150426/Ultra_6_140929_150426.xml</Path>
+  <FromDate>2014-09-29</FromDate>
+  <ToDate>2015-04-26</ToDate>
+  <TableName nr="6">6</TableName>
+  <ValidText>Giltig 2014-09-29 - 2015-04-26</ValidText>
+  <Revision>Skapad 2014-09-19 13:41:06</Revision>
+  <Directions>
+    <Direction>
+      <Head>Röbäck - Vasaplan - Carlshöjd</Head>
+      <Cols>
+        <Col pos="0">
+          <StopName print="1">Mantelvägen</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="1">
+          <StopName print="1">Vasaplan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="2">
+          <StopName print="1">Carlshöjd</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+      </Cols>
+      <DayTypes>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">06:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">06:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">06:44:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">06:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">06:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">07:14:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">07:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">07:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">07:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">07:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">07:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">08:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">08:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">08:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">08:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">08:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">08:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">09:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">09:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">09:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">09:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">09:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">09:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">10:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">10:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">10:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">10:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">10:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">10:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">11:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">11:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">11:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">11:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">11:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">11:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">12:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">12:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">12:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">12:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">12:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">12:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">13:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">13:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">13:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">13:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">14:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">14:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">14:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">14:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">15:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">15:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">15:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">15:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">15:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">15:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">16:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">16:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">17:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">17:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">17:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">17:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">17:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">17:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">18:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">18:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">18:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">18:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">18:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">18:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">19:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">19:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">19:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">19:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">10:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">10:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">11:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">11:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">11:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">11:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">11:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">11:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">12:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">12:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">12:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">12:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">12:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">12:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">13:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">13:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">13:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">13:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">14:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">14:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">14:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:33:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">14:56:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">15:15:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">15:03:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">15:26:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">15:45:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+      </DayTypes>
+    </Direction>
+    <Direction>
+      <Head>Carlshöjd - Vasaplan - Röbäck</Head>
+      <Cols>
+        <Col pos="0">
+          <StopName print="1">Carlshöjd</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="1">
+          <StopName print="1">Vasaplan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="2">
+          <StopName print="1">Mantelvägen</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+      </Cols>
+      <DayTypes>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">05:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">06:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">06:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">06:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">06:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">07:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">06:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">07:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">07:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">07:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">07:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">08:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">07:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">08:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">08:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">08:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">08:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">09:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">08:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">09:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">09:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">09:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">09:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">10:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">09:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">10:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">10:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">10:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">10:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">11:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">10:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">11:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">11:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">11:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">11:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">12:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">11:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">12:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">12:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">12:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">12:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">13:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">12:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">13:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">13:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">13:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">14:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">14:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">14:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">14:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">15:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">15:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">15:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">15:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">15:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">15:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">16:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">17:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">16:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">17:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">17:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">17:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">17:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">18:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">17:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">18:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">18:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">18:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">18:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">19:04:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">18:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">19:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">19:34:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">10:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">11:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">11:36:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">11:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">11:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">12:06:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">11:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">12:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">12:36:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">12:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">12:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">13:06:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">12:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">13:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">13:36:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">13:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">14:07:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">14:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">14:37:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">14:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">15:07:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:53:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">15:15:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">15:37:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>lördag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>6</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">15:23:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">15:45:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:07:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+      </DayTypes>
+    </Direction>
+  </Directions>
+</P4WTimetable>

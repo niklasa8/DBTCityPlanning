@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<P4WTimetable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Type>L</Type>
+  <Path>Ultra/140929_150426/Ultra_78_140929_150426.xml</Path>
+  <FromDate>2014-09-29</FromDate>
+  <ToDate>2015-04-26</ToDate>
+  <TableName nr="78">78</TableName>
+  <ValidText>Giltig 2014-09-29 - 2015-04-26</ValidText>
+  <Revision>Skapad 2014-09-19 13:41:37</Revision>
+  <Directions>
+    <Direction>
+      <Head>Forslundagymnasiet - Vasaplan</Head>
+      <Cols>
+        <Col pos="0">
+          <StopName print="1">Forslundagymnasiet</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="1">
+          <StopName print="1">Bilprovningen</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="2">
+          <StopName print="1">Vasaplan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+      </Cols>
+      <DayTypes>
+        <DayType>
+          <DayName>fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>78</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:30:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">13:45:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>E</TripFootnoteId>
+                </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>S</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-torsdag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>78</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">15:55:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:10:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>D</TripFootnoteId>
+                </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>H</TripFootnoteId>
+                </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>S</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>78</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:05:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:20:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>G</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>78</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:35:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:50:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>G</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>78</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="1">
+                  <DepArrTime lsT="1">17:05:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">17:20:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>G</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+      </DayTypes>
+      <Footnotes>
+        <Footnote>
+          <FootnoteId>D</FootnoteId>
+          <FootnoteText>Går mån-torsdag. Går väg 363, ej via Västerslätts industriomr.</FootnoteText>
+        </Footnote>
+        <Footnote>
+          <FootnoteId>E</FootnoteId>
+          <FootnoteText>Går fredag. Går väg 363, ej via Västerslätts industriomr.</FootnoteText>
+        </Footnote>
+        <Footnote>
+          <FootnoteId>G</FootnoteId>
+          <FootnoteText>Turen startar på hpl Bilprovningen</FootnoteText>
+        </Footnote>
+        <Footnote>
+          <FootnoteId>H</FootnoteId>
+          <FootnoteText>Turen körs av KR-Trafik</FootnoteText>
+        </Footnote>
+        <Footnote>
+          <FootnoteId>S</FootnoteId>
+          <FootnoteText>Turen går endast skoldagar</FootnoteText>
+        </Footnote>
+      </Footnotes>
+    </Direction>
+    <Direction>
+      <Head>Vasaplan - Forslundagymnasiet</Head>
+      <Cols>
+        <Col pos="0">
+          <StopName print="1">Vasaplan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="1">
+          <StopName print="1">Bilprovningen</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="2">
+          <StopName print="1">Forslundagymnasiet</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+      </Cols>
+      <DayTypes>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>78</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">06:40:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">06:51:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>C</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>78</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">07:45:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">08:00:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>H</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>78</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">08:03:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">08:17:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>B</TripFootnoteId>
+                </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>H</TripFootnoteId>
+                </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>S</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+      </DayTypes>
+      <Footnotes>
+        <Footnote>
+          <FootnoteId>B</FootnoteId>
+          <FootnoteText>Går väg 363, ej via Västerslätts industriomr.</FootnoteText>
+        </Footnote>
+        <Footnote>
+          <FootnoteId>C</FootnoteId>
+          <FootnoteText>Turen avslutas på hpl Bilprovningen</FootnoteText>
+        </Footnote>
+        <Footnote>
+          <FootnoteId>H</FootnoteId>
+          <FootnoteText>Turen körs av KR-Trafik</FootnoteText>
+        </Footnote>
+        <Footnote>
+          <FootnoteId>S</FootnoteId>
+          <FootnoteText>Turen går endast skoldagar</FootnoteText>
+        </Footnote>
+      </Footnotes>
+    </Direction>
+  </Directions>
+</P4WTimetable>
