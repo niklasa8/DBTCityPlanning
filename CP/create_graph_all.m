@@ -88,4 +88,4 @@ end
 clear car_path_toParking
 clear walk_path_fromParking
 
-save('graph_data.mat','carTo_walkFrom_parking','bicycling_path','intnd_map','id_map','intnd_count','intnd','walk_graph','-append')
+save('graph_data.mat','carTo_walkFrom_parking','bicycling_path','intnd_map','id_map','intnd_count','intnd','walk_all_shortest_path','-append')

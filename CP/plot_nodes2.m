@@ -4,7 +4,7 @@
 %load('graph_data.mat','intnd_count','intnd','intnd_map','id_map','bicycling_graph','carTo_walkFrom_parking')
 %load('data_umea.mat','node','way')
 
-node_source = '283324062';
+node_source = '444493179';
 [x,n_ways] = size(way);
 hold on
 
@@ -14,15 +14,15 @@ for i = 1:intnd_count %Plottar itersection nodes och färglägger dem enligt snabb
     lon = intnd(i).lon;
     
     if carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) ~= inf
-        if bicycling_graph(i,intnd_map(id_map(node_source))) < carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60 && bicycling_graph(i,intnd_map(id_map(node_source))) < fastest_trip(i)
+        if bicycling_path(i,intnd_map(id_map(node_source))) < carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60 && bicycling_path(i,intnd_map(id_map(node_source))) < fastest_trip(i)
             plot(lon,lat, 'r.')
         end
     end
-    if carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60 < bicycling_graph(i,intnd_map(id_map(node_source))) && carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60 < fastest_trip(i)
+    if carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60 < bicycling_path(i,intnd_map(id_map(node_source))) && carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60 < fastest_trip(i)
         plot(lon,lat, '.')
     end
     if carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) ~= inf
-        if fastest_trip(i) < bicycling_graph(i,intnd_map(id_map(node_source))) && fastest_trip(i) < carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60
+        if fastest_trip(i) < bicycling_path(i,intnd_map(id_map(node_source))) && fastest_trip(i) < carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60
              plot(lon,lat, 'g.')
         end
     end

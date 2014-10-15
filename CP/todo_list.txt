@@ -15,6 +15,3 @@ Gör vikterna tidsberoende.
 Spara vart bilvägarna har väjningsplikt och använd det för att generalisera vikterna.
 
 Spara lutningen för vissa vägar där det har betydelse för hur lång tid vägen tar att köra (svingen) och ta hänsyn till det när vikterna till cykel grafen räknas ut. Det är väldigt få ställen där det lutar så pass mycket att det gör någon oförsummbar skillnad, så de kan läggas in manuellt.
-
-
-

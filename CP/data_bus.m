@@ -24,15 +24,15 @@ arrival_ = zeros(27,27,1440);
 departure_ = zeros(27,27,1440);
 
 
-for i = 1:16
+for i = 1:16 %Loopar över alla 
     file_id = fopen(char(ultra_file(i)));
     B = fgets(file_id);
     
-    while isempty(strfind(B,'</Directions>'))
+    while isempty(strfind(B,'</Directions>')) %När programmet kommer till raden "</Directions>" är all information i den filen inläst.
         
-        dir_nr = dir_nr + 1;
+        dir_nr = dir_nr + 1; %Alla busslinjer har antingen 1 eller 2 riktningar den körs i.
     
-        while isempty(strfind(B,'</Cols>'))
+        while isempty(strfind(B,'</Cols>')) %Läser in alla busshållplatser som linjen stannar vid.
 
             if strcmp(B(9:10),'<C')
                 col_pos = str2double(B(19))+1;
@@ -41,36 +41,31 @@ for i = 1:16
                 
                 name = B(31:end_index(2)-1);
 
-                if ~isKey(bs_map,B(31:end_index(2)-1))
-                    bs_count = bs_count + 1;
-                    B(31:end_index-1);
+                if ~isKey(bs_map,name) %Om busshållplatsen redan är inläst ska den inte sparas igen.
+                    bs_count = bs_count + 1; %Räknar upp antalet busshållplatser.
                     bus_stop(bs_count).name = B(31:end_index(2)-1);
-                    bs_ref(i,dir_nr,col_pos) = bs_count;
-                    bs_map(bus_stop(bs_count).name) = bs_count;
-                else
+                    bs_ref(i,dir_nr,col_pos) = bs_count; %Sparar vilken busshållplats som "col_pos" refererar till givet en linje (i) och en riktning (dir_nr).
+                    bs_map(bus_stop(bs_count).name) = bs_count; %Kopplar namnet för busshållplatsen med numret på busshållplatsen.
+                else %Om busshållplatsen redan är inläst skall det endast sparas vilken busshållplats som "col_pos" refererar till.
                     bs_ref(i,dir_nr,col_pos) = bs_map(B(31:end_index(2)-1));
                 end
                 
             else
                 B = fgets(file_id);
-            end %if B(9:10)
-        end %while
-        
-        times(bs_count,bs_count).departure = 0;
-        times(bs_count,bs_count).arrival = 0;
+            end
+        end
 
+        while isempty(findstr(B,'</Direction>')) %Läser in alla avgångstider och ankomsttider för den aktuella riktningen.
 
-        while isempty(findstr(B,'</Direction>'))
-
-            if ~isempty(findstr(B,'<DayName>'))
+            if ~isempty(findstr(B,'<DayName>')) 
                 end_index = findstr(B,'<');
-                day_name = B(20:end_index(2)-1);
+                day_name = B(20:end_index(2)-1); %Sparar vilka dagar denna resa gäller (används ej ännu).
                 B = fgets(file_id);
                 dept_time = 0;
                 n_stops = 0;
                 bs_id = 0;
 
-                while isempty(findstr(B,'</Rows>'))
+                while isempty(findstr(B,'</Rows>')) %Läser in avgångstider för resan.
 
                     if ~isempty(findstr(B,'<Time pos='))
                         n_stops = n_stops + 1;
@@ -80,7 +75,7 @@ for i = 1:16
                         if isempty(findstr(B,'x'))
                             end_index = findstr(B,'<');
                             dept_time_str = B(39:end_index(2)-1);
-                            dept_time(n_stops) = str2double(dept_time_str(1:2))*60 + str2double(dept_time_str(4:5)) + 1;
+                            dept_time(n_stops) = str2double(dept_time_str(1:2))*60 + str2double(dept_time_str(4:5)) + 1; %Sparar avgångstid från busshållplatsen
                         else
                             bs_id(n_stops) = [];
                             n_stops = n_stops - 1;
@@ -93,8 +88,8 @@ for i = 1:16
                 for j = 2:n_stops
                     from = bs_ref(i,dir_nr,bs_id(j-1));
                     to = bs_ref(i,dir_nr,bs_id(j));
-                    departure_(from,to,dept_time(j):end) = dept_time(j-1);
-                    arrival_(from,to,dept_time(j):end) = dept_time(j);
+                    departure_(from,to,dept_time(j):end) = dept_time(j-1); %Lägger till avgångstider i departure_ matrisen.
+                    arrival_(from,to,dept_time(j):end) = dept_time(j); %Lägger till ankomsttider i arrival_ matrisen.
                     k = dept_time(j);
                 end
                 
@@ -104,7 +99,7 @@ for i = 1:16
         B = fgets(file_id);
     end
     fclose(file_id);
-end %for
+end
 
 bus_stop(1).id = id_map('613495002');
 bus_stop(2).id = id_map('1917895812');

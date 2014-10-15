@@ -1,7 +1,8 @@
-load('graph_data.mat','walk_graph','bus_stop_nodes','intnd_count','intnd_map')
-load('data_umea','departure_','arrival_','n_stops','bus_stop')
+load('graph_data.mat','walk_all_shortest_path','intnd_count','intnd_map')
+load('data_umea','departure_','arrival_','bus_stop','bus_stop_nodes')
 
 %% Skapar busTo_bs
+n_stops = max(size(bus_stop_nodes));
 busTo_bs = zeros(n_stops,n_stops,1440);
 t = 1:1440;
 clear t_matrix
@@ -25,9 +26,9 @@ end
 %framme tiden t.
 %% Räknar ut snabbaste vägen
 
-walkTo_bs = walk_graph(:,bus_stop_nodes); %walkTo_bs - walk to bus station. Snabbaste vägen att gå från godtycklig nod till alla busshållplatser.
-i = intnd_map(bus_stop(6).id);
-t = 482; %i och t är 
+walkTo_bs = walk_all_shortest_path(:,bus_stop_nodes); %walkTo_bs - walk to bus station. Snabbaste vägen att gå från godtycklig nod till alla busshållplatser.
+i = intnd_map(id_map('444493179'));
+t = 800; %i och t är 
 limit_walk = 0.5; %Algoritmen räknar inte ut hur lång tid det tar att ta sig från en plats till en annan med buss om det tar överdrivet lång tid att gå till busshållplatsen.
 limit_wait_time = 0.5;
 fastest_trip = inf(intnd_count,1);
@@ -40,7 +41,7 @@ for j = 1:n_stops %Loop över alla slutstationer.
         
     for k = 1:n_stops %Loop över alla startstationer.
 
-        trip_plus_wait_time = busTo_bs(k,j,int16(t-walkTo_bs(i,j)*60)) + walkTo_bs(:,k) + walkTo_bs(i,j);
+        trip_plus_wait_time = busTo_bs(k,j,int16(t-walkTo_bs(i,j)*60))/6 + walkTo_bs(:,k) + walkTo_bs(i,j);
 
         idx = find(trip_plus_wait_time < fastest_trip);
         
