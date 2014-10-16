@@ -52,7 +52,7 @@ function test_OpeningFcn(hObject, eventdata, handles, varargin)
 % handles    structure with handles and user data (see GUIDATA)
 % varargin   command line arguments to test (see VARARGIN)
 
-handles.pic = imread('fish.jpg');
+handles.pic = imread('map.png');
 handles.ih = imshow(handles.pic);
 
 % Choose default command line output for test
