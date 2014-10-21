@@ -1,0 +1,42 @@
+function color_map(timematrix,starting_node,res,bt) % Har ej kört koden.
+
+% timematrix - Matrisen vars tider ska visualiseras.
+% starting_node - Noden för vilken tidsmatrisen gäller.
+% res - Antal minuter per nyans.
+% bt - För tider över bt färgas noderna svart.
+
+%load('graph_data.mat','intnd_count','intnd','intnd_map','id_map','bicycling_graph','carTo_walkFrom_parking')
+%load('data_umea.mat','node','way')
+
+[r,~] = size(timematrix);
+hold on
+
+for i=1:r % Plottar noderna i cyan. Ju längre tid det tar till en nod desto mörkare.
+        
+    lat = intnd(i).lat;
+    lon = intnd(i).lon;
+    t = timematrix(i,starting_node);
+%    t = t-mod(t,res); % % Avrunda t nedåt till närmsta multipel av res.
+    nuance = 1-t/bt;
+    
+    if nuance<0
+        nuance = 0;
+    end
+    
+    plot(lon,lat,'.','color',[0 nuance nuance])
+end
+
+% Kod sedan tidigare.
+for i = 1:n_ways %Plottar vägarna mellan noderna, notera att ALLA noder används (även de som inte är intersection nodes) för att rita ut vägarna.
+    if way(i).footway == 0
+        [x n_ndref] = size(way(i).ndref);
+        X = zeros(1,n_ndref);
+        Y = zeros(1,n_ndref);
+        for j = 1:n_ndref
+            X(j) = node(id_map(way(i).ndref{j})).lon;
+            Y(j) = node(id_map(way(i).ndref{j})).lat;
+        end
+
+        line('Ydata',Y,'Xdata',X);
+    end
+end
