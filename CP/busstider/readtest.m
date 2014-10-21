@@ -1,5 +1,6 @@
 function [Names IDs] = readtest(name)
 %Arrays to store values in.
+format long
 IDs=[];
 Names=[];
 file_id=fopen(name, 'r', 'n', 'UTF-8'); %Open file.
