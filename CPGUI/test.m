@@ -22,7 +22,7 @@ function varargout = test(varargin)
 
 % Edit the above text to modify the response to help test
 
-% Last Modified by GUIDE v2.5 07-Oct-2014 23:09:59
+% Last Modified by GUIDE v2.5 30-Oct-2014 14:37:35
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -51,15 +51,23 @@ function test_OpeningFcn(hObject, eventdata, handles, varargin)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 % varargin   command line arguments to test (see VARARGIN)
-
-handles.pic = imread('map.png');
-handles.ih = imshow(handles.pic);
-
+h = waitbar(0,'Initializing..');
+handles.current_node = '1627177524';
+%handles.current_node = '444493179';
+% Computes the fastest trip and plots the result in axes1
+fastest_trip = bus(handles.current_node);
+waitbar(0.5,h);
+%plot_nodes2(fastest_trip)
+plot_nodes2(fastest_trip,handles.current_node)
+waitbar(1,h);
+delete(h)
 % Choose default command line output for test
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
+
+
 
 % UIWAIT makes test wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
@@ -76,21 +84,45 @@ function varargout = test_OutputFcn(hObject, eventdata, handles)
 varargout{1} = handles.output;
 
 
-% --- Executes on button press in togglebutton1.
-function togglebutton1_Callback(hObject, eventdata, handles)
-% hObject    handle to togglebutton1 (see GCBO)
+% --- Executes on button press in pushbutton1.
+function coord_button_callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hint: get(hObject,'Value') returns toggle state of togglebutton1
-if get(hObject,'Value')
-    set(handles.ih,'ButtonDownFcn',@ImageClickCallback);
-else
-    set(handles.ih,'ButtonDownFcn','default');
-end
-
-function ImageClickCallback (hObject, eventdata, handles)
-    handle=guidata(hObject);
-    coordinates = get(handle.axes1,'CurrentPoint');
-    set(handle.text1,'string',{'Pixels',num2str(coordinates(1,1))...
+coordinates = ginput(1); %Startar det h�r "siktet" (lagg)
+handle=guidata(hObject);
+set(handle.text1,'string',{'Pixels',num2str(coordinates(1,1))...
                                num2str(coordinates(1,2))})
+handles.current_node = decrypt_coords(coordinates); %k�r in coordinaterna i "decrypt"
+% Update handles structure
+guidata(hObject, handles);                          
+
+% --- Executes on button press in pushbutton1.
+function pushbutton1_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+h = waitbar(0,'Computing..');
+% Computes the fastest trip and plots the result in axes1
+fastest_trip = bus(handles.current_node);
+waitbar(0.5,h);
+axes(handles.axes1)
+plot_nodes2(fastest_trip,handles.current_node)
+waitbar(1,h);
+delete(h)
+
+
+% --- Executes on button press in checkbox1.
+function checkbox1_Callback(hObject, eventdata, handles)
+% hObject    handle to checkbox1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of checkbox1
+if get(hObject,'Value')
+    set(gcf,'WindowButtonMotionFcn', @cursor_coord);
+else
+    set(gcf,'WindowButtonMotionFcn','default');                
+end                               
