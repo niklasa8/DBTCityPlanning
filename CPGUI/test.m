@@ -22,7 +22,7 @@ function varargout = test(varargin)
 
 % Edit the above text to modify the response to help test
 
-% Last Modified by GUIDE v2.5 30-Oct-2014 14:37:35
+% Last Modified by GUIDE v2.5 30-Oct-2014 17:18:12
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -55,7 +55,7 @@ h = waitbar(0,'Initializing..');
 handles.current_node = '1627177524';
 %handles.current_node = '444493179';
 % Computes the fastest trip and plots the result in axes1
-fastest_trip = bus(handles.current_node);
+fastest_trip = bus(handles.current_node, 800); %800 är ungefär 13:00
 waitbar(0.5,h);
 %plot_nodes2(fastest_trip)
 plot_nodes2(fastest_trip,handles.current_node)
@@ -106,7 +106,28 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 
 h = waitbar(0,'Computing..');
 % Computes the fastest trip and plots the result in axes1
-fastest_trip = bus(handles.current_node);
+
+travelTime_raw = get(handles.time_edit, 'String');
+travelTime_split = strsplit(travelTime_raw,':');
+[sizeStart,sizeEnd] = size(travelTime_split);
+
+if sizeEnd == 2
+    travelTime_hour = str2num(travelTime_split{1});
+    travelTime_min = str2num(travelTime_split{2});
+    if (travelTime_hour && travelTime_min) || (travelTime_hour == 0 || travelTime_min == 0)
+        if travelTime_hour >= 0 && travelTime_hour <= 24 && travelTime_min >= 0 && travelTime_min <= 60
+            travelTime = travelTime_hour*60 + travelTime_min;
+        else
+            disp('Valid time is between 0-24h and 0-60min!') %tar ej hänsyn till ex. 24:50
+        end
+    else
+        disp('Valid time format is xx:xx in numbers')
+    end
+else
+    disp('Valid time format is xx:xx in numbers')
+end
+
+fastest_trip = bus(handles.current_node,travelTime);
 waitbar(0.5,h);
 axes(handles.axes1)
 plot_nodes2(fastest_trip,handles.current_node)
@@ -126,3 +147,26 @@ if get(hObject,'Value')
 else
     set(gcf,'WindowButtonMotionFcn','default');                
 end                               
+
+
+
+function time_edit_Callback(hObject, eventdata, handles)
+% hObject    handle to time_edit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of time_edit as text
+%        str2double(get(hObject,'String')) returns contents of time_edit as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function time_edit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to time_edit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
