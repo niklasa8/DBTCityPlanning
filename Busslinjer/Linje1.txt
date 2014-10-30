@@ -1,0 +1,40 @@
+Ö.Ersboda	613495002
+Krukgränd	156639548
+Kärnvägen	156640236
+Östra Ersboda Centrum	1917854740
+Byttgränd	182795827
+Södra Slevgränd	1917895844
+Bruksvägen	1917895850
+Fogvägen	1917895812
+Hermelinvägen	1917895836
+Mariebergsskolan	1917895790
+Marieberg	149013564
+Mariehemshöjd	158679895
+Nydala	282252349
+Mariehems Centrum	282252233
+Liljansberget	1117711600
+Samhällsvetarhuset	1058150466
+Universitetssjukhuset	2076294624
+Östermalmsgatan	155156420
+Östra Strandgatan	1280497326
+Fabriksgatan	291135635
+Församlingsgården	283324901
+Vasaplan	283324062
+Renmarkstorget	291136953
+Stadshuset	291138160
+Smedsgatan	263187680
+Dragonskolan	291138226
+Ängesvägen	291138318
+Stadsgränsvägen	158587483
+Hartvigsgatan	158589628
+Gabrieljansvägen	158589633
+Kronoparksvägen	158589637
+Kungsänget	291138485
+Hedvägen	613406373
+Klockarvägen	613406372
+Kyrkvägen	613406370
+Löftets gränd	301742691
+Glädjens gränd	613406371
+Paradisgränd	533996636
+Lagervägen	1302057753
+Klockarbäcken	3111032425
