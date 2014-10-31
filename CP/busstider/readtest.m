@@ -1,4 +1,4 @@
-function [Names IDs] = readtest(name)
+function [Names, IDs, xDoc] = readtest(name, name2)
 %Arrays to store values in.
 format long
 IDs=[];
@@ -12,4 +12,40 @@ while ~feof(file_id) %Read until end of file.
     Names=[Names A(1)];
     IDs=[IDs str2num(A{2})];
 end
+fclose(file_id);
 
+%file_id=fopen(name2, 'r+', 'n', 'UTF-8');
+xDoc=xmlread('Ultra_73_140929_150426.xml');
+already_there=zeros(length(IDs),1);
+
+cols_list=xDoc.getElementsByTagName('Cols');
+start_stop=zeros(2,1);
+for i=1:1 %För båda riktningarna.
+    i
+    cols=cols_list.item(i-1);
+    len=cols.getLength;
+    
+    for j=1:2:len-3 %För alla intervaller i XML-filen.
+        %Identifiera intervallet i XML-filen.
+        j
+        col1=cols.item(j);
+        col2=cols.item(j+2);
+        stop_name1=col1.item(1).item(0).getData;
+        stop_name2=col2.item(1).item(0).getData;
+        %Identifiera intervallet i våra textfiler.
+    
+        for k=1:length(IDs)
+            char(Names(k));
+            if strcmp(char(Names(k)),char(stop_name1)) %detta verkar itne fungera
+                start_stop(1)=k;
+                o=1
+            end
+            if Names(k)==stop_name2 %och detta
+                start_stop(2)=k;
+                p=1
+            end
+        end
+        
+%        for k=start_stop(1)+1:start_stop(2)-1
+    end
+end
