@@ -37,7 +37,7 @@ Ostkroken	257128
 Västra Ersboda Centrum	2075347365
 Snipgränd	2124595649
 Kylgränd	301119315
-Regementet
+Regementet	1004430683
 Nygatan	281032452
 Renmarkstorget	291136953
 Vasaplan	283324062
