@@ -5,26 +5,27 @@ function color_map(timematrix,starting_node,res,bt) % Har ej kört koden.
 % res - Antal minuter per nyans.
 % bt - För tider över bt färgas noderna svart.
 
-%load('graph_data.mat','intnd_count','intnd','intnd_map','id_map','bicycling_graph','carTo_walkFrom_parking')
-%load('data_umea.mat','node','way')
+load('graph_data.mat','intnd_count','intnd','intnd_map','id_map','bicycling_graph','carTo_walkFrom_parking')
+load('data_umea.mat','node','way')
 
-[r,~] = size(timematrix);
 hold on
 
-for i=1:r % Plottar noderna i cyan. Ju längre tid det tar till en nod desto mörkare.
-        
-    lat = intnd(i).lat;
-    lon = intnd(i).lon;
-    t = timematrix(i,starting_node);
-%    t = t-mod(t,res); % % Avrunda t nedåt till närmsta multipel av res.
-    nuance = 1-t/bt;
-    
-    if nuance<0
-        nuance = 0;
-    end
-    
-    plot(lon,lat,'.','color',[0 nuance nuance])
+nrofintervals = ceil(bt/res);
+t = timematrix(:,starting_node);
+
+lat = intnd.lat;
+lon = intnd.lon;
+
+for i=1:nrofintervals
+    x = find(t<i*res);
+    t(x) = inf;
+    % Plotta noderna i cyan. Ju längre tid desto mörkare.
+    nuance = 1-(i-1)*1/nrintervals;
+    plot(lon(x),lat(x),'.','color',[0 nuance nuance])
 end
+% Plotta övriga nåbara noder svarta.
+x = find(t<inf);
+plot(lon(x),lat(x),'.','color',[0 0 0])
 
 % Kod sedan tidigare.
 for i = 1:n_ways %Plottar vägarna mellan noderna, notera att ALLA noder används (även de som inte är intersection nodes) för att rita ut vägarna.
