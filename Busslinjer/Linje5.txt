@@ -30,10 +30,10 @@ Fabriksgatan	291135635
 Östra Strandgatan	1280497326
 Östermalmsgatan	155156420
 Univeristetssjukhuset	2076294624
-Universum	1280457926
+Universum	295095193
 Växthuset	138123943
-Ålidhöjd	1301275701
-Ålidhems Centrum	1233965979
+Ålidhöjd	285934053
+Ålidhems Centrum	258577547
 Magistervägen	1473215377
 Carlslid	1183675469	(Ej del av väg, del av gångväg)
 Flintvägen	140185329
