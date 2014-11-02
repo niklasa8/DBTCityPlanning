@@ -27,7 +27,7 @@ Renmarkstorget	291136953
 Vasaplan	283324062
 Församlingsgården	283324901
 Fabriksgatan	291135635
-Östra Strandgatan	1280497326
+Östra Strandgatan	167024486
 Östermalmsgatan	155156420
 Univeristetssjukhuset	2076294624
 Universum	295095193

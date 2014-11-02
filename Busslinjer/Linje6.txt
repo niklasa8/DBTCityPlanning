@@ -9,7 +9,7 @@ Klintvägen	1257199136
 Universum	1280457926
 Universitetssjukhuset	2076294624
 Östermalmsgatan	155156420
-Östra Strandgatan	1280497326
+Östra Strandgatan	167024486
 Fabriksgatan	291135635
 Församlingsgården	283324901
 Vasaplan	283324062
@@ -48,7 +48,7 @@ Varvsgatan	166976634	(enkelriktad gata)
 Vasaplan	283324062
 Församlingsgården	283324901
 Fabriksgatan	291135635
-Östra Strandgatan	1280497326
+Östra Strandgatan	167024486
 Östermalmsgatan	155156420
 Universitetssjukhuset	2076294624
 Universum	1280457926

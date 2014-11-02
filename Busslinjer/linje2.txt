@@ -4,8 +4,8 @@ Kylgränd	301119315
 Ersboda handelsområde	143858852
 Formvägen	1353679265
 Fogvägen	1917895812
-Hermelinvägen	1917895836
-Mariebergskolan	1917895790
+Hermelinvägen	306119453
+Mariebergskolan	1491260750
 Marieberg	149013564
 Mariehemshöjd	158679895
 Nydala	282252349
