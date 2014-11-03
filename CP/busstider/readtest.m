@@ -16,11 +16,10 @@ fclose(file_id);
 
 %file_id=fopen(name2, 'r+', 'n', 'UTF-8');
 xDoc=xmlread('Ultra_73_140929_150426.xml');
-already_there=zeros(length(IDs),1);
 
 cols_list=xDoc.getElementsByTagName('Cols');
 start_stop=zeros(2,1);
-for i=1:1 %För båda riktningarna.
+for i=1:1%För båda riktningarna.
     i
     cols=cols_list.item(i-1);
     len=cols.getLength;
@@ -32,18 +31,20 @@ for i=1:1 %För båda riktningarna.
         col2=cols.item(j+2);
         stop_name1=col1.item(1).item(0).getData;
         stop_name2=col2.item(1).item(0).getData;
+        
         %Identifiera intervallet i våra textfiler.
-    
         for k=1:length(IDs)
-            char(Names(k));
-            if strcmp(char(Names(k)),char(stop_name1)) %detta verkar itne fungera
-                start_stop(1)=k;
-                o=1
+            if strcmp(char(Names(k)),char(stop_name1))
+                start_stop(1)=k
+                Names(k)
             end
-            if Names(k)==stop_name2 %och detta
-                start_stop(2)=k;
-                p=1
+            if strcmp(char(Names(k)),char(stop_name2))
+                start_stop(2)=k
+                Names(k)
             end
+        end
+        for k=start_stop(1):start_stop(2)
+            disp(Names(k))
         end
         
 %        for k=start_stop(1)+1:start_stop(2)-1
