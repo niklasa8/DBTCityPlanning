@@ -15,7 +15,7 @@ end
 fclose(file_id);
 
 %file_id=fopen(name2, 'r+', 'n', 'UTF-8');
-xDoc=xmlread('Ultra_73_140929_150426.xml');
+xDoc=xmlread(name2);
 
 cols_list=xDoc.getElementsByTagName('Cols');
 start_stop=zeros(2,1);
@@ -43,10 +43,21 @@ for i=1:1%För båda riktningarna.
                 Names(k)
             end
         end
-        for k=start_stop(1):start_stop(2)
-            disp(Names(k))
-        end
         
+        for k=start_stop(1):start_stop(2)
+           % X = sprintf('Adding busstop %s to xmlfile.',Names(k));
+            Names(k)
+            newElement = xDoc.createElement('Col');
+            %newElement.addAttribute('pos');
+            %newElement.setAttribute('pos', k);
+            cols.insertBefore(newElement,cols.item(j+2))
+            
+%             thisElement.appendChild... 
+%                 (docNode.createTextNode(Names(k)));
+%             docRootNode.appendChild(thisElement);
+        end
+
 %        for k=start_stop(1)+1:start_stop(2)-1
     end
 end
+xmlwrite('hej', xDoc)
