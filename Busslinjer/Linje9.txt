@@ -13,7 +13,7 @@ Universitetssjukhuset	2076294624
 Fabriksgatan	291135635
 Församlingsgården	283324901
 Vasaplan	283324062
-Varvsgatan	166976634	(enkelriktad gata)
+Varvsgatan	166976634
 Obbolavägen	166973579
 Ishallen	1511880808
 Tegsvägen	302115669
@@ -50,7 +50,7 @@ Tegsvägen	302115669
 Ishallen	1511880808
 Vintergatan	
 Obbolavägen	166973579
-Varvsgatan	166976634	(enkelriktad gata)
+Varvsgatan	166976634
 Vasaplan	283324062
 Församlingsgården	283324901
 Fabriksgatan	291135635

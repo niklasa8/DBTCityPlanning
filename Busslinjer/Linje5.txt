@@ -35,7 +35,7 @@ Växthuset	138123943
 Ålidhöjd	285934053
 Ålidhems Centrum	258577547
 Magistervägen	1473215377
-Carlslid	1183675469	(Ej del av väg, del av gångväg)
+Carlslid	1183675469
 Flintvägen	140185329
 Gnejsvägen	153193859
 Dammen	1075174670

@@ -1,6 +1,6 @@
 Carlshöjd	153189435
 Kvartsvägen	1149693649
-Porfyrvägen	129946445	(Nod ej kopplad till gångväg)
+Porfyrvägen	129946445
 Kolbäcksvägen	1075174585
 Elevstråket	229809260
 Assistentvägen	291141864
@@ -13,7 +13,7 @@ Universitetssjukhuset	2076294624
 Fabriksgatan	291135635
 Församlingsgården	283324901
 Vasaplan	283324062
-Varvsgatan	166976634	(enkelriktad gata)
+Varvsgatan	166976634
 Tegs Centrum	1402080824
 Tegs centralskola	274732912
 Tegsvägen	302115669
@@ -44,7 +44,7 @@ Tegsvägen	302115669
 Tegs centralskola	274732912
 Tegs Centrum	1402080824
 Obbolavägen	166973579
-Varvsgatan	166976634	(enkelriktad gata)
+Varvsgatan	166976634
 Vasaplan	283324062
 Församlingsgården	283324901
 Fabriksgatan	291135635
@@ -57,6 +57,6 @@ Laboratorvägen	229822631
 Assistentvägen	291141864
 Elevstråket	229809260
 Kolbäcksvägen	1075174585
-Porfyrvägen	129946445	(Nod ej kopplad till gångväg)
+Porfyrvägen	129946445
 Kvartsvägen	1149693649
 Carlshöjd	153189435

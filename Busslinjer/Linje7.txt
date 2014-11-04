@@ -7,7 +7,7 @@ Berghemsvägen	181289058
 Terrängvägen	181289062
 Gammlia	247788092
 Sporthallen	286123475
-Tuvgränd	247782033	(saknar koppling till gångväg)
+Tuvgränd	247782033
 Vasaplan	283324062
 Renmarkstorget	291136953
 Stadshuset	291138160
@@ -15,13 +15,13 @@ Smedsgatan	263187680
 Dragonskolan	291138226
 Hedlundakyrkan	263187745
 Västerslätts Centrum	155180347
-Kornettstråket	155184857	(saknar koppling till gångväg)
-Rödäng	1624655470	(saknar koppling till gångväg)
+Kornettstråket	155184857
+Rödäng	1624655470
 Rödberget	155184870
 
 Rödberget	155184870
-Rödäng	1624655470	(saknar koppling till gångväg)
-Kornettstråket	155184857	(saknar koppling till gångväg)
+Rödäng	1624655470
+Kornettstråket	155184857
 Västerslätts Centrum	155180347
 Hedlundakyrkan	263187745
 Dragonskolan	291138226
