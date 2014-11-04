@@ -1,3 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<P4WTimetable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Type>L</Type>
+  <Path>Ultra/140929_150426/Ultra_1_140929_150426.xml</Path>
+  <FromDate>2014-09-29</FromDate>
+  <ToDate>2015-04-26</ToDate>
+  <TableName nr="1">1</TableName>
+  <ValidText>Giltig 2014-09-29 - 2015-04-26</ValidText>
+  <Revision>Skapad 2014-09-19 13:40:47</Revision>
   <Directions>
     <Direction>
       <Head>Ö.Ersboda - Vasaplan - Umedalen</Head>
@@ -12214,3 +12223,4 @@
       </Footnotes>
     </Direction>
   </Directions>
+</P4WTimetable>
