@@ -1,0 +1,7 @@
+Vasaplan	283324062 (Bus_stop)
+Östra Strandgatan	1280497326(bus_stop)
+Östermalmsgatan	155156420 (bus_stop)
+Universitetssjukhuset	2076294624
+Universum	1280457926 (bus_stop)
+Klintvägen	1260329517 (bus_stop)
+Laboratorvägen	1233985303 (bus_stop)

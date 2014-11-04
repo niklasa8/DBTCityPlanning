@@ -1,19 +1,19 @@
-Hästhagsvägen	205331503
-Kajsa Söders väg	205332885
-Sillviksvägen	1357015255
-Tavleån	205331520
-Brännbackavägen	205330993
+HÃ¤sthagsvÃ¤gen	205331503
+Kajsa SÃ¶ders vÃ¤g	205332885
+SillviksvÃ¤gen	1357015255
+TavleÃ¥n	205331520
+BrÃ¤nnbackavÃ¤gen	205330993
 Tavleliden	151230484
-Källplatsen	606684611
+KÃ¤llplatsen	606684611
 Tomteboparken	151229680
-Vittervägen	264863965
+VittervÃ¤gen	264863965
 Nornaplatsen	434092981
-Älvans väg	1186396760
-Mineralvägen	249501952
-Magistervägen	259253551
-Ålidhems Centrum	258577547
+Ã„lvans vÃ¤g	1186396760
+MineralvÃ¤gen	249501952
+MagiservÃ¤gen	259253551
+Ã…lidhems Centrum	258577547
 Universitetssjukhuset	2076294624
-Fridhem	155115168 (Endast Innertavle->Vasaplan)(måste kopplas med gångväg)
-Östra Norrlandsgatan	283324666 (Buss nod)
-Församlingsgården	283324901 (Buss nod)
-Vasaplan	283324062 (Buss nod)
+Fridhem	155115168
+Ã–stra Norrlandsgatan	283324666
+FÃ¶rsamlingsgÃ¥rden	283324901
+Vasaplan	283324062

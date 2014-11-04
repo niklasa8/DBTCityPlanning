@@ -1,0 +1,4 @@
+Fridhem	155115168 (Endast Innertavle->Vasaplan)(måste kopplas med gångväg)
+Östra Norrlandsgatan	283324666 (Buss nod)
+Församlingsgården	283324901 (Buss nod)
+Vasaplan	283324062 (Buss nod)

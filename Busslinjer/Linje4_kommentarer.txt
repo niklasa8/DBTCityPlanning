@@ -1,0 +1,2 @@
+Tegsborg	286383990	(Hur ska man hantera att den ligger på motorväg, och mellan två filer?)
+Kungsgatan	263196874	(Har tags: highway, traffic_signals)
