@@ -22,7 +22,7 @@ function varargout = win2(varargin)
 
 % Edit the above text to modify the response to help win2
 
-% Last Modified by GUIDE v2.5 16-Oct-2014 10:24:07
+% Last Modified by GUIDE v2.5 23-Oct-2014 09:07:59
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -105,3 +105,141 @@ function checkbox3_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of checkbox3
+
+
+% --------------------------------------------------------------------
+function Untitled_1_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_2_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_3_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_3 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_9_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_9 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_10_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_10 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_11_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_11 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_6_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_6 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_4_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_5_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_5 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_8_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_8 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_7_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_7 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on selection change in popupmenu1.
+function popupmenu1_Callback(hObject, eventdata, handles)
+% hObject    handle to popupmenu1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns popupmenu1 contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from popupmenu1
+
+
+% --- Executes during object creation, after setting all properties.
+function popupmenu1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to popupmenu1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: popupmenu controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+advse = 0
+
+% --- Executes on button press in checkbox4.
+function checkbox4_Callback(hObject, eventdata, handles)
+% hObject    handle to checkbox4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of checkbox4
+advse=1
+
+if advse==1
+    % --- Executes on selection change in listbox2.
+    function listbox2_Callback(hObject, eventdata, handles)
+    % hObject    handle to listbox2 (see GCBO)
+    % eventdata  reserved - to be defined in a future version of MATLAB
+    % handles    structure with handles and user data (see GUIDATA)
+    
+    % Hints: contents = cellstr(get(hObject,'String')) returns listbox2 contents as cell array
+    %        contents{get(hObject,'Value')} returns selected item from listbox2
+    
+    
+    % --- Executes during object creation, after setting all properties.
+        function listbox2_CreateFcn(hObject, eventdata, handles)
+            % hObject    handle to listbox2 (see GCBO)
+            % eventdata  reserved - to be defined in a future version of MATLAB
+            % handles    empty - handles not created until after all CreateFcns called
+            
+            % Hint: listbox controls usually have a white background on Windows.
+            %       See ISPC and COMPUTER.
+            if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+                set(hObject,'BackgroundColor','white');
+            end
+    
+
