@@ -1,0 +1,68 @@
+Carlshöjd	153189435
+Kvartsvägen	1149693649
+Porfyrvägen	129946445
+Kolbäcksvägen	1075174585
+Elevstråket	229809260
+Assistentvägen	291141864
+Laboratorvägen	229822631
+Klintvägen	1257199136
+Universum	295095193
+Universitetssjukhuset	2076294624
+Östermalmsgatan	155156420
+Östra Strandgatan	167024486
+Fabriksgatan	291135635
+Församlingsgården	283324901
+Vasaplan	283324062
+Varvsgatan	166976634
+Obbolavägen	166973579
+Ishallen	1511880808
+Tegsvägen	302115669
+Tegs centralskola	274732912
+Bryggargatan	295213775
+Svedjebacken	305950666
+Laxgränd	270655422
+Umeliivägen	262999261
+Volvo	2458407308
+Tranbärsvägen	295216791
+Päronvägen	1658706866
+Klarbärsvägen	302115407
+Travbanevägen	305941870
+Grusåsvägen	305941882
+Röbäcks Centrum	1682263544
+Rosettvägen	1550754326
+Mantelvägen	1627176703
+
+
+Mantelvägen	1627176703
+Rosettvägen	1550754326
+Röbäcks Centrum	1682263544
+Grusåsvägen	305941882
+Travbanevägen	305941870
+Klarbärsvägen	302115407
+Päronvägen	1658706866
+Tranbärsvägen	295216791
+Umeliivägen	262999261
+Laxgränd	270655422
+Svedjebacken	305950666
+Bryggargatan	295213775
+Tegs centralskola	274732912
+Tegsvägen	302115669
+Ishallen	1511880808
+Vintergatan	
+Obbolavägen	166973579
+Varvsgatan	166976634
+Vasaplan	283324062
+Församlingsgården	283324901
+Fabriksgatan	291135635
+Östra Strandgatan	167024486
+Östermalmsgatan	155156420
+Universitetssjukhuset	2076294624
+Universum	295095193
+Klintvägen	1257199136
+Laboratorvägen	229822631
+Assistentvägen	291141864
+Elevstråket	229809260
+Kolbäcksvägen	1075174585
+Porfyrvägen	129946445
+Kvartsvägen	1149693649
+Carlshöjd	153189435

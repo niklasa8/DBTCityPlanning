@@ -1,0 +1,44 @@
+Ersmark	290367981
+Aftonvägen	1629944254
+Morgonvägen	2124595654
+Onsdagsvägen	2124595663
+Skymningsvägen	2124595666
+Gärssjöbäcksvägen	2124595653
+Bron	2124595651
+Ersforsen Norra	2124595664
+Ersforsen Södra	2124595656
+Måttgränd	2124595670
+Gräddvägen	2124595660
+Snipgränd	2124595649
+Västra Ersboda Centrum	2075347365
+Ystarvägen	2124595655
+Fogvägen	1917895812
+Mårdvägen	131920338
+Vargvägen	131923256
+Uttervägen	135300999
+Kapellvägen	249309916
+Vallarestigen	1611123156
+Dalstigen	132533571
+Solvändan	2354169238
+Parkvägen	2398729607
+Löjtnantsgatan	296161445
+Nygatan	281032452
+Renmarkstorget	291136953
+Vasaplan	283324062
+Församlingsgården	283324901
+Fabriksgatan	291135635
+Östra Strandgatan	167024486
+Östermalmsgatan	155156420
+Univeristetssjukhuset	2076294624
+Universum	295095193
+Växthuset	138123943
+Ålidhöjd	285934053
+Ålidhems Centrum	258577547
+Magistervägen	1473215377
+Carlslid	1183675469
+Flintvägen	140185329
+Gnejsvägen	153193859
+Dammen	1075174670
+Gimonäs	1149316277
+Tegelbruksvägen	1149625193
+Strömpilen	291140580
