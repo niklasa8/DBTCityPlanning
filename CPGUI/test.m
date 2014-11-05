@@ -53,6 +53,7 @@ function test_OpeningFcn(hObject, eventdata, handles, varargin)
 % varargin   command line arguments to test (see VARARGIN)
 h = waitbar(0,'Initializing..');
 handles.current_node = '1627177524';
+
 %handles.current_node = '444493179';
 % Computes the fastest trip and plots the result in axes1
 fastest_trip = bus(handles.current_node, 800); %800 �r ungef�r 13:00
@@ -61,7 +62,7 @@ waitbar(0.5,h);
 plot_nodes2(fastest_trip,handles.current_node);
 waitbar(1,h);
 delete(h)
-handles.switch=0
+%posi =getPosition(handles.current_node)
 %handles.point = impoint
 % Choose default command line output for test
 handles.output = hObject;
@@ -106,7 +107,7 @@ if get(hObject,'Value')
         delete(handles.point)
     end
     handles.point =impoint(gca,[]);
-    handles.coordinates= getPosition(handles.point)
+    handles.coordinates= getPosition(handles.point);
     set(handles.text1,'string',{'Pixels',num2str(handles.coordinates(1,1))...
         num2str(handles.coordinates(1,2))});
     
