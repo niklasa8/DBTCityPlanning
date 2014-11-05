@@ -1,16 +1,16 @@
 Ersmark	290367981
-Aftonv‰gen	1629944254
-Morgonv‰gen	2124595654
-Onsdagsv‰gen	2124595663
-Skymningsv‰gen	2124595666
-G‰rssjˆb‰cksv‰gen	2124595653
+Aftonv√§gen	1629944254
+Morgonv√§gen	2124595654
+Onsdagasv√§gen	2124595663
+Skrymningsv√§gen	2124595666
+G√§rssj√∂b√§cksv√§gen	2124595653
 Bron	2124595651
 Ersforsen Norra	2124595664
-Ersforsen Sˆdra	2124595656
-MÂttgr‰nd	2124595670
-Gr‰ddv‰gen	2124595660
-Kylgr‰nd	301119315
-Regementet	1004430683	(endast Ersmark->Vasaplan)(secondary way)
+Ersforsen S√∂dra	2124595656
+M√•ttgr√§nd	2124595670
+Gr√§ddv√§gen	2124595660
+Kylgr√§nd	301119315
+Regementet	1004430683
 Nygatan	281032452
 Renmarkstorget	291136953
 Vasaplan	283324062

@@ -11,8 +11,7 @@ Maskinvägen	167005505
 Ringvägen	167003671
 Tegs sjukhem	1402065734
 Tegs Centrum	1402080824
-Tegsborg	286383990	(Hur ska man hantera att den ligger på motorväg, och mellan två filer?)
-Kungsgatan	263196874	(Har tags: highway, traffic_signals)
+Tegsborg	286383990
+Kungsgatan	263196874
 Renmarkstorget	291136953
 Vasaplan	283324062
-

@@ -1,12 +1,11 @@
-Vasaplan	283324062 (Bus_stop)
-÷stra Strandgatan	1280497326(bus_stop)
-÷stermalmsgatan	155156420 (bus_stop)
+Vasaplan	283324062
+√ñstra Strandgatan	1280497326
+√ñstermalmsgatan	155156420
 Universitetssjukhuset	2076294624
-Universum	1280457926 (bus_stop)
-Klintv‰gen	1260329517 (bus_stop)
-Laboratorv‰gen	1233985303 (bus_stop)
-Assistentv‰gen	291141864
-ElevstrÂket	1149839749
-Alviksgr‰nd	2043054479
-UmeÂ Airport	2043054555
-
+Universum	1280457926
+Klintv√§gen	1260329517
+Laboratorv√§gen	1233985303
+Assistentv√§gen	291141864
+Elevstr√•ket	1149839749
+Alviksgr√§nd	2043054479
+Ume√• Airport	2043054555

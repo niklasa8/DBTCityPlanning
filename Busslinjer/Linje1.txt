@@ -1,82 +1,82 @@
-Klockarbäcken	3111032425
-Lagervägen	1302057753
-Paradisgränd	533996636
-Glädjens gränd	613406371
-Löftets gränd	301742691
-Kyrkvägen	613406370
-Klockarvägen	613406372
-Hedvägen	613406373
-Kungsänget	291138485
-Kronoparksvägen	158589637
-Gabrieljansvägen	158589633
+KlockarbÃ¤cken	3111032425
+LagervÃ¤gen	1302057753
+ParadisgrÃ¤nd	533996636
+GlÃ¤djens grÃ¤nd	613406371
+LÃ¶ftets grÃ¤nd	301742691
+KyrkvÃ¤gen	613406370
+KlockarvÃ¤gen	613406372
+HedvÃ¤gen	613406373
+KungsÃ¤nget	291138485
+KronoparksvÃ¤gen	158589637
+GabrieljansvÃ¤gen	158589633
 Hartvigsgatan	158589628
-Stadsgränsvägen	158587483
-Ängesvägen	291138318
+StadsgrÃ¤nsvÃ¤gen	158587483
+Ã„ngesvÃ¤gen	291138318
 Dragonskolan	291138226
 Smedsgatan	263187680
 Stadshuset	291138160
 Renmarkstorget	291136953
 Vasaplan	283324062
-Församlingsgården	283324901
+FÃ¶rsamlingsgÃ¥rden	283324901
 Fabriksgatan	291135635
-Östra Strandgatan	167024486
-Östermalmsgatan	155156420
+Ã–stra Strandgatan	167024486
+Ã–stermalmsgatan	155156420
 Universitetssjukhuset	2076294624
-Samhällsvetarhuset	727618697
+SamhÃ¤llsvetarhuset	727618697
 Liljansberget	1117711621
 Mariehems Centrum	282252233
 Nydala	282252349
-Mariehemshöjd	158679895
+MariehemshÃ¶jd	158679895
 Marieberg	149013564
 Mariebergsskolan	1491260750
-Hermelinvägen	306119453
-Fogvägen	1917895812
-Bruksvägen	363498626
-Södra Slevgränd	1917895844
-Byttgränd	182795827
-Östra Ersboda Centrum	1917854740
-Kärnvägen	156640236
-Krukgränd	156639548
-Östra Ersboda	613494994
+HermelinvÃ¤gen	306119453
+FogvÃ¤gen	1917895812
+BruksvÃ¤gen	363498626
+SÃ¶dra SlevgrÃ¤nd	1917895844
+ByttgrÃ¤nd	182795827
+Ã–stra Ersboda Centrum	1917854740
+KÃ¤rnvÃ¤gen	156640236
+KrukgrÃ¤nd	156639548
+Ã–stra Ersboda	613494994
 
 
-Östra Ersboda	613494994
-Krukgränd	156639548
-Kärnvägen	156640236
-Östra Ersboda Centrum	1917854740
-Byttgränd	182795827
-Södra Slevgränd	1917895844
-Bruksvägen	363498626
-Fogvägen	1917895812
-Hermelinvägen	306119453
+Ã–stra Ersboda	613494994
+KrukgrÃ¤nd	156639548
+KÃ¤rnvÃ¤gen	156640236
+Ã–stra Ersboda Centrum	1917854740
+ByttgrÃ¤nd	182795827
+SÃ¶dra SlevgrÃ¤nd	1917895844
+BruksvÃ¤gen	363498626
+FogvÃ¤gen	1917895812
+HermelinvÃ¤gen	306119453
 Mariebergsskolan	1491260750
 Marieberg	149013564
-Mariehemshöjd	158679895
+MariehemshÃ¶jd	158679895
 Nydala	282252349
 Mariehems Centrum	282252233
 Liljansberget	1117711621
-Samhällsvetarhuset	727618697
+SamhÃ¤llsvetarhuset	727618697
 Universitetssjukhuset	2076294624
-Östermalmsgatan	155156420
-Östra Strandgatan	167024486
+Ã–stermalmsgatan	155156420
+Ã–stra Strandgatan	167024486
 Fabriksgatan	291135635
-Församlingsgården	283324901
+FÃ¶rsamlingsgÃ¥rden	283324901
 Vasaplan	283324062
 Renmarkstorget	291136953
 Stadshuset	291138160
 Smedsgatan	263187680
 Dragonskolan	291138226
-Ängesvägen	291138318
-Stadsgränsvägen	158587483
+Ã„ngesvÃ¤gen	291138318
+StadsgrÃ¤nsvÃ¤gen	158587483
 Hartvigsgatan	158589628
-Gabrieljansvägen	158589633
-Kronoparksvägen	158589637
-Kungsänget	291138485
-Hedvägen	613406373
-Klockarvägen	613406372
-Kyrkvägen	613406370
-Löftets gränd	301742691
-Glädjens gränd	613406371
-Paradisgränd	533996636
-Lagervägen	1302057753
-Klockarbäcken	3111032425
+GabrieljansvÃ¤gen	158589633
+KronoparksvÃ¤gen	158589637
+KungsÃ¤nget	291138485
+HedvÃ¤gen	613406373
+KlockarvÃ¤gen	613406372
+KyrkvÃ¤gen	613406370
+LÃ¶ftets grÃ¤nd	301742691
+GlÃ¤djens grÃ¤nd	613406371
+ParadisgrÃ¤nd	533996636
+LagervÃ¤gen	1302057753
+KlockarbÃ¤cken	3111032425

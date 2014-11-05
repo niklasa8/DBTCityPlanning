@@ -1,0 +1,5 @@
+Porfyrvägen	129946445	(Nod ej kopplad till gångväg)
+Varvsgatan	166976634	(enkelriktad gata)
+
+Varvsgatan	166976634	(enkelriktad gata)
+Porfyrvägen	129946445	(Nod ej kopplad till gångväg)
