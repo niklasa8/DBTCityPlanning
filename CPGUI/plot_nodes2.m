@@ -49,13 +49,5 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
 end
 hold off
     
-handles=guidata(hObject);
-ispoint = isfield(handles,'im3');
-if ispoint == 1;
-    delete(handles.im3);
-end
 
-handles.im3=handles.im2;
-setColor(handles.im2,'m');
-guidata(hObject,handles);
 end

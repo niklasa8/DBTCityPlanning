@@ -40,16 +40,15 @@ function node_osm = decrypt_coords(coordinates,hObject,handles) %node_info: plat
     %plot(intnd(cur).lon, intnd(cur).lat)
 
     
-    
-    pospoint =[intnd(shortest_dist(2)).lon,intnd(shortest_dist(2)).lat];
-    
     handles=guidata(hObject);
+    handles.pospoint =[intnd(shortest_dist(2)).lon,intnd(shortest_dist(2)).lat];
+    
     ispoint = isfield(handles,'im2');
     if ispoint == 1;
         delete(handles.im2);
     end
     
-    handles.im2=impoint(gca,pospoint);
+    handles.im2=impoint(gca,handles.pospoint);
     setColor(handles.im2,'m');
     guidata(hObject,handles);
 

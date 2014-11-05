@@ -147,11 +147,23 @@ if sizeEnd == 2
 else
     disp('Valid time format is xx:xx in numbers')
 end
-handles.current_node
+
 fastest_trip = bus(handles.current_node,travelTime);
 waitbar(0.5,h);
 axes(handles.axes1)
-plot_nodes2(fastest_trip,handles.current_node)
+plot_nodes2(fastest_trip,handles.current_node,handles,hObject);
+
+handles=guidata(hObject);
+ispoint = isfield(handles,'im3');
+if ispoint == 1;
+    delete(handles.im3);
+end
+
+
+handles.im3=impoint(gca,handles.pospoint);
+setColor(handles.im3,'y');
+guidata(hObject,handles);
+
 waitbar(1,h);
 delete(h)
 
