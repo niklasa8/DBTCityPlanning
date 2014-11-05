@@ -22,7 +22,7 @@ function varargout = test(varargin)
 
 % Edit the above text to modify the response to help test
 
-% Last Modified by GUIDE v2.5 30-Oct-2014 17:18:12
+% Last Modified by GUIDE v2.5 04-Nov-2014 23:40:55
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -56,6 +56,7 @@ handles.current_node = '1627177524';
 
 %handles.current_node = '444493179';
 % Computes the fastest trip and plots the result in axes1
+<<<<<<< HEAD
 fastest_trip = bus(handles.current_node, 800); %800 �r ungef�r 13:00
 waitbar(0.5,h);
 %plot_nodes2(fastest_trip)
@@ -64,6 +65,16 @@ waitbar(1,h);
 delete(h)
 %posi =getPosition(handles.current_node)
 %handles.point = impoint
+=======
+%fastest_trip = bus(handles.current_node, 800); %800 �r ungef�r 13:00
+waitbar(0.5,h);
+
+plot_nodes_init;
+%plot_nodes2(fastest_trip,handles.current_node);
+waitbar(1,h);
+delete(h)
+
+>>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
 % Choose default command line output for test
 handles.output = hObject;
 
@@ -87,12 +98,13 @@ function varargout = test_OutputFcn(hObject, eventdata, handles)
 varargout{1} = handles.output;
 
 
-% --- Executes on button press in pushbutton1.
+% --- Executes on button press in coord_button.
 function coord_button_callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton1 (see GCBO)
+% hObject    handle to coord_button (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
+<<<<<<< HEAD
 % coordinates = ginput(1) %Startar det h�r "siktet" (lagg)
 % handle=guidata(hObject);
 % set(handle.text1,'string',{'Pixels',num2str(coordinates(1,1))...
@@ -102,17 +114,28 @@ function coord_button_callback(hObject, eventdata, handles)
 if get(hObject,'Value')  
     set(gcf,'WindowButtonMotionFcn', @cursor_coord);
     %handles.point=impoint(gca,[])
+=======
+if get(hObject,'Value')  
+    set(gcf,'WindowButtonMotionFcn', @cursor_coord);
+    
+>>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
     ispoint = isfield(handles,'point');
     if ispoint == 1;
         delete(handles.point)
     end
+<<<<<<< HEAD
     handles.point =impoint(gca,[]);
     handles.coordinates= getPosition(handles.point);
+=======
+    handles.point = impoint(gca,[]);
+    handles.coordinates = getPosition(handles.point);
+>>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
     set(handles.text1,'string',{'Pixels',num2str(handles.coordinates(1,1))...
         num2str(handles.coordinates(1,2))});
     
     guidata(hObject,handles);
     
+<<<<<<< HEAD
 
     handles.current_node = decrypt_coords(handles.coordinates,hObject,handles); %k�r in coordinaterna i "decrypt"
     handles=guidata(hObject);
@@ -128,10 +151,24 @@ guidata(hObject,handles);
     
 end
                        
+=======
+    
+    handles.current_node = decrypt_coords(handles.coordinates,hObject,handles); %k�r in coordinaterna i "decrypt"
+    handles = guidata(hObject);
+    % Update handles structure
+    
+    guidata(hObject,handles);
+>>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
 
-% --- Executes on button press in pushbutton1.
+else
+    set(gcf,'WindowButtonMotionFcn','default');
+    guidata(hObject,handles);
+end
+                       
+
+% --- Executes on button press in coord_button.
 function pushbutton1_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton1 (see GCBO)
+% hObject    handle to coord_button (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
@@ -157,7 +194,7 @@ if sizeEnd == 2
 else
     disp('Valid time format is xx:xx in numbers')
 end
-
+handles.current_node
 fastest_trip = bus(handles.current_node,travelTime);
 waitbar(0.5,h);
 axes(handles.axes1)

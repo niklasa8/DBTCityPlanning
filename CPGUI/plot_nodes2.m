@@ -48,6 +48,7 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
     end
 end
 hold off
+<<<<<<< HEAD
     
 handles=guidata(hObject);
 ispoint = isfield(handles,'im3');
@@ -59,3 +60,5 @@ handles.im3=handles.im2;
 setColor(handles.im2,'m');
 guidata(hObject,handles);
 end
+=======
+>>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
