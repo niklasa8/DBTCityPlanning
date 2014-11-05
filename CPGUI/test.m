@@ -53,19 +53,8 @@ function test_OpeningFcn(hObject, eventdata, handles, varargin)
 % varargin   command line arguments to test (see VARARGIN)
 h = waitbar(0,'Initializing..');
 handles.current_node = '1627177524';
-
 %handles.current_node = '444493179';
 % Computes the fastest trip and plots the result in axes1
-<<<<<<< HEAD
-fastest_trip = bus(handles.current_node, 800); %800 �r ungef�r 13:00
-waitbar(0.5,h);
-%plot_nodes2(fastest_trip)
-plot_nodes2(fastest_trip,handles.current_node);
-waitbar(1,h);
-delete(h)
-%posi =getPosition(handles.current_node)
-%handles.point = impoint
-=======
 %fastest_trip = bus(handles.current_node, 800); %800 �r ungef�r 13:00
 waitbar(0.5,h);
 
@@ -74,7 +63,6 @@ plot_nodes_init;
 waitbar(1,h);
 delete(h)
 
->>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
 % Choose default command line output for test
 handles.output = hObject;
 
@@ -104,61 +92,26 @@ function coord_button_callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-<<<<<<< HEAD
-% coordinates = ginput(1) %Startar det h�r "siktet" (lagg)
-% handle=guidata(hObject);
-% set(handle.text1,'string',{'Pixels',num2str(coordinates(1,1))...
-%                                num2str(coordinates(1,2))})
-%handles.switch=0;
-%pa=hObject
-if get(hObject,'Value')  
-    set(gcf,'WindowButtonMotionFcn', @cursor_coord);
-    %handles.point=impoint(gca,[])
-=======
 if get(hObject,'Value')  
     set(gcf,'WindowButtonMotionFcn', @cursor_coord);
     
->>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
     ispoint = isfield(handles,'point');
     if ispoint == 1;
         delete(handles.point)
     end
-<<<<<<< HEAD
-    handles.point =impoint(gca,[]);
-    handles.coordinates= getPosition(handles.point);
-=======
     handles.point = impoint(gca,[]);
     handles.coordinates = getPosition(handles.point);
->>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
     set(handles.text1,'string',{'Pixels',num2str(handles.coordinates(1,1))...
         num2str(handles.coordinates(1,2))});
     
     guidata(hObject,handles);
     
-<<<<<<< HEAD
-
-    handles.current_node = decrypt_coords(handles.coordinates,hObject,handles); %k�r in coordinaterna i "decrypt"
-    handles=guidata(hObject);
-    % Update handles structure
-    
-    guidata(hObject,handles);
-
-else
-    set(gcf,'WindowButtonMotionFcn','default');
-guidata(hObject,handles);
-    
-    
-    
-end
-                       
-=======
     
     handles.current_node = decrypt_coords(handles.coordinates,hObject,handles); %k�r in coordinaterna i "decrypt"
     handles = guidata(hObject);
     % Update handles structure
     
     guidata(hObject,handles);
->>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
 
 else
     set(gcf,'WindowButtonMotionFcn','default');

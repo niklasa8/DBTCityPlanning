@@ -38,7 +38,7 @@ function node_osm = decrypt_coords(coordinates,hObject,handles) %node_info: plat
     hold on
     %cur = handles.current_intnd
     %plot(intnd(cur).lon, intnd(cur).lat)
-<<<<<<< HEAD
+
     
     
     pospoint =[intnd(shortest_dist(2)).lon,intnd(shortest_dist(2)).lat];
@@ -52,21 +52,7 @@ function node_osm = decrypt_coords(coordinates,hObject,handles) %node_info: plat
     handles.im2=impoint(gca,pospoint);
     setColor(handles.im2,'m');
     guidata(hObject,handles);
-=======
-    %handles.current_intnd = shortest_dist(2);
-    %plot(intnd(shortest_dist(2)).lon,intnd(shortest_dist(2)).lat,'xc');
-    pospoint = [intnd(shortest_dist(2)).lon,intnd(shortest_dist(2)).lat];
-    
-    handles = guidata(hObject);
-    ispoint = isfield(handles,'im2');
-    if ispoint == 1;
-        delete(handles.im2)
-    end
-    
-    handles.im2 = impoint(gca,pospoint);
-    setColor(handles.im2,'m')
-    guidata(hObject,handles)
->>>>>>> 8e78e680245f059c4f1818751162a79613bd83fc
+
     node_osm = intnd(shortest_dist(2)).id;
     %return shortest_dist(2), anropa plot_nodes2 fast med nya OSM ID.,
     %plotta om
