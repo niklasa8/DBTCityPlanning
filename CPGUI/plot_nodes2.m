@@ -48,4 +48,3 @@ for i = 1:n_ways %Plottar vägarna mellan noderna, notera att ALLA noder används 
     end
 end
 hold off
-end

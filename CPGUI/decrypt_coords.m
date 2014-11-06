@@ -1,31 +1,31 @@
-function node_osm = decrypt_coords(coordinates) %node_info: plats 1 = OSM id, plats 2 = intersection node ID
+function node_osm = decrypt_coords(coordinates,hObject,handles) %node_info: plats 1 = OSM id, plats 2 = intersection node ID
     h = waitbar(0,'Finding closest node');
-    load('graph_data.mat','intnd_count','intnd','intnd_map','id_map') %behöver lite data..
-    sensivity = 0.0020; %Vi kollar alltså i 0.0020 lat/lon distance i varje led
+    load('graph_data.mat','intnd_count','intnd','intnd_map','id_map') %behï¿½ver lite data..
+    sensivity = 0.0120; %Vi kollar alltsï¿½ i 0.0020 lat/lon distance i varje led
     close_intnd_pos_lon = []; 
     close_intnd = [];
-    shortest_dist = 10; %sätter som 10 => "dummy" variabel, kommer alltid skrivas över
+    shortest_dist = 10; %sï¿½tter som 10 => "dummy" variabel, kommer alltid skrivas ï¿½ver
     waitbar(0.25,h);
-    for i = 1:intnd_count %Kollar igenom hela intnd, sparar undan positionen i intnd för match
-        if (abs(intnd(i).lon - coordinates(1)) <= sensivity)
+    for i = 1:intnd_count %Kollar igenom hela intnd, sparar undan positionen i intnd fï¿½r match
+        if (abs(intnd(i).lon - coordinates(1)) <= sensivity);
             close_intnd_pos_lon = [close_intnd_pos_lon i];
         end
     end
     waitbar(0.5,h);
-    for i = close_intnd_pos_lon %Kollar igenom de positioner vi sparade, sparar ny position i intnd för match
-        if (abs(intnd(i).lat - coordinates(2) <= sensivity))
+    for i = close_intnd_pos_lon %Kollar igenom de positioner vi sparade, sparar ny position i intnd fï¿½r match
+        if (abs(intnd(i).lat - coordinates(2)) <= sensivity);
             close_intnd = [close_intnd i];
         end
     end
     waitbar(0.75,h);
-    for i = close_intnd %Nu när vi hittat punkter som ligger inom "sensivity area", kollar vi vilken av dem som är närmast
+    for i = close_intnd %Nu nï¿½r vi hittat punkter som ligger inom "sensivity area", kollar vi vilken av dem som ï¿½r nï¿½rmast
         coord_ref(1) = intnd(i).lon;
         coord_ref(2) = intnd(i).lat;
 
         distance = norm(coordinates - coord_ref); %"pythagoras sats"
 
-        if distance < shortest_dist %om nya avståndet kortare än gamla, uppdatera shortest dist
-            shortest_dist(1) = distance; %avstånd
+        if distance < shortest_dist %om nya avstï¿½ndet kortare ï¿½n gamla, uppdatera shortest dist
+            shortest_dist(1) = distance; %avstï¿½nd
             shortest_dist(2) = i; %vilken intnd det handlar om
         end
     end
@@ -40,7 +40,17 @@ function node_osm = decrypt_coords(coordinates) %node_info: plats 1 = OSM id, pl
     %plot(intnd(cur).lon, intnd(cur).lat)
     handles.current_intnd = shortest_dist(2);
     plot(intnd(shortest_dist(2)).lon,intnd(shortest_dist(2)).lat,'xc');
+    pospoint =[intnd(shortest_dist(2)).lon,intnd(shortest_dist(2)).lat]
+    
+    handles=guidata(hObject);
+    ispoint = isfield(handles,'im2');
+    if ispoint == 1;
+        delete(handles.im2)
+    end
+    
+    handles.im2=impoint(gca,pospoint)
+    setColor(handles.im2,'m')
+    guidata(hObject,handles)
     node_osm = intnd(shortest_dist(2)).id;
     %return shortest_dist(2), anropa plot_nodes2 fast med nya OSM ID.,
     %plotta om
-end

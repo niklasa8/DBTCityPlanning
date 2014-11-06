@@ -55,12 +55,14 @@ h = waitbar(0,'Initializing..');
 handles.current_node = '1627177524';
 %handles.current_node = '444493179';
 % Computes the fastest trip and plots the result in axes1
-fastest_trip = bus(handles.current_node, 800); %800 är ungefär 13:00
+fastest_trip = bus(handles.current_node, 800); %800 ï¿½r ungefï¿½r 13:00
 waitbar(0.5,h);
 %plot_nodes2(fastest_trip)
-plot_nodes2(fastest_trip,handles.current_node)
+plot_nodes2(fastest_trip,handles.current_node);
 waitbar(1,h);
 delete(h)
+handles.switch=0
+%handles.point = impoint
 % Choose default command line output for test
 handles.output = hObject;
 
@@ -90,13 +92,41 @@ function coord_button_callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-coordinates = ginput(1); %Startar det hï¿½r "siktet" (lagg)
-handle=guidata(hObject);
-set(handle.text1,'string',{'Pixels',num2str(coordinates(1,1))...
-                               num2str(coordinates(1,2))})
-handles.current_node = decrypt_coords(coordinates); %kï¿½r in coordinaterna i "decrypt"
-% Update handles structure
-guidata(hObject, handles);                          
+% coordinates = ginput(1) %Startar det hï¿½r "siktet" (lagg)
+% handle=guidata(hObject);
+% set(handle.text1,'string',{'Pixels',num2str(coordinates(1,1))...
+%                                num2str(coordinates(1,2))})
+%handles.switch=0;
+%pa=hObject
+if get(hObject,'Value')  
+    set(gcf,'WindowButtonMotionFcn', @cursor_coord);
+    %handles.point=impoint(gca,[])
+    ispoint = isfield(handles,'point');
+    if ispoint == 1;
+        delete(handles.point)
+    end
+    handles.point =impoint(gca,[]);
+    handles.coordinates= getPosition(handles.point)
+    set(handles.text1,'string',{'Pixels',num2str(handles.coordinates(1,1))...
+        num2str(handles.coordinates(1,2))});
+    
+    guidata(hObject,handles);
+    
+
+    handles.current_node = decrypt_coords(handles.coordinates,hObject,handles); %kï¿½r in coordinaterna i "decrypt"
+    handles=guidata(hObject);
+    % Update handles structure
+    
+    guidata(hObject,handles);
+
+else
+    set(gcf,'WindowButtonMotionFcn','default');
+guidata(hObject,handles);
+    
+    
+    
+end
+                       
 
 % --- Executes on button press in pushbutton1.
 function pushbutton1_Callback(hObject, eventdata, handles)
@@ -118,7 +148,7 @@ if sizeEnd == 2
         if travelTime_hour >= 0 && travelTime_hour <= 24 && travelTime_min >= 0 && travelTime_min <= 60
             travelTime = travelTime_hour*60 + travelTime_min;
         else
-            disp('Valid time is between 0-24h and 0-60min!') %tar ej hänsyn till ex. 24:50
+            disp('Valid time is between 0-24h and 0-60min!') %tar ej hï¿½nsyn till ex. 24:50
         end
     else
         disp('Valid time format is xx:xx in numbers')
@@ -135,18 +165,7 @@ waitbar(1,h);
 delete(h)
 
 
-% --- Executes on button press in checkbox1.
-function checkbox1_Callback(hObject, eventdata, handles)
-% hObject    handle to checkbox1 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hint: get(hObject,'Value') returns toggle state of checkbox1
-if get(hObject,'Value')
-    set(gcf,'WindowButtonMotionFcn', @cursor_coord);
-else
-    set(gcf,'WindowButtonMotionFcn','default');                
-end                               
+                             
 
 
 
