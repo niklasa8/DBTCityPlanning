@@ -1,9 +1,9 @@
-function [Names, IDs, xDoc] = readtest(name, name2)
+function [Names, IDs, xDoc] = readtest(xmldoc,txtdoc)
 %Arrays to store values in.
 format long
 IDs=[];
 Names=[];
-file_id=fopen(name, 'r', 'n', 'UTF-8'); %Open file.
+file_id=fopen(txtdoc, 'r', 'n', 'UTF-8'); %Open file.
 while ~feof(file_id) %Read until end of file.
     %Read line and split it at tab. The data is stored in a cell array.
     A=strsplit(fgetl(file_id),'\t');
@@ -15,18 +15,17 @@ end
 fclose(file_id);
 
 %file_id=fopen(name2, 'r+', 'n', 'UTF-8');
-xDoc=xmlread(name2);
+xDoc=xmlread(xmldoc);
 
 cols_list=xDoc.getElementsByTagName('Cols');
 start_stop=zeros(2,1);
 for i=1:1%För båda riktningarna.
-    i
     cols=cols_list.item(i-1);
     len=cols.getLength;
     
     for j=1:2:len-3 %För alla intervaller i XML-filen.
         %Identifiera intervallet i XML-filen.
-        j
+        interval=(j+1)/2
         col1=cols.item(j);
         col2=cols.item(j+2);
         stop_name1=col1.item(1).item(0).getData;
@@ -34,13 +33,11 @@ for i=1:1%För båda riktningarna.
         
         %Identifiera intervallet i våra textfiler.
         for k=1:length(IDs)
-            if strcmp(char(Names(k)),char(stop_name1))
+            if strcmpi(char(Names(k)),char(stop_name1))
                 start_stop(1)=k
-                Names(k)
             end
-            if strcmp(char(Names(k)),char(stop_name2))
+            if strcmpi(char(Names(k)),char(stop_name2))
                 start_stop(2)=k
-                Names(k)
             end
         end
         
@@ -60,4 +57,4 @@ for i=1:1%För båda riktningarna.
 %        for k=start_stop(1)+1:start_stop(2)-1
     end
 end
-xmlwrite('hej', xDoc)
+%xmlwrite('hej', xDoc)
