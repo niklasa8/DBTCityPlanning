@@ -1,6 +1,6 @@
-Klockarbäcken	3111032425
+Klockarbäcken	1627177528
 Lagervägen	1302057753
-Paradisgränd	533996636
+Paradisgränd	158633948
 Glädjens gränd	613406371
 Löftets gränd	301742691
 Kyrkvägen	613406370
@@ -9,7 +9,7 @@ Hedvägen	613406373
 Kronoparken	1470708378
 Stickvägen	1297815279
 Aspvägen	1357160265
-Hartvigsgatan	158589628
+Hartvigsgatan	158587486
 Sandåkern	2425638040
 Dressyrgatan	305950651
 Dragonfältet	263187033
