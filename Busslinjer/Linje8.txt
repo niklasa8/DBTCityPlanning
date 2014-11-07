@@ -9,7 +9,7 @@ Magistervägen	259253551
 Ålidhöjd	285934053
 Växthuset	138123943
 Universum	295095193
-Universitetssjukhuset	2076294624
+Universitetssjukhuset	2076294620
 Östermalmsgatan	155156420
 Östra Strandgatan	167024486
 Fabriksgatan	291135635
@@ -45,7 +45,7 @@ Församlingsgården	283324901
 Fabriksgatan	291135635
 Östra Strandgatan	167024486
 Östermalmsgatan	155156420
-Universitetssjukhuset	2076294624
+Universitetssjukhuset	2076294619
 Universum	295095193
 Växthuset	138123943
 Ålidhöjd	285934053

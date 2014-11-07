@@ -21,7 +21,7 @@ Församlingsgården	283324901
 Fabriksgatan	291135635
 Östra Strandgatan	167024486
 Östermalmsgatan	155156420
-Universitetssjukhuset	2076294624
+Universitetssjukhuset	2076294619
 Samhällsvetarhuset	727618697
 Liljansberget	1117711621
 Mariehems Centrum	282252233
@@ -56,7 +56,7 @@ Nydala	282252349
 Mariehems Centrum	282252233
 Liljansberget	1117711621
 Samhällsvetarhuset	727618697
-Universitetssjukhuset	2076294624
+Universitetssjukhuset	2076294620
 Östermalmsgatan	155156420
 Östra Strandgatan	167024486
 Fabriksgatan	291135635
