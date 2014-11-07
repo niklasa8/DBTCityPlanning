@@ -16,7 +16,7 @@ Fabriksgatan	291135635
 Församlingsgården	283324901
 Vasaplan	283324062
 Renmarkstorget	291136953
-Nygatan	281032452
+Nygatan	291136995
 Kylgränd	301119315
 Snipgränd	2124595649
 Västra Ersboda Centrum	2075347365
