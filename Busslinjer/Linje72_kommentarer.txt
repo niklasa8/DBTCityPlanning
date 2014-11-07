@@ -1,1 +1,4 @@
 Fridhem	155115168	(endast från IKSU->Paradisgränd)
+Järnvägstorget -> olika hållplatser beroende på direktion. Tur Universitet->Umedalen använd NodID: 286123597. Umedalen->Universitet använd nod 286123598
+Fridhems noden skulle nog behöva en koppling till cykelväg. 
+Universitetssjukhuset har olika noder beroende på riktning Vasaplan->Universitetssjukhuset: 2076294619, Universitetssjukhuset->Vasaplan: 2076294620
