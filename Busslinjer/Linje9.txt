@@ -1,10 +1,10 @@
 Carlshöjd	153189435
 Kvartsvägen	1149693649
-Porfyrvägen	129946445
-Kolbäcksvägen	1075174585
+Porfyrvägen	1062497482
+Kolbäcksvägen	140186279
 Elevstråket	229809260
 Assistentvägen	291141864
-Laboratorvägen	229822631
+Laboratorvägen	129944582
 Klintvägen	1257199136
 Universum	295095193
 Universitetssjukhuset	2076294624
@@ -23,7 +23,7 @@ Svedjebacken	305950666
 Laxgränd	270655422
 Umeliivägen	262999261
 Volvo	2458407308
-Tranbärsvägen	295216791
+Tranbärsvägen	295216772
 Päronvägen	1658706866
 Klarbärsvägen	302115407
 Travbanevägen	305941870
@@ -40,7 +40,7 @@ Grusåsvägen	305941882
 Travbanevägen	305941870
 Klarbärsvägen	302115407
 Päronvägen	1658706866
-Tranbärsvägen	295216791
+Tranbärsvägen	295216772
 Umeliivägen	262999261
 Laxgränd	270655422
 Svedjebacken	305950666
@@ -48,21 +48,21 @@ Bryggargatan	295213775
 Tegs centralskola	274732912
 Tegsvägen	302115669
 Ishallen	1511880808
-Vintergatan	
+Vintergatan	166978617
 Obbolavägen	166973579
-Varvsgatan	166976634
+Varvsgatan	258354235
 Vasaplan	283324062
 Församlingsgården	283324901
 Fabriksgatan	291135635
 Östra Strandgatan	167024486
 Östermalmsgatan	155156420
-Universitetssjukhuset	2076294624
+Universitetssjukhuset	2076294627
 Universum	295095193
 Klintvägen	1257199136
-Laboratorvägen	229822631
+Laboratorvägen	129944582
 Assistentvägen	291141864
 Elevstråket	229809260
-Kolbäcksvägen	1075174585
-Porfyrvägen	129946445
+Kolbäcksvägen	140186279
+Porfyrvägen	1062497482
 Kvartsvägen	1149693649
 Carlshöjd	153189435

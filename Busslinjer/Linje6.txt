@@ -1,10 +1,10 @@
 Carlshöjd	153189435
 Kvartsvägen	1149693649
-Porfyrvägen	129946445
-Kolbäcksvägen	1075174585
+Porfyrvägen	1062497482
+Kolbäcksvägen	140186279
 Elevstråket	229809260
 Assistentvägen	291141864
-Laboratorvägen	229822631
+Laboratorvägen	129944582
 Klintvägen	1257199136
 Universum	295095193
 Universitetssjukhuset	2076294624
@@ -14,11 +14,12 @@ Fabriksgatan	291135635
 Församlingsgården	283324901
 Vasaplan	283324062
 Varvsgatan	166976634
+Obbolavägen	166973579
 Tegs Centrum	1402080824
 Tegs centralskola	274732912
 Tegsvägen	302115669
 Riksvägen	25478292
-Smultronvägen	295213808
+Smultronvägen	295213809
 Enbärsvägen	1286919323
 Päronvägen	1658706866
 Klarbärsvägen	302115407
@@ -38,13 +39,13 @@ Travbanevägen	305941870
 Klarbärsvägen	302115407
 Päronvägen	1658706866
 Enbärsvägen	1286919323
-Smultronvägen	295213808
+Smultronvägen	295213809
 Riksvägen	25478292
 Tegsvägen	302115669
 Tegs centralskola	274732912
 Tegs Centrum	1402080824
 Obbolavägen	166973579
-Varvsgatan	166976634
+Varvsgatan	258354235
 Vasaplan	283324062
 Församlingsgården	283324901
 Fabriksgatan	291135635
@@ -57,6 +58,6 @@ Laboratorvägen	229822631
 Assistentvägen	291141864
 Elevstråket	229809260
 Kolbäcksvägen	1075174585
-Porfyrvägen	129946445
+Porfyrvägen	1062497482
 Kvartsvägen	1149693649
 Carlshöjd	153189435
