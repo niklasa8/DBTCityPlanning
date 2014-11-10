@@ -1,5 +1,5 @@
 V.Ersboda Centrum	2075347365
-Snipgränd	2124595649
+Snipgränd	2075102331
 Kylgränd	301119315
 Ersboda Handelsområde	143858852
 Formvägen	1353679265
@@ -44,5 +44,5 @@ Fogvägen	1917895812
 Formvägen	1353679265
 Ersboda Handelsområde	143858852
 Kylgränd	301119315
-Snipgränd	2124595649
+Snipgränd	2075102331
 V.Ersboda Centrum	2075347365
