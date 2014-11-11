@@ -51,15 +51,16 @@ function test_OpeningFcn(hObject, eventdata, handles, varargin)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 % varargin   command line arguments to test (see VARARGIN)
+
 h = waitbar(0,'Initializing..');
-handles.current_node = '1627177524';
-%handles.current_node = '444493179';
-% Computes the fastest trip and plots the result in axes1
-%fastest_trip = bus(handles.current_node, 800); %800 �r ungef�r 13:00
+handles.current_node = '444493179';
+handles.graph_data = load('graph_data.mat','intnd_count','intnd','intnd_map','id_map');
+handles.data_umea = load('data_umea.mat','node','way');
+
 waitbar(0.5,h);
 
-plot_nodes_init;
-%plot_nodes2(fastest_trip,handles.current_node);
+plot_nodes_init(handles.graph_data, handles.data_umea);
+
 waitbar(1,h);
 delete(h)
 
@@ -107,7 +108,7 @@ if get(hObject,'Value')
     guidata(hObject,handles);
     
     
-    handles.current_node = decrypt_coords(handles.coordinates,hObject,handles); %k�r in coordinaterna i "decrypt"
+    handles.current_node = decrypt_coords(hObject,handles); %k�r in coordinaterna i "decrypt"
     handles = guidata(hObject);
     % Update handles structure
     
@@ -148,28 +149,23 @@ else
     disp('Valid time format is xx:xx in numbers')
 end
 
-fastest_trip = bus(handles.current_node,travelTime);
+fastest_trip = bus(handles.current_node,handles.graph_data,travelTime);
 waitbar(0.5,h);
 axes(handles.axes1)
-plot_nodes2(fastest_trip,handles.current_node,handles,hObject);
+plot_nodes2(fastest_trip,handles.current_node,handles.graph_data,handles.data_umea)
 
-handles=guidata(hObject);
+handles = guidata(hObject);
 ispoint = isfield(handles,'im3');
 if ispoint == 1;
     delete(handles.im3);
 end
 
-
-handles.im3=impoint(gca,handles.pospoint);
+handles.im3 = impoint(gca,handles.pospoint);
 setColor(handles.im3,'y');
 guidata(hObject,handles);
 
 waitbar(1,h);
 delete(h)
-
-
-                             
-
 
 
 function time_edit_Callback(hObject, eventdata, handles)

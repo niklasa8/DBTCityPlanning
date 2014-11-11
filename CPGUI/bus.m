@@ -1,5 +1,6 @@
-function fastest_trip = bus(node_source,time)
-load('graph_data.mat','walk_all_shortest_path','intnd_count','intnd_map','id_map')
+function fastest_trip = bus(node_source,graph_data,time)
+
+load('graph_data.mat','walk_all_shortest_path')%,'intnd_count','intnd_map','id_map')
 load('data_umea','departure_','arrival_','bus_stop','bus_stop_nodes')
 
 %% Skapar busTo_bs
@@ -28,12 +29,12 @@ end
 %% Räknar ut snabbaste vägen
 
 walkTo_bs = walk_all_shortest_path(:,bus_stop_nodes); %walkTo_bs - walk to bus station. Snabbaste vägen att gå från godtycklig nod till alla busshållplatser.
-i = intnd_map(id_map(node_source));
+i = graph_data.intnd_map(graph_data.id_map(node_source));
 %t = 800; %i och t är 
 t = time; %time är från input arg
 limit_walk = 0.5; %Algoritmen räknar inte ut hur lång tid det tar att ta sig från en plats till en annan med buss om det tar överdrivet lång tid att gå till busshållplatsen.
 limit_wait_time = 0.5;
-fastest_trip = inf(intnd_count,1);
+fastest_trip = inf(graph_data.intnd_count,1);
 
 for j = 1:n_stops %Loop över alla slutstationer.
     

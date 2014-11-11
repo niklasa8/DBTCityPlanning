@@ -1,27 +1,28 @@
-function plot_nodes2(fastest_trip, node_source)
+function plot_nodes2(fastest_trip, node_source, graph_data, data_umea)
 %Fulskript som plottar noder och vï¿½gar fï¿½r att visualisera sï¿½ att debugging
 %blir lï¿½ttare.
 
-load('graph_data.mat','intnd_count','intnd','intnd_map','id_map','bicycling_path','carTo_walkFrom_parking')
-load('data_umea.mat','node','way')
+%load('graph_data.mat','intnd_count','intnd','intnd_map','id_map','bicycling_path','carTo_walkFrom_parking')
+load('graph_data.mat','bicycling_path','carTo_walkFrom_parking')
+%load('data_umea.mat','node','way')
 
 %node_source = '444493179';
-[x,n_ways] = size(way);
+[x,n_ways] = size(data_umea.way);
 hold on
-for i = 1:intnd_count %Plottar itersection nodes och fï¿½rglï¿½gger dem enligt snabbaste fï¿½rdsï¿½ttet.
-    lat = intnd(i).lat;
-    lon = intnd(i).lon;
+for i = 1:graph_data.intnd_count %Plottar itersection nodes och färglägger dem enligt snabbaste färdsättet.
+    lat = graph_data.intnd(i).lat;
+    lon = graph_data.intnd(i).lon;
     
-    if carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) ~= inf
-        if bicycling_path(i,intnd_map(id_map(node_source))) < carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60 && bicycling_path(i,intnd_map(id_map(node_source))) < fastest_trip(i)
+    if carTo_walkFrom_parking(i,graph_data.intnd_map(graph_data.id_map(node_source))) ~= inf
+        if bicycling_path(i,graph_data.intnd_map(graph_data.id_map(node_source))) < carTo_walkFrom_parking(i,graph_data.intnd_map(graph_data.id_map(node_source))) + 3/60 && bicycling_path(i,graph_data.intnd_map(graph_data.id_map(node_source))) < fastest_trip(i)
             plot(lon,lat, 'r.')
         end
     end
-    if carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60 < bicycling_path(i,intnd_map(id_map(node_source))) && carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60 < fastest_trip(i)
+    if carTo_walkFrom_parking(i,graph_data.intnd_map(graph_data.id_map(node_source))) + 3/60 < bicycling_path(i,graph_data.intnd_map(graph_data.id_map(node_source))) && carTo_walkFrom_parking(i,graph_data.intnd_map(graph_data.id_map(node_source))) + 3/60 < fastest_trip(i)
         plot(lon,lat, '.')
     end
-    if carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) ~= inf
-        if fastest_trip(i) < bicycling_path(i,intnd_map(id_map(node_source))) && fastest_trip(i) < carTo_walkFrom_parking(i,intnd_map(id_map(node_source))) + 3/60
+    if carTo_walkFrom_parking(i,graph_data.intnd_map(graph_data.id_map(node_source))) ~= inf
+        if fastest_trip(i) < bicycling_path(i,graph_data.intnd_map(graph_data.id_map(node_source))) && fastest_trip(i) < carTo_walkFrom_parking(i,graph_data.intnd_map(graph_data.id_map(node_source))) + 3/60
              plot(lon,lat, 'g.')
         end
     end
@@ -34,14 +35,14 @@ end
 
 
 
-for i = 1:n_ways %Plottar vï¿½garna mellan noderna, notera att ALLA noder anvï¿½nds (ï¿½ven de som inte ï¿½r intersection nodes) fï¿½r att rita ut vï¿½garna.
-    if way(i).footway == 0
-        [x n_ndref] = size(way(i).ndref);
+for i = 1:n_ways %Plottar vägarna mellan noderna, notera att ALLA noder används (även de som inte är intersection nodes) för att rita ut vägarna.
+    if data_umea.way(i).footway == 0
+        [x n_ndref] = size(data_umea.way(i).ndref);
         X = zeros(1,n_ndref);
         Y = zeros(1,n_ndref);
         for j = 1:n_ndref
-            X(j) = node(id_map(way(i).ndref{j})).lon;
-            Y(j) = node(id_map(way(i).ndref{j})).lat;
+            X(j) = data_umea.node(graph_data.id_map(data_umea.way(i).ndref{j})).lon;
+            Y(j) = data_umea.node(graph_data.id_map(data_umea.way(i).ndref{j})).lat;
         end
 
         line('Ydata',Y,'Xdata',X);
