@@ -1,1 +1,1 @@
-Endast en riktning. 
+Turen Umeå airport->Vasaplan räknas som att den avslutas på vasaplan alltid. så inga fotnoter.
