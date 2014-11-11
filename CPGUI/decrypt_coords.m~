@@ -61,3 +61,4 @@ function node_osm = decrypt_coords(hObject,handles) %node_info: plats 1 = OSM id
     
     %return shortest_dist(2), anropa plot_nodes2 fast med nya OSM ID.,
     %plotta om
+>>>>>>> 08691ac144ae56616c45388d82260cc40029d0a5
