@@ -1,4 +1,4 @@
-IKSU Hallen	613494992
+IKSU-hallen	613494992
 Växthuset	138123943
 Universum	295095193
 Universitetssjukhuset	2076294620

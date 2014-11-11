@@ -14,9 +14,9 @@ Fridhem	155115168
 Universitetssjukhuset	2076294619
 Universum	295095193
 Växthuset	138123943
-IKSU Hallen	613494992
+IKSU-hallen	613494992
 
-IKSU Hallen	613494992
+IKSU-hallen	613494992
 Växthuset	138123943
 Universum	295095193
 Universitetssjukhuset	2076294620
