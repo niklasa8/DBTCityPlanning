@@ -22,7 +22,7 @@ function varargout = test(varargin)
 
 % Edit the above text to modify the response to help test
 
-% Last Modified by GUIDE v2.5 04-Nov-2014 23:40:55
+% Last Modified by GUIDE v2.5 11-Nov-2014 14:33:45
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -54,6 +54,7 @@ function test_OpeningFcn(hObject, eventdata, handles, varargin)
 
 h = waitbar(0,'Initializing..');
 handles.current_node = '444493179';
+handles.current_day = 'Monday';
 handles.graph_data = load('graph_data.mat','intnd_count','intnd','intnd_map','id_map');
 handles.data_umea = load('data_umea.mat','node','way');
 
@@ -95,7 +96,6 @@ function coord_button_callback(hObject, eventdata, handles)
 
 if get(hObject,'Value')  
     set(gcf,'WindowButtonMotionFcn', @cursor_coord);
-    
     ispoint = isfield(handles,'point');
     if ispoint == 1;
         delete(handles.point)
@@ -120,7 +120,7 @@ else
 end
                        
 
-% --- Executes on button press in coord_button.
+% --- Executes on button press in pushbutton1.
 function pushbutton1_Callback(hObject, eventdata, handles)
 % hObject    handle to coord_button (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -184,6 +184,34 @@ function time_edit_CreateFcn(hObject, eventdata, handles)
 % handles    empty - handles not created until after all CreateFcns called
 
 % Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on selection change in popupmenu1.
+function popupmenu1_Callback(hObject, eventdata, handles)
+% hObject    handle to popupmenu1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns popupmenu1 contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from popupmenu1
+str = get(hObject,'String');
+val = get(hObject,'Value');
+handles.current_day = str{val};
+guidata(hObject,handles);
+
+
+
+% --- Executes during object creation, after setting all properties.
+function popupmenu1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to popupmenu1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: popupmenu controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
