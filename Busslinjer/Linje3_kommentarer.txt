@@ -1,0 +1,2 @@
+Nygatan	291136995	(Notera: Nygatan har en hållplats för vardera riktning, bör vi ha två namn, problem?)
+Nygatan	281032452	(Notera: Nygatan har en hållplats för vardera riktning)

@@ -6,7 +6,7 @@ Elevstråket	229809260
 Assistentvägen	291141864
 Laboratorvägen	229822631
 Klintvägen	1257199136
-Universum	1280457926
+Universum	295095193
 Universitetssjukhuset	2076294624
 Östermalmsgatan	155156420
 Östra Strandgatan	167024486
@@ -51,7 +51,7 @@ Fabriksgatan	291135635
 Östra Strandgatan	167024486
 Östermalmsgatan	155156420
 Universitetssjukhuset	2076294624
-Universum	1280457926
+Universum	295095193
 Klintvägen	1257199136
 Laboratorvägen	229822631
 Assistentvägen	291141864
