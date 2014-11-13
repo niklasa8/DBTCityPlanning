@@ -1,0 +1,18 @@
+Anta att jorden är en sfär med radien R.
+
+Ett varv i latitudled är s_lat = 2*pi*R.
+
+Ett varv i longitudled är s_lon = 2*pi*R*cos(lat).
+
+s_lon/s_lat = cos(lat) ~ 0.44 i Umeå.
+
+I Umeå är alltså sträckan längs en vinkelenhet i longitudled 0.44 gånger så lång som motsvarande sträcka i latitudled.
+
+Vinkeln längs en längdenhet är därför i latitudled 0.44 gånger så stor som motsvarande vinkel i longitudled.
+
+När jag mätte i OpenStreetMap fick jag 0.443, så det verkar stämma.
+
+
+===== SLUTSATS =====
+
+Använd daspect([1 0.44 1]) i plottarna i Matlab.
