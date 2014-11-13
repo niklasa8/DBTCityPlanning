@@ -5,14 +5,14 @@ Ersboda Handelsområde	143858852
 Formvägen	1353679265
 Fogvägen	1917895812
 Hermelinvägen	306119453
-Mariebergskolan	1491260750
+Mariebergsskolan	1491260750
 Marieberg	149013564
 Mariehemshöjd	158679895
 Nydala	282252349
 Mariehems Centrum	282252233
 Istidsgatan	1536202587
 Rullstensgatan	293002318
-IKSU-Hallen	613494992
+IKSU-hallen	613494992
 Växthuset	138123943
 Universum	295095193
 Skidspåret	1117682194
@@ -31,14 +31,14 @@ Fridhemsvägen	247787771
 Skidspåret	1117682194
 Universum	295095193
 Växthuset	138123943
-IKSU-Hallen	613494992
+IKSU-hallen	613494992
 Rullstensgatan	293002318
 Istidsgatan	1536202587
 Mariehems Centrum	282252233
 Nydala	282252349
 Mariehemshöjd	158679895
 Marieberg	149013564
-Mariebergskolan	1491260750
+Mariebergsskolan	1491260750
 Hermelinvägen	306119453
 Fogvägen	1917895812
 Formvägen	1353679265

@@ -19,7 +19,7 @@ Renmarkstorget	291136953
 Nygatan	291136995
 Kylgränd	301119315
 Snipgränd	2075102331
-Västra Ersboda Centrum	2075347365
+V.Ersboda Centrum	2075347365
 Ostkroken	257128
 Byttgränd	182795827
 Östra Ersboda Centrum	1917854740
@@ -33,7 +33,7 @@ Kärnvägen	156640236
 Östra Ersboda Centrum	1917854740
 Byttgränd	182795827
 Ostkroken	257128
-Västra Ersboda Centrum	2075347365
+V.Ersboda Centrum	2075347365
 Snipgränd	2075102331
 Kylgränd	301119315
 Regementet	1004430683
