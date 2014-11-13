@@ -1,4 +1,4 @@
-load('graph_data.mat','id_map')
+xload('graph_data.mat','id_map')
 ultra_file(1) = {'Ultra_1_140929_150426.xml'};
 ultra_file(2) = {'Ultra_2_140929_150426.xml'};
 ultra_file(3) = {'Ultra_3_140929_150426.xml'};
@@ -129,4 +129,6 @@ bus_stop(25).id = id_map('2043054425');
 bus_stop(26).id = id_map('1983283008');
 bus_stop(27).id = id_map('158587486');
 bus_stop_nodes = intnd_map([bus_stop.id]);
+bus_stop
+
 save('data_umea.mat','departure_','arrival_','bus_stop','n_stops','bus_stop_nodes','-append')
