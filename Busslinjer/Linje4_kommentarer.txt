@@ -1,3 +1,0 @@
-Tegsborg	286383990	(nod ligger på tegsbron/motorväg. Ingen åtkomst för fotgängare från tegshållet)
-Kungsgatan	263196874	(Har tags: highway, traffic_signals, åtkomst?.)
-Kungsgatan	263196873	(Notera även att nygatan har två hållplatser, en i vardera riktning)
