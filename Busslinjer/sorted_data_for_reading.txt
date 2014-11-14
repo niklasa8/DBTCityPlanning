@@ -61,7 +61,7 @@ Kanslihuset                   144839560
 Kapellvägen                   249309916
 Klarbärsvägen                 302115407
 Klintvägen                    1257199136
-Klockarbäcken                 3111032425
+Klockarbäcken                 1627177528
 Klockarvägen                  613406372
 Kolbäcksvägen                 294500759
 Kontaktvägen                  1400320407
@@ -69,14 +69,14 @@ Kornettstråket                155184857
 Kronoparken                   1470708378
 Kronoparksvägen               158589637
 Krukgränd                     156639548
-Kungsgatan                    263196873
+Kungsgatan                    263196874
 Kungsänget                    291138485
 Kvartsvägen                   1149693649
 Kylgränd                      301119315
 Kyrkvägen                     613406370
 Källplatsen                   606684611
 Kärnvägen                     156640236
-Laboratorvägen                129944582
+Laboratorvägen                229822631
 Lagervägen                    1302057753
 Laxgränd                      270655422
 Liljansberget                 1117711621
@@ -100,8 +100,7 @@ Måttgränd                     1426149838
 Nornaplatsen                  434092981
 Nydala                        282252349
 Nygatan                       291136995
-Obbolavägen                   166973579
-Onsdagasvägen                 2124595663
+Obbolavägen                   295095228
 Onsdagsvägen                  1629944221
 Ostkroken                     257128
 Paradisgränd                  533996636
@@ -123,7 +122,6 @@ Samhällsvetarhuset            727618697
 Sandåkern                     2425638040
 Sillviksvägen                 1357015255
 Skidspåret                    1117682194
-Skrymningsvägen               2124595666
 Skymningsvägen                263197752
 Smedsgatan                    263187680
 Smultronvägen                 295213809
@@ -142,7 +140,6 @@ Södra Slevgränd               1917895844
 Tavleliden                    151230484
 Tavleån                       205331520
 Tegelbruksvägen               1149625193
-Tegs Centralskola             274732911
 Tegs Centrum                  1402080824
 Tegs centralskola             274732912
 Tegs sjukhem                  1402065734
@@ -150,13 +147,12 @@ Tegsborg                      286383990
 Tegsvägen                     302115669
 Terrängvägen                  181289062
 Tomteboparken                 151229680
-Tranbärsvägen                 295216791
+Tranbärsvägen                 295216772
 Trastvägen                    128194209
 Travbanevägen                 305941870
 Tuvgränd                      247782033
 Umeliivägen                   262999261
 Umeå Airport                  1477609588
-Univeristetssjukhuset         2076294620
 Universitetssjukhuset         2076294619
 Universum                     295095193
 Uttervägen                    182940888
@@ -177,9 +173,9 @@ Ystarvägen                    1658901550
 Ängesvägen                    291138318
 Ålidhems Centrum              258577547
 Ålidhöjd                      285934053
+Ö.Ersboda                     613494994
+Ö.Ersboda Centrum             1917854740
 Östermalmsgatan               155156420
-Östra Ersboda                 613494994
-Östra Ersboda Centrum         1917854740
 Östra Grinden                 260642516
 Östra Norrlandsgatan          283324666
 Östra Strandgatan             167024486

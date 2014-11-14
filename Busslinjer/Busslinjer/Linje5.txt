@@ -10,7 +10,7 @@ Ersforsen Södra	2318296213
 Måttgränd	1426149838
 Gräddvägen	182854479
 Snipgränd	2075102331
-Västra Ersboda Centrum	2075347365
+V.Ersboda Centrum	2075347365
 Ystarvägen	1658901550
 Fogvägen	1917895812
 Mårdvägen	131920338
@@ -26,10 +26,10 @@ Nygatan	281032452
 Renmarkstorget	291136953
 Vasaplan	283324062
 Församlingsgården	283324901
-Fabriksgatan	291135084
+Fabriksgatan	291135635
 Östra Strandgatan	167024486
 Östermalmsgatan	155156420
-Univeristetssjukhuset	2076294619
+Universitetssjukhuset	2076294619
 Universum	295095193
 Växthuset	138123943
 Ålidhöjd	285934053
@@ -55,10 +55,10 @@ Magistervägen	259253551
 Ålidhöjd	285934053
 Växthuset	138123943
 Universum	295095193
-Univeristetssjukhuset	2076294620
+Universitetssjukhuset	2076294620
 Östermalmsgatan	155156420
 Östra Strandgatan	167024486
-Fabriksgatan	291135084
+Fabriksgatan	291135635
 Församlingsgården	283324901
 Vasaplan	283324062
 Renmarkstorget	291136953
@@ -74,7 +74,7 @@ Vargvägen	131923256
 Mårdvägen	131920338
 Fogvägen	1917895812
 Ystarvägen	1658901550
-Västra Ersboda Centrum	2075347365
+V.Ersboda Centrum	2075347365
 Snipgränd	2075102331
 Gräddvägen	182854479
 Måttgränd	1426149838

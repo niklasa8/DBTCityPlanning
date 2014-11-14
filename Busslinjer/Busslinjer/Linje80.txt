@@ -4,7 +4,7 @@ Vasaplan	283324062
 Universitetssjukhuset	2076294619
 Universum	295095193
 Klintvägen	1257199136
-Laboratorvägen	129944582
+Laboratorvägen	229822631
 Assistentvägen	291141864
 Elevstråket	229809260
 Alviksgränd	2043054479

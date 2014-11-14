@@ -6,7 +6,7 @@ textfiles={'Linje1.txt','Linje2.txt','Linje3.txt','Linje4.txt',...
 Names={};
 IDs={};
 file_history=[];
-
+clc
 for i=1:length(textfiles)
     file_id=fopen(char(textfiles(i)), 'r', 'n', 'UTF-8');
     while ~feof(file_id) %Read until end of file.
@@ -28,24 +28,24 @@ for i=1:length(textfiles)
             file_history=[file_history i];
         elseif ID_present && ~Name_present
             disp(' ');
-            disp(' ');
             disp('ID match and name difference: ');
             disp(IDs(ID_index));
-            disp(' ');
             disp(textfiles(i));
             disp(A(1));
-            disp(' ');
             disp(textfiles(file_history(ID_index)));
             disp(Names(ID_index));
-        elseif ~ID_present && Name_present
-            disp(' ');
+        elseif ~ID_present && Name_present && ...
+                ~strcmp(A{1},'Universitetssjukhuset') && ...
+                ~strcmp(A{1},'Nygatan') && ...
+                ~strcmp(A{1},'Varvsgatan') && ...
+                ~strcmp(A{1},'Järnvägstorget') && ...
+                ~strcmp(A{1},'Obbolavägen')
+                
             disp(' ');
             disp('Name match and ID difference: ');
             disp(Names(Name_index));
-            disp(' ');
             disp(textfiles(i));
             disp(A(2));
-            disp(' ');
             disp(textfiles(file_history(Name_index)));
             disp(IDs(Name_index));
         end
