@@ -1,21 +1,21 @@
-Mantelvägen	1627176705
+Mantelvägen	1627176703
 Rosettvägen	1550754326
-Röbäcks Centrum	497816637
+Röbäck C	497816637
 Grusåsvägen	305941882
 Travbanevägen	305941870
 Klarbärsvägen	302115407
-Päronvägen	302115302
+Päronvägen	1658706866
 Enbärsvägen	1286919323
-Smultronvägen	295213808
+Smultronvägen	295213809
 Riksvägen	25478292
 Tegsvägen	302115669
-Tegs Centralskola	274732911
+Tegs centralskola	274732912
 Tegs Centrum	1402080824
-Obbolavägen	1597767067
+Obbolavägen	166974868
 Varvsgatan	166976634
-Östra Strandgatan	1280497326 
+Östra Strandgatan	167024486
 Östermalmsgatan	155156420
-Universitetssjukhuset	2076294624
-Universum	1280457926
+Universitetssjukhuset	2076294619
+Universum	295095193
 Växthuset	138123943
 IKSU-hallen	613494992
