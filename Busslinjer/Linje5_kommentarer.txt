@@ -1,4 +1,0 @@
-Morgonvägen	132106051	Del av väg nu
-Carlslid	1183675469	(Ej del av väg, del av gångväg)
-
-Östra Strandgatan	Hur delar vi upp den?

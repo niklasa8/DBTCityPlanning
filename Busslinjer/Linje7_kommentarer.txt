@@ -1,9 +1,0 @@
-Tuvgränd	247782033	(saknar koppling till gångväg)
-Kornettstråket	155184857	(saknar koppling till gångväg)
-Rödäng	1624655470	(saknar koppling till gångväg)
-
-Rödäng	1624655470	(saknar koppling till gångväg)
-Kornettstråket	155184857	(saknar koppling till gångväg)
-Tuvgränd	247782033	(saknar koppling till gångväg)
-
-bör ej ha betydelse
