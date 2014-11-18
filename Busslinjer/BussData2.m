@@ -1,8 +1,4 @@
-clear all
-clc
-
-textFile(1)={'Fotnoter/72/l72_d1_a.txt'};
-xmlFile(1)={'XML/Ultra_1_140929_150426_test.xml'};
+function table = BussData2(textFile,xmlFile)
 
 index=find(char(textFile)=='_');
 f = char(textFile);
@@ -12,7 +8,7 @@ dir = str2num(f(index(1)+2:index(2)-1))
 fileFnote = upper(f(index(2)+1:end-4))
 
 % Loopa över alla senare
-file_idTXT = fopen(char(textFile(1)),'r','n','UTF-8');
+file_idTXT = fopen(char(textFile),'r','n','UTF-8');
 
 % Läs in busshållplatser från fil
 stopnr=1;
@@ -21,11 +17,15 @@ while ~feof(file_idTXT)
     c=strsplit(char(B),'\t');
     stop(stopnr).name=c(1);
     stop(stopnr).id=c(2);
+    stop(stopnr).MT = [];
+    stop(stopnr).F = [];
+    stop(stopnr).L = [];
+    stop(stopnr).S = [];
     stopnr=stopnr+1;        
 end
 
 % Läs xml-fil
-xDoc = xmlread(char(xmlFile(1)));
+xDoc = xmlread(char(xmlFile));
 dirList = xDoc.getElementsByTagName('Direction');
 direction = dirList.item(dir-1);
 colList = direction.item(3).getChildNodes;
@@ -45,15 +45,11 @@ end
 
 % Hantera busstider
 for k=1:2:dayTypes.getLength-1
-    dayName = dayTypes.item(k).item(1).getTextContent;
+    dayName = char(dayTypes.item(k).item(1).getTextContent);
     row = dayTypes.item(k).item(3).item(1);
     times = row.item(7);
     tripNoteList = row.getElementsByTagName('TripFootnoteId');
     tripFootnote = '';
-%     for i=0:tfnote.getLength-1
-%         tfnote.item(i).getTextContent
-%     end
-    
     
     % Om det finns en tripfootnote
     if tripNoteList.getLength > 0
@@ -64,9 +60,9 @@ for k=1:2:dayTypes.getLength-1
     
     % För varje time-element
     for j=1:2:times.getLength-1
-        timepos = times.item(j).getAttribute('pos');
+        timepos = str2num(times.item(j).getAttribute('pos'));
         timeNoteList = times.item(j).getElementsByTagName('TimeFootnoteId');
-        depArrTime = times.item(j).item(1).getTextContent;
+        depArrTime = char(times.item(j).item(1).getTextContent);              
         timeFootnote = '';
         
         % Om det finns en timefootnote
@@ -75,14 +71,13 @@ for k=1:2:dayTypes.getLength-1
                 timeFootnote = strcat(timeFootnote, char(timeNoteList.item(i).getTextContent));
             end            
         end
-        
-        
+               
         % Lägg till avgång om fotnoter är identiska
         footNote = strcat(timeFootnote,tripFootnote);
         corr_fnote = false;
-        if length(footNote) == length(fileFnote)
+        if (length(footNote) == length(fileFnote)) && ~strcmp(depArrTime,'x')
             corr_fnote = true;
-            for i=1:length(fileFnote)               
+            for i=1:length(fileFnote)                
                if isempty(strfind(footNote, fileFnote(i)))
                    corr_fnote = false;
                end
@@ -91,14 +86,40 @@ for k=1:2:dayTypes.getLength-1
             if corr_fnote
                 for i=1:stopnr-1
                     if stop(i).pos == timepos
-                        stop(i).times = 
+                        % konvertera departure/arrival-time till double
+                        nums = strsplit(depArrTime,':');
+                        depArrTime = str2double(nums(1)) + str2double(nums(2))/100; 
+                        % lägg till tid i tidtabell för hållplats
+                        if strcmp(dayName,'måndag-fredag')
+                        	stop(i).MT = [stop(i).MT,depArrTime];                               
+                        end
+                        if strcmp(dayName,'fredag')
+                            stop(i).F = [stop(i).F,depArrTime];
+                        end
+                        if strcmp(dayName,'lördag')
+                            stop(i).L = [stop(i).L,depArrTime];    
+                        end
+                        if strcmp(dayName,'söndag')
+                            stop(i).S = [stop(i).S,depArrTime];
+                        end
+
                     end
                 end                      
             end
-        end
-                   
-    end    
+        end                   
+    end 
     
 end
 
+% Sätt ihop måndag-fredag med de speciella tiderna för fredag
+for i=1:stopnr-1    
+    if length(stop(i).MT) > 0
+        MT = stop(i).MT;
+        F = stop(i).F;
+        F_merge = sort(cat(2,MT,F));
+        stop(i).F = F_merge;
+    end
+end
+
+table = stop;
 
