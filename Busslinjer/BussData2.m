@@ -1,7 +1,8 @@
 clear all
+clc
 
 textFile(1)={'Fotnoter/72/l72_d1_a.txt'};
-xmlFile(1)={'XML/Ultra_1_140929_150426.xml'};
+xmlFile(1)={'XML/Ultra_1_140929_150426_test.xml'};
 
 index=find(char(textFile)=='_');
 f = char(textFile);
@@ -70,22 +71,33 @@ for k=1:2:dayTypes.getLength-1
         
         % Om det finns en timefootnote
         if timeNoteList.getLength > 0
-            timeFootnote = char(times.item(j).item(3).getTextContent);
+            for i=0:timeNoteList.getLength-1           
+                timeFootnote = strcat(timeFootnote, char(timeNoteList.item(i).getTextContent));
+            end            
         end
         
-        % Lägg till avgång om fotnoter stämmer
-        if ~isempty(strfind(fileFnote,timeFootnote)) && ...
-            ~isempty(strfind(fileFnote,tripFootnote))
-            disp('MATCH')
-            for i=1:stopnr-1
-                if stop(i).pos == timepos
-%                     stop(i).times = 
-                end
+        
+        % Lägg till avgång om fotnoter är identiska
+        footNote = strcat(timeFootnote,tripFootnote);
+        corr_fnote = false;
+        if length(footNote) == length(fileFnote)
+            corr_fnote = true;
+            for i=1:length(fileFnote)               
+               if isempty(strfind(footNote, fileFnote(i)))
+                   corr_fnote = false;
+               end
+            end
+            
+            if corr_fnote
+                for i=1:stopnr-1
+                    if stop(i).pos == timepos
+                        stop(i).times = 
+                    end
+                end                      
             end
         end
-        
-    end
-    
+                   
+    end    
     
 end
 
