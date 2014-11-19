@@ -1,4 +1,31 @@
-function plot_roads(graph_data,data_umea,handles)
+function plot_roads(hObject,handles)
+test = guidata(handles.test);
+data_umea=test.data_umea;
+graph_data=test.graph_data;
+axes(test.axes1)
+car=get(handles.car,'Value');
+bic=get(handles.bic,'Value');
+bus=get(handles.bus,'Value');
+
+one=get(handles.one,'Value');
+only=get(handles.only,'Value');
+others=get(handles.others,'Value');
+park=get(handles.park,'Value');
+
+handles.c1=color_pop(hObject,handles,handles.pop1);
+handles.c2=color_pop(hObject,handles,handles.pop2);
+handles.c3=color_pop(hObject,handles,handles.pop3);
+handles.c4=color_pop(hObject,handles,handles.pop4);
+handles.c5=color_pop(hObject,handles,handles.pop5);
+handles.c6=color_pop(hObject,handles,handles.pop6);
+handles.c7=color_pop(hObject,handles,handles.pop7);
+handles.c8=color_pop(hObject,handles,handles.pop8);
+handles.c9=color_pop(hObject,handles,handles.pop9);
+handles.c10=color_pop(hObject,handles,handles.pop10);
+handles.c11=color_pop(hObject,handles,handles.pop11);
+
+%car=get(handles.car,'Value');
+%car=get(handles.car,'Value');
 %Fulskript som plottar noder och v�gar f�r att visualisera s� att debugging
 %blir l�ttare.
 
@@ -7,11 +34,11 @@ function plot_roads(graph_data,data_umea,handles)
 
 [x,n_ways] = size(data_umea.way);
 hold on
-for i = 1:graph_data.intnd_count %Plottar itersection nodes och f�rgl�gger dem enligt snabbaste f�rds�ttet.
-    lat = graph_data.intnd(i).lat;
-    lon = graph_data.intnd(i).lon;
-    plot(lon,lat, '.k')
-end
+% for i = 1:graph_data.intnd_count %Plottar itersection nodes och f�rgl�gger dem enligt snabbaste f�rds�ttet.
+%     lat = graph_data.intnd(i).lat;
+%     lon = graph_data.intnd(i).lon;
+    %plot(lon,lat, '.k')
+%end
 
 for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�nds (�ven de som inte �r intersection nodes) f�r att rita ut v�garna.
     if data_umea.way(i).footway == 0 
@@ -23,28 +50,33 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
             Y(j) = data_umea.node(graph_data.id_map(data_umea.way(i).ndref{j})).lat;
         end
         
-        handles.car = 1;
-        handles.bic=1;
-        handles.bus=1;
-        handles.footway=1;
+        %car = 1;
+        %car=1;
+        %bus=1;
         
-        handles.c1='y';
-        handles.c2='r';
-        handles.c3='g';
-        handles.c4=[255 178 102];%orange
-        handles.c5='b';
-        handles.c6='c';
-        handles.c7='m';
-        handles.c8=[153 76 0];%brown
-        handles.c9=[128 128 128];%grey
         
-        handles.one=0;
+        
+%         handles.c1='y';%bike alone
+%         handles.c2='r';%highway
+%         handles.c3='g';%bike + car not on highway
+%         handles.c4=[255 178 102]/256;%orange bus + car not on highway
+%         handles.c5='b';%highway bike
+%         handles.c6='c';%bike bus
+%         handles.c7='m';%highway bus
+%         handles.c8=[153 76 0]/256;%brown highway bike bus
+%         handles.c9=[128 128 128]/256;%grey; footway 
+%         handles.c10=[102 0 51]/256;%purple; parking
+%         handles.c11=[12 75 82]/256;%strange; car other than 
+        
+        
+        
+        %handles.one=1;
         
         
         
         %infoga bus only när finns
         
-        if handles.car == 1 && handles.bic==1 && handles.bus==1
+        if car == 1 && bic==1 && bus==1
             
             if data_umea.way(i).cycleway == 1
                 line('Ydata',Y,'Xdata',X,'Color',handles.c1);
@@ -64,11 +96,15 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
                     
             elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 
                 line('Ydata',Y,'Xdata',X,'Color',handles.c8);
+            elseif handles.parking==1 && data_umea.way(i).parking == 1 
+                line('Ydata',Y,'Xdata',X,'Color',handles.c10);
+            elseif data_umea.way(i).parking == 0 && data_umea.way(i).bicycle == 0 && data_umea.way(i).highway == 0 && data_umea.way(i).cycleway == 0%&& data_umea.way(i).bus == 0
+                line('Ydata',Y,'Xdata',X,'Color',handles.c11);
             else
-                line('Ydata',Y,'Xdata',X,'Color','k')
+                line('Ydata',Y,'Xdata',X,'Color','k');
             end        
             
-        elseif handles.car == 1 && handles.bic==1 && handles.bus==0
+        elseif car == 1 && bic==1 && bus==0
             if data_umea.way(i).cycleway == 1
                 line('Ydata',Y,'Xdata',X,'Color',handles.c1);
             elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 0 
@@ -78,38 +114,46 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
                     
             elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 0 
                     line('Ydata',Y,'Xdata',X,'Color',handles.c5);
-            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x 
+            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 && others==1 %&& data_umea.way(i).bus == 1 x 
                     line('Ydata',Y,'Xdata',X,'Color',handles.c6);
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 1 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 && others==1%&& data_umea.way(i).bus == 1 x
                     line('Ydata',Y,'Xdata',X,'Color',handles.c7);
                     
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 1 x
                     line('Ydata',Y,'Xdata',X,'Color',handles.c8);
+            elseif park==1 && data_umea.way(i).parking == 1 
+                line('Ydata',Y,'Xdata',X,'Color',handles.c10);
+            elseif data_umea.way(i).parking == 0 && data_umea.way(i).bicycle == 0 && data_umea.way(i).highway == 0 && data_umea.way(i).cycleway == 0%&& data_umea.way(i).bus == 0
+                line('Ydata',Y,'Xdata',X,'Color',handles.c11);
             else
                 line('Ydata',Y,'Xdata',X,'Color','k')
                 
             end        
                     
-        elseif handles.car == 1 && handles.bic==0 && handles.bus==1
+        elseif car == 1 && bic==0 && bus==1
             if data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 0 
                     line('Ydata',Y,'Xdata',X,'Color',handles.c2);
             elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 1 
                     line('Ydata',Y,'Xdata',X,'Color',handles.c4);
                     
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 0 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 0 x
                     line('Ydata',Y,'Xdata',X,'Color',handles.c5);
-            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x
+            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 1 x
                     line('Ydata',Y,'Xdata',X,'Color',handles.c6);
             elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 1 
                     line('Ydata',Y,'Xdata',X,'Color',handles.c7);
                     
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 1 x
                     line('Ydata',Y,'Xdata',X,'Color',handles.c8);
+            elseif park==1 && data_umea.way(i).parking == 1 
+                line('Ydata',Y,'Xdata',X,'Color',handles.c10);
+            elseif data_umea.way(i).parking == 0 && data_umea.way(i).bicycle == 0 && data_umea.way(i).highway == 0 && data_umea.way(i).cycleway == 0%&& data_umea.way(i).bus == 0
+                line('Ydata',Y,'Xdata',X,'Color',handles.c11);
             else
                 line('Ydata',Y,'Xdata',X,'Color','k')
             end
             
-        elseif handles.car == 0 && handles.bic==1 && handles.bus==1
+        elseif car == 0 && bic==1 && bus==1
             if data_umea.way(i).cycleway == 1
                 line('Ydata',Y,'Xdata',X,'Color',handles.c1);
             elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 0 
@@ -118,80 +162,102 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
                     line('Ydata',Y,'Xdata',X,'Color',handles.c4);
             
             
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 0 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 0 x
                     line('Ydata',Y,'Xdata',X,'Color',handles.c5);
             elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 
                     line('Ydata',Y,'Xdata',X,'Color',handles.c6);
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 1 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 && others==1%&& data_umea.way(i).bus == 1 x
                     line('Ydata',Y,'Xdata',X,'Color',handles.c7);
                     
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 1 x
                     line('Ydata',Y,'Xdata',X,'Color',handles.c8);
+            elseif park==1 && data_umea.way(i).parking == 1 
+                line('Ydata',Y,'Xdata',X,'Color',handles.c10);
             else
                 line('Ydata',Y,'Xdata',X,'Color','k')
             end
        
-        elseif handles.car == 1 && handles.bic==0 && handles.bus==0
+        elseif car == 1 && bic==0 && bus==0
          
-            if data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 0 
+            if data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 && others==1 %&& data_umea.way(i).bus == 0 
                     line('Ydata',Y,'Xdata',X,'Color',handles.c2);
                     
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 0 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 0 x
                     line('Ydata',Y,'Xdata',X,'Color',handles.c);
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 1 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 && others==1%&& data_umea.way(i).bus == 1 x
                     line('Ydata',Y,'Xdata',X,'Color','r');
                     
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 1 x
                     line('Ydata',Y,'Xdata',X,'Color','r');         
+            elseif park==1 && data_umea.way(i).parking == 1 
+                line('Ydata',Y,'Xdata',X,'Color',handles.c10);
+            elseif data_umea.way(i).parking == 0 && data_umea.way(i).bicycle == 0 && data_umea.way(i).highway == 0 && data_umea.way(i).cycleway == 0%&& data_umea.way(i).bus == 0
+                line('Ydata',Y,'Xdata',X,'Color',handles.c11);
             else
                 line('Ydata',Y,'Xdata',X,'Color','k')
             end
             
-        elseif handles.car == 0 && handles.bic==1 && handles.bus==0
+        elseif car == 0 && bic==1 && bus==0
             if data_umea.way(i).cycleway == 1
                 line('Ydata',Y,'Xdata',X,'Color',handles.c1);
             
-            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 0 
+            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 && others==1 %&& data_umea.way(i).bus == 0 
                     line('Ydata',Y,'Xdata',X,'Color',handles.c3);
                     
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 0 x
-                    line('Ydata',Y,'Xdata',X,'Color','r');
-            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x
-                    line('Ydata',Y,'Xdata',X,'Color','r');           
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 0 x
+                    line('Ydata',Y,'Xdata',X,'Color',handles.c5);
+            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 1 x
+                    line('Ydata',Y,'Xdata',X,'Color',handles.c6);           
                     
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x
-                    line('Ydata',Y,'Xdata',X,'Color','r');         
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 1 x
+                    line('Ydata',Y,'Xdata',X,'Color',handles.c8);         
+            elseif park==1 && data_umea.way(i).parking == 1 
+                line('Ydata',Y,'Xdata',X,'Color',handles.c10);
             else
                 line('Ydata',Y,'Xdata',X,'Color','k')
             end
             
-        elseif handles.car == 0 && handles.bic==0 && handles.bus==1            
+        elseif car == 0 && bic==0 && bus==1            
            
             if data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 1 
-                    line('Ydata',Y,'Xdata',X,'Color','r');                    
+                    line('Ydata',Y,'Xdata',X,'Color',handles.c4);                    
             
-            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x
-                    line('Ydata',Y,'Xdata',X,'Color','r');
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 %&& data_umea.way(i).bus == 1 x
-                    line('Ydata',Y,'Xdata',X,'Color','r');
+            elseif data_umea.way(i).highway == 0 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 1 x
+                    line('Ydata',Y,'Xdata',X,'Color',handles.c6);
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 0 && others==1%&& data_umea.way(i).bus == 1 x
+                    line('Ydata',Y,'Xdata',X,'Color',handles.c7);
                     
-            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 %&& data_umea.way(i).bus == 1 x
-                    line('Ydata',Y,'Xdata',X,'Color','r');         
+            elseif data_umea.way(i).highway == 1 && data_umea.way(i).bicycle == 1 && others==1%&& data_umea.way(i).bus == 1 x
+                    line('Ydata',Y,'Xdata',X,'Color',handles.c8);         
+            elseif park==1 && data_umea.way(i).parking == 1 
+                line('Ydata',Y,'Xdata',X,'Color',handles.c10);
             else
                 line('Ydata',Y,'Xdata',X,'Color','k')
             end
+         
+        elseif park == 1
+            if data_umea.way(i).parking == 1
+                line('Ydata',Y,'Xdata',X,'Color',handles.c10);
             
             
         end
-        if handles.one == 1
-            set(line, 'LineStyle', '--');
-            %+make sth with nodes
-        end
+%        if one=1
+%         if data_umea.way(i).oneway == 1
+%             set(line, 'LineStyle', '--');
+%             set(line, 'Color','m')
+%             %+make sth with nodes
+%             if j==1 %data_umea.way(i).ndref()
+%                plot(X(j),Y(j), '.k')
+                
+%         end
             
             
     elseif handles.footway  == 1
+        a=3
         line('Ydata',Y,'Xdata',X,'Color',handles.c9,'LineStyle', ':' )
-    end
+             end
     
+    end 
+hold off    
 end
-hold off
+

@@ -22,7 +22,7 @@ function varargout = test(varargin)
 
 % Edit the above text to modify the response to help test
 
-% Last Modified by GUIDE v2.5 11-Nov-2014 14:33:45
+% Last Modified by GUIDE v2.5 13-Nov-2014 14:27:53
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -216,3 +216,85 @@ function popupmenu1_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes on button press in pushbutton2.
+function pushbutton2_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+%plot_roads(handles.graph_data,handles.data_umea,handles);%göra spec handles för import
+
+rv(handles.figure1);
+
+
+function x_edit_Callback(hObject, eventdata, handles)
+% hObject    handle to x_edit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of x_edit as text
+%        str2double(get(hObject,'String')) returns contents of x_edit as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function x_edit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to x_edit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function y_edit_Callback(hObject, eventdata, handles)
+% hObject    handle to y_edit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of y_edit as text
+%        str2double(get(hObject,'String')) returns contents of y_edit as a double
+get(hObject,'String')
+
+% --- Executes during object creation, after setting all properties.
+function y_edit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to y_edit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in pushbutton3.
+function pushbutton3_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton3 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+xcor = get(handles.x_edit, 'String');
+ycor = get(handles.y_edit, 'String');
+
+xcor = str2num(xcor);
+ycor = str2num(ycor);
+
+
+ispoint = isfield(handles,'point');
+if ispoint == 1;
+    delete(handles.point)
+end
+handles.point = impoint(gca,xcor,ycor);
+handles.coordinates = getPosition(handles.point);
+set(handles.text1,'string',{'Pixels',num2str(handles.coordinates(1,1))...
+    num2str(handles.coordinates(1,2))});
+guidata(hObject,handles);
+
+
