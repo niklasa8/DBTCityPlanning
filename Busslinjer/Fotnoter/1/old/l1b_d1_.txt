@@ -16,7 +16,7 @@ Fogvägen	1917895812
 Bruksvägen	363498626
 Södra Slevgränd	1917895844
 Byttgränd	182795827
-Ö.Ersboda Centrum	1917854740
+Östra Ersboda Centrum	1917854740
 Kärnvägen	156640236
 Krukgränd	156639548
-Ö.Ersboda	613494994
+Östra Ersboda	613494994

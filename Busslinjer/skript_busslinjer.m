@@ -1,3 +1,6 @@
+clear all 
+clc
+
 %% XML-filer
 
 xmlFile(1)={'XML/Ultra_1_140929_150426.xml'};
@@ -21,4 +24,4 @@ xmlFile(11)={'XML/Ultra_81_140929_150426.xml'};
 textFile(1)= {'Fotnoter/72/l72_d1_a.txt'};
 textFile(2) = {'Fotnoter/1/l1a_d1_.txt'};
 
-table = BussData2(textFile(2),xmlFile(1));
+[table,fotnoter_fr_xml] = BussData2(textFile(2),xmlFile(1));

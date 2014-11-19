@@ -1,4 +1,4 @@
-function table = BussData2(textFile,xmlFile)
+function [table, fotnoter_fr_xml] = BussData2(textFile,xmlFile)
 
 index=find(char(textFile)=='_');
 f = char(textFile);
@@ -6,6 +6,7 @@ f = char(textFile);
 % Läs in riktning och fotnot
 dir = str2num(f(index(1)+2:index(2)-1))
 fileFnote = upper(f(index(2)+1:end-4))
+Notes = ''; % Sträng med alla fotnotskombinationer i xmlfil
 
 % Loopa över alla senare
 file_idTXT = fopen(char(textFile),'r','n','UTF-8');
@@ -73,7 +74,8 @@ for k=1:2:dayTypes.getLength-1
         end
                
         % Lägg till avgång om fotnoter är identiska
-        footNote = strcat(timeFootnote,tripFootnote);
+        footNote = strcat(timeFootnote,tripFootnote);           
+        
         corr_fnote = false;
         if (length(footNote) == length(fileFnote)) && ~strcmp(depArrTime,'x')
             corr_fnote = true;
@@ -120,6 +122,9 @@ for i=1:stopnr-1
         stop(i).F = F_merge;
     end
 end
+
+% Skapa cellarray av för alla fotnoter i xmlfil
+fotnoter_fr_xml = Notes;
 
 table = stop;
 

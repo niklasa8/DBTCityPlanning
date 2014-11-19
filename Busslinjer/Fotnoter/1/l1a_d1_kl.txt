@@ -12,11 +12,13 @@ Marieberg	149013564
 Mariehemshöjd	158679895
 Nydala	282252349
 Mariehems Centrum	282252233
+Istidsgatan	1536202587
+Rullstensgatan	293002318
 Liljansberget	1117711621
 Samhällsvetarhuset	727618697
 Universitetssjukhuset	2076294620
 Östermalmsgatan	155156420
-Östra Strandgatan	167024486
-Fabriksgatan	291135635
+Järnvägsgatan	613411034
+Länsstyrelsen	613411032
 Församlingsgården	283324901
 Vasaplan	283324062
