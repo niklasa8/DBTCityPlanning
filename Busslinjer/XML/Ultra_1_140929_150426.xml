@@ -248,6 +248,9 @@
                 <Time pos="6">
                   <DepArrTime lsT="1">07:11:00</DepArrTime>
                 </Time>
+				<Time pos="7">
+                  <DepArrTime lsT="1">07:15:00</DepArrTime>
+                </Time>
               </Times>
               <TripFootnotes>
                 <TripFootnote>
