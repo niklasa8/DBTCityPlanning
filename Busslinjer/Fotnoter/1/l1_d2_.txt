@@ -1,3 +1,19 @@
+Paradisgränd	533996636
+Glädjens gränd	613406371
+Löftets gränd	301742691
+Kyrkvägen	613406370
+Klockarvägen	613406372
+Hedvägen	613406373
+Kungsänget	291138485
+Kronoparksvägen	158589637
+Gabrieljansvägen	158589633
+Hartvigsgatan	158589628
+Stadsgränsvägen	158587483
+Ängesvägen	291138318
+Dragonskolan	291138226
+Smedsgatan	263187680
+Stadshuset	291138160
+Renmarkstorget	291136953
 Vasaplan	283324062
 Församlingsgården	283324901
 Fabriksgatan	291135635

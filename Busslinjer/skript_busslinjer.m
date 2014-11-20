@@ -21,7 +21,11 @@ xmlFile(11)={'XML/Ultra_80_140929_150426.xml'};
 xmlFile(11)={'XML/Ultra_81_140929_150426.xml'};
 %% Text-filer
 
-textFile(1)= {'Fotnoter/72/l72_d1_a.txt'};
-textFile(2) = {'Fotnoter/1/l1a_d1_.txt'};
+% Linje 1
+textFile(1) = {'Fotnoter/1/l1_d1_.txt'};
+textFile(2) = {'Fotnoter/1/l1_d1_k.txt'};
+textFile(3) = {'Fotnoter/1/l1_d2_.txt'};
 
-[table,fotnoter_fr_xml] = BussData2(textFile(2),xmlFile(1));
+% textFile(1)= {'Fotnoter/72/l72_d1_a.txt'};
+
+[table,fotnoter] = BussData2_test(textFile(3),xmlFile(1));
