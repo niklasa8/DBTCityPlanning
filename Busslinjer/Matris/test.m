@@ -10,5 +10,9 @@ for i=3:length(BussData)
     end
 end
 
-arr=cell(200,200);
-dep=cell(200,200);
+
+
+
+n=check_footnote_files();
+arr=cell(n);
+dep=cell(n);

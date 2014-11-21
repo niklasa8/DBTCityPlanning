@@ -14,7 +14,7 @@ file_idTXT = fopen(char(textFile),'r','n','UTF-8');
 % Läs in busshållplatser från fil
 stopnr=1;
 while ~feof(file_idTXT)    
-    B = fgets(file_idTXT);
+    B = fgetl(file_idTXT);
     c=strsplit(char(B),'\t');
     stop(stopnr).name=c(1);
     stop(stopnr).id=c(2);

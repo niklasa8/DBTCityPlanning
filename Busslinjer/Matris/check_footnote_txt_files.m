@@ -1,3 +1,4 @@
+function n=check_footnote_txt_files()
 textfiles={};
 k=1;
 BussData=dir('../Fotnoter');
@@ -80,3 +81,5 @@ end
 fclose(fid1);
 fclose(fid2);
 fclose(fid3);
+n=rows;
+end
