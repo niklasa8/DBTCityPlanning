@@ -1,7 +1,14 @@
-textfiles={'Linje1.txt','Linje2.txt','Linje3.txt','Linje4.txt',...
-    'Linje5.txt','Linje6.txt','Linje7.txt','Linje8.txt',...
-    'Linje9.txt','Linje72.txt','Linje73.txt','Linje75.txt',...
-    'Linje76.txt','Linje78.txt','Linje80.txt','Linje81.txt'};
+textfiles={};
+k=1;
+BussData=dir('../Fotnoter');
+for i=3:length(BussData)
+    directory=['../Fotnoter/' BussData(i).name '/'];
+    A=dir([directory 'l*.txt']);
+    for j=1:length(A)
+        textfiles(k)={[directory A(j).name]};
+        k=k+1;
+    end
+end
 
 Names={};
 IDs={};
@@ -56,8 +63,9 @@ end
 [B, I]=sort(Names);
 sorted_data=[Names(I); IDs(I)]';
 
-fid1=fopen('sorted_data_for_reading.txt','wt');
-fid2=fopen('sorted_data_tabbed.txt', 'wt');
+fid1=fopen('sorted_data_for_reading2.txt','wt');
+fid2=fopen('sorted_data_tabbed2.txt', 'wt');
+fid3=fopen('sorted_data_semicolon2.txt', 'wt');
 [rows,cols]=size(sorted_data);
 for i=1:rows
       fprintf(fid1,'%-30s',sorted_data{i,1});
@@ -65,6 +73,10 @@ for i=1:rows
       
       fprintf(fid2,'%s\t',sorted_data{i,1});
       fprintf(fid2,'%s\n',sorted_data{i,2});
+      
+      fprintf(fid3,'%s;',sorted_data{i,1});
+      fprintf(fid3,'%s\n',sorted_data{i,2});
 end
 fclose(fid1);
 fclose(fid2);
+fclose(fid3);
