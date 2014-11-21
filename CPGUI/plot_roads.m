@@ -11,7 +11,7 @@ one=get(handles.one,'Value');
 only=get(handles.only,'Value');
 others=get(handles.others,'Value');
 park=get(handles.park,'Value');
-handles.rv_pass=1;
+%handles.rv_pass=1;
 %guidata(hObject, handles);
 
 [handles.c1,handles.cont1]=color_pop(hObject,handles,handles.pop1);
@@ -25,6 +25,10 @@ handles.rv_pass=1;
 [handles.c9,handles.cont9]=color_pop(hObject,handles,handles.pop9);
 [handles.c10,handles.cont10]=color_pop(hObject,handles,handles.pop10);
 [handles.c11,handles.cont11]=color_pop(hObject,handles,handles.pop11);
+
+set(test.apple,'Value',45)
+test.handlesrv=handles;
+guidata(hObject, test);
 
 guidata(hObject, handles);
 %car=get(handles.car,'Value');

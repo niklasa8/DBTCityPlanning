@@ -22,7 +22,7 @@ function varargout = test(varargin)
 
 % Edit the above text to modify the response to help test
 
-% Last Modified by GUIDE v2.5 13-Nov-2014 14:27:53
+% Last Modified by GUIDE v2.5 21-Nov-2014 09:52:27
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -226,10 +226,13 @@ function pushbutton2_Callback(hObject, eventdata, handles)
 
 
 %plot_roads(handles.graph_data,handles.data_umea,handles);%göra spec handles för import
-
+test2=getfield(handles, 'rv3');
+handles.apple=0
 handles.rv3=rv(handles.figure1);
-%rv2=handles.rv;
+%rv2=handles.rv3;
+%rv2 = guidata(handles.rv3);
 %handles.rv3 = guidata(handles.rv);
+test2=getfield(handles, 'rv3');
 guidata(hObject,handles);
 
 
@@ -302,3 +305,10 @@ set(handles.text1,'string',{'Pixels',num2str(handles.coordinates(1,1))...
 guidata(hObject,handles);
 
 
+
+
+% --- Executes on mouse press over axes background.
+function axes1_ButtonDownFcn(hObject, eventdata, handles)
+% hObject    handle to axes1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
