@@ -76,14 +76,26 @@ num_notes(5) = 7;
 textFile(32) = {'Fotnoter/6/l6_d1_.txt'};
 textFile(33) = {'Fotnoter/6/l6_d2_.txt'};
 
-%% Spara data i mat filer
+%% Spara data i .mat filer
+% index = 1
+% for i=1:16
+%     i
+%     for j=index:num_notes(i)+index       
+% %         dataName = textFile{j}(10:end-4);
+% %         path = strcat('BussData/',dataName,'.mat');
+% %         [table,fotnoter] = BussData(textFile(i),xmlFile(i));
+% %         save(path,'table')
+%         index = index+1
+%     %     save(strcat('BussData/',dataName,'_Fotnoter.mat'),'fotnoter')
+%     end    
+% end
 
-for i=23:24%max(size(textFile))
-    dataName = textFile{i}(10:end-4);
-    path = strcat('BussData/',dataName,'.mat');
-    [table,fotnoter] = BussData(textFile(i),xmlFile(1));
-    save(path,'table')
-%     save(strcat('BussData/',dataName,'_Fotnoter.mat'),'fotnoter')
-end
+    for i=23:24     
+        dataName = textFile{i}(10:end-4);
+        path = strcat('BussData/',dataName,'.mat');
+        [table,fotnoter] = BussData(textFile(i),xmlFile(4));
+        save(path,'table')     
+%         save(strcat('BussData/',dataName,'_Fotnoter.mat'),'fotnoter')
+    end 
 
 disp('...Färdig')
