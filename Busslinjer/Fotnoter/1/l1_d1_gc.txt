@@ -1,10 +1,3 @@
-Ö.Ersboda	613494994
-Krukgränd	156639548
-Kärnvägen	156640236
-Ö.Ersboda Centrum	1917854740
-Byttgränd	182795827
-Södra Slevgränd	1917895844
-Bruksvägen	363498626
 Fogvägen	1917895812
 Hermelinvägen	306119453
 Mariebergsskolan	1491260750
@@ -16,8 +9,8 @@ Liljansberget	1117711621
 Samhällsvetarhuset	727618697
 Universitetssjukhuset	2076294620
 Östermalmsgatan	155156420
-Järnvägsgatan	613411034
-Länsstyrelsen	613411032
+Östra Strandgatan	167024486
+Fabriksgatan	291135635
 Församlingsgården	283324901
 Vasaplan	283324062
 Renmarkstorget	291136953
@@ -36,3 +29,5 @@ Kyrkvägen	613406370
 Löftets gränd	301742691
 Glädjens gränd	613406371
 Paradisgränd	533996636
+Lagervägen	1302057753
+Klockarbäcken	1627177528

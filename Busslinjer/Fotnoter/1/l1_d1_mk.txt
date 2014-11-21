@@ -12,6 +12,8 @@ Marieberg	149013564
 Mariehemshöjd	158679895
 Nydala	282252349
 Mariehems Centrum	282252233
+Istidsgatan	1536202587
+Rullstensgatan	293002318
 Liljansberget	1117711621
 Samhällsvetarhuset	727618697
 Universitetssjukhuset	2076294620

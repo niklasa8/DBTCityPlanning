@@ -1,5 +1,3 @@
-Klockarbäcken	3111032425
-Lagervägen	1302057753
 Paradisgränd	533996636
 Glädjens gränd	613406371
 Löftets gränd	301742691
@@ -18,7 +16,7 @@ Stadshuset	291138160
 Renmarkstorget	291136953
 Vasaplan	283324062
 Församlingsgården	283324901
-Östra Esplanaden	244197387
+Länsstyrelsen	613411032
 Järnvägsgatan	613411034
 Östermalmsgatan	155156420
 Universitetssjukhuset	2076294619
@@ -36,7 +34,7 @@ Fogvägen	1917895812
 Bruksvägen	363498626
 Södra Slevgränd	1917895844
 Byttgränd	182795827
-Östra Ersboda Centrum	1917854740
+Ö.Ersboda Centrum	1917854740
 Kärnvägen	156640236
 Krukgränd	156639548
-Östra Ersboda	613494994
+Ö.Ersboda	613494994

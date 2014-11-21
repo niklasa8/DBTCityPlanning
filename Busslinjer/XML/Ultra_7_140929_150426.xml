@@ -87,6 +87,9 @@
               <Dir>1</Dir>
               <CallTrip>0</CallTrip>
               <Times>
+			    <Time pos="0">
+                  <DepArrTime lsT="1">07:48:00</DepArrTime>
+                </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">08:05:00</DepArrTime>
                 </Time>
@@ -1002,7 +1005,7 @@
               </Times>
               <TripFootnotes>
                 <TripFootnote>
-                  <TripFootnoteId>A</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
