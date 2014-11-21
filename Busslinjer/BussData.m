@@ -1,4 +1,4 @@
-function [table, fnotes] = BussData2(textFile,xmlFile)
+function [table, fnotes] = BussData(textFile,xmlFile)
 
 index=find(char(textFile)=='_');
 f = char(textFile);

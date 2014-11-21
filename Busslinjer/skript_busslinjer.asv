@@ -55,7 +55,7 @@ textFile(20) = {'Fotnoter/2/l2_d2_h.txt'};
 for i=13:max(size(textFile))
     dataName = textFile{i}(10:end-4);
     path = strcat('BussData/',dataName,'.mat');
-    [table,fotnoter] = BussData(textFile(i),xmlFile(2));
+    [table,fotnoter] = BussData(textFile(i),xmlFile(1));
     save(path,'table')
 %     save(strcat('BussData/',dataName,'_Fotnoter.mat'),'fotnoter')
 end

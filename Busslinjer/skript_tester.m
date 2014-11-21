@@ -1,8 +1,5 @@
-clear all 
+clear 
 clc
-
-disp('Genererar bussdata....')
-%% XML-filer
 
 xmlFile(1)={'XML/Ultra_1_140929_150426.xml'};
 xmlFile(2)={'XML/Ultra_2_140929_150426.xml'};
@@ -21,8 +18,6 @@ xmlFile(14)={'XML/Ultra_78_140929_150426.xml'};
 xmlFile(15)={'XML/Ultra_80_140929_150426.xml'};
 xmlFile(16)={'XML/Ultra_81_140929_150426.xml'};
 
-%% Text-filer
-
 % Linje 1
 textFile(1) = {'Fotnoter/1/l1_d1_.txt'};
 textFile(2) = {'Fotnoter/1/l1_d1_d.txt'};
@@ -33,7 +28,6 @@ textFile(6) = {'Fotnoter/1/l1_d1_k.txt'};
 textFile(7) = {'Fotnoter/1/l1_d1_kl.txt'};
 textFile(8) = {'Fotnoter/1/l1_d1_mk.txt'};
 textFile(9) = {'Fotnoter/1/l1_d1_n.txt'};
-
 textFile(10) = {'Fotnoter/1/l1_d2_.txt'};
 textFile(11) = {'Fotnoter/1/l1_d2_k.txt'};
 textFile(12) = {'Fotnoter/1/l1_d2_mn.txt'};
@@ -50,14 +44,5 @@ textFile(19) = {'Fotnoter/2/l2_d2_c.txt'};
 textFile(20) = {'Fotnoter/2/l2_d2_h.txt'};
 
 
-%% Spara data i mat filer
 
-for i=13:max(size(textFile))
-    dataName = textFile{i}(10:end-4);
-    path = strcat('BussData/',dataName,'.mat');
-    [table,fotnoter] = BussData(textFile(i),xmlFile(2));
-    save(path,'table')
-%     save(strcat('BussData/',dataName,'_Fotnoter.mat'),'fotnoter')
-end
-
-disp('...Färdig')
+[table,fotnoter] = BussData(textFile(13),xmlFile(2));
