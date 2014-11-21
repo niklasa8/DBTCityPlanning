@@ -42,13 +42,31 @@ textFile(17) = {'Fotnoter/2/l2_d2_.txt'};
 textFile(18) = {'Fotnoter/2/l2_d2_a.txt'};
 textFile(19) = {'Fotnoter/2/l2_d2_c.txt'};
 textFile(20) = {'Fotnoter/2/l2_d2_h.txt'};
-
+    
 % Linje 3
 textFile(21) = {'Fotnoter/3/l3_d1_.txt'};
 textFile(22) = {'Fotnoter/3/l3_d2_.txt'};
 
 % Linje 4
 textFile(23) = {'Fotnoter/4/l4_d1_.txt'};
+textFile(24) = {'Fotnoter/4/l4_d2_.txt'};
+
+% Linje 5
+textFile(25) = {'Fotnoter/5/l5_d1_.txt'};
+textFile(26) = {'Fotnoter/5/l5_d1_c.txt'};
+textFile(27) = {'Fotnoter/5/l5_d1_e.txt'};
+textFile(28) = {'Fotnoter/5/l5_d1_ce.txt'};
+textFile(29) = {'Fotnoter/5/l5_d1_k.txt'};
+textFile(30) = {'Fotnoter/5/l5_d1_kc.txt'};
+textFile(31) = {'Fotnoter/5/l5_d1_v.txt'};
+
+% Linje 6
+textFile(32) = {'Fotnoter/6/l6_d1_.txt'};
+textFile(33) = {'Fotnoter/6/l6_d2_.txt'};
+
+% Linje 7
+textFile(34) = {'Fotnoter/7/l7_d1_.txt'};
 
 
-[table,fotnoter] = BussData(textFile(23),xmlFile(4));
+
+[table,fotnoter] = BussData(textFile(34),xmlFile(7));

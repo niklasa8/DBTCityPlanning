@@ -1,0 +1,43 @@
+Strömpilen	291140580
+Dammen	1075174670
+Kolbäcksvägen	294500759
+Gnejsvägen	153193859
+Flintvägen	140185329
+Carlslid	126228226
+Magistervägen	259253551
+Ålidhems Centrum	258577547
+Ålidhöjd	285934053
+Växthuset	138123943
+Universum	295095193
+Universitetssjukhuset	2076294620
+Östermalmsgatan	155156420
+Järnvägsgatan	613411034
+Länsstyrelsen	613411032
+Församlingsgården	283324901
+Vasaplan	283324062
+Renmarkstorget	291136953
+Nygatan	291136995
+Löjtnantsgatan	296161445
+Parkvägen	2398729607
+Solvändan	2354169238
+Dalstigen	132533571
+Vallarestigen	1611123156
+Kapellvägen	249309916
+Uttervägen	182940888
+Vargvägen	131923256
+Mårdvägen	131920338
+Fogvägen	1917895812
+Ystarvägen	1658901550
+V.Ersboda Centrum	2075347365
+Snipgränd	2075102331
+Gräddvägen	182854479
+Måttgränd	1426149838
+Ersforsen Södra	2318296213
+Ersforsen Norra	151246427
+Bron	263197136
+Gärssjöbäcksvägen	1629944076
+Skymningsvägen	263197752
+Onsdagsvägen	1629944221
+Morgonvägen	132106051
+Aftonvägen	1629944254
+Ersmark	290367981

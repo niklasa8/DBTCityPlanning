@@ -49,6 +49,14 @@ textFile(18) = {'Fotnoter/2/l2_d2_a.txt'};
 textFile(19) = {'Fotnoter/2/l2_d2_c.txt'};
 textFile(20) = {'Fotnoter/2/l2_d2_h.txt'};
 
+% Linje 3
+textFile(21) = {'Fotnoter/3/l3_d1_.txt'};
+textFile(22) = {'Fotnoter/3/l3_d2_.txt'};
+
+% Linje 4
+textFile(23) = {'Fotnoter/4/l4_d1_.txt'};
+textFile(24) = {'Fotnoter/4/l4_d2_.txt'};
+
 
 %% Spara data i mat filer
 
