@@ -53,26 +53,60 @@ function rv_OpeningFcn(hObject, eventdata, handles, varargin)
 % varargin   command line arguments to rv (see VARARGIN)
 
 % Choose default command line output for rv
-handles.output = hObject;
-
+%handles.output = handles;
+%handles = guidata(hObject);
 handles.test=varargin{1}
-set(handles.pop1,'Value',1);
-set(handles.pop2,'Value',2);
-set(handles.pop3,'Value',3);
-set(handles.pop4,'Value',4);
-set(handles.pop5,'Value',5);
-set(handles.pop6,'Value',6);
-set(handles.pop7,'Value',7);
-set(handles.pop8,'Value',8);
-set(handles.pop9,'Value',9);
-set(handles.pop10,'Value',10);
-set(handles.pop11,'Value',11);
 
+test = guidata(handles.test);
+if isfield(test,'rv3') == 0;
+    set(handles.pop1,'Value',1);
+    set(handles.pop2,'Value',2);
+    set(handles.pop3,'Value',3);
+    set(handles.pop4,'Value',4);
+    set(handles.pop5,'Value',5);
+    set(handles.pop6,'Value',6);
+    set(handles.pop7,'Value',7);
+    set(handles.pop8,'Value',8);
+    set(handles.pop9,'Value',9);
+    set(handles.pop10,'Value',10);
+    set(handles.pop11,'Value',11);
+    
+    set(handles.bic,'Value',1);
+    set(handles.bus,'Value',1);
+    set(handles.car,'Value',1);
+    set(handles.others,'Value',1);
+    
+else
+    rv3 = test.rv3;
+    rv2 = rv3;
+    
+    %set(handles.pop1,'Value',handles.cont1);
+    %set(handles.pop2,'Value',handles.cont2);
+%     small_pop(hObject,handles,handles.pop1);
+%     small_pop(hObject,handles,handles.pop2);
+%     small_pop(hObject,handles,handles.pop3);
+%     small_pop(hObject,handles,handles.pop4);
+%     small_pop(hObject,handles,handles.pop5);
+%     small_pop(hObject,handles,handles.pop6);
+%     small_pop(hObject,handles,handles.pop7);
+%     small_pop(hObject,handles,handles.pop8);
+%     small_pop(hObject,handles,handles.pop9);
+%     small_pop(hObject,handles,handles.pop10);
+%     small_pop(hObject,handles,handles.pop11);
+%     
+%     small_pop(hObject,handles,handles.bic);
+%     small_pop(hObject,handles,handles.bus);
+%     small_pop(hObject,handles,handles.car);
+%     small_pop(hObject,handles,handles.others); 
+    
+end
+
+    
 % Update handles structure
 guidata(hObject, handles);
 
 % UIWAIT makes rv wait for user response (see UIRESUME)
-% uiwait(handles.figure1);
+uiwait(handles.figure2);
 
 
 % --- Outputs from this function are returned to the command line.
@@ -83,7 +117,10 @@ function varargout = rv_OutputFcn(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Get default command line output from handles structure
-varargout{1} = handles.output;
+varargout{1} = handles;
+
+%close(handles.gui);
+delete(handles.figure2)
 
 
 % --- Executes on button press in push.
@@ -93,7 +130,10 @@ function push_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-plot_roads(hObject,handles);
+handles=plot_roads(hObject,handles);
+handles.output=handles;
+guidata(hObject, handles);
+
 
 % --- Executes on button press in car.
 function car_Callback(hObject, eventdata, handles)

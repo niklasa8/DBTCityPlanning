@@ -227,7 +227,11 @@ function pushbutton2_Callback(hObject, eventdata, handles)
 
 %plot_roads(handles.graph_data,handles.data_umea,handles);%göra spec handles för import
 
-rv(handles.figure1);
+handles.rv3=rv(handles.figure1);
+%rv2=handles.rv;
+%handles.rv3 = guidata(handles.rv);
+guidata(hObject,handles);
+
 
 
 function x_edit_Callback(hObject, eventdata, handles)

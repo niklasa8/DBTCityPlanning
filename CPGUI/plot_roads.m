@@ -1,4 +1,4 @@
-function plot_roads(hObject,handles)
+function handles=plot_roads(hObject,handles)
 test = guidata(handles.test);
 data_umea=test.data_umea;
 graph_data=test.graph_data;
@@ -11,19 +11,22 @@ one=get(handles.one,'Value');
 only=get(handles.only,'Value');
 others=get(handles.others,'Value');
 park=get(handles.park,'Value');
+handles.rv_pass=1;
+%guidata(hObject, handles);
 
-handles.c1=color_pop(hObject,handles,handles.pop1);
-handles.c2=color_pop(hObject,handles,handles.pop2);
-handles.c3=color_pop(hObject,handles,handles.pop3);
-handles.c4=color_pop(hObject,handles,handles.pop4);
-handles.c5=color_pop(hObject,handles,handles.pop5);
-handles.c6=color_pop(hObject,handles,handles.pop6);
-handles.c7=color_pop(hObject,handles,handles.pop7);
-handles.c8=color_pop(hObject,handles,handles.pop8);
-handles.c9=color_pop(hObject,handles,handles.pop9);
-handles.c10=color_pop(hObject,handles,handles.pop10);
-handles.c11=color_pop(hObject,handles,handles.pop11);
+[handles.c1,handles.cont1]=color_pop(hObject,handles,handles.pop1);
+[handles.c2,handles.cont2]=color_pop(hObject,handles,handles.pop2);
+[handles.c3,handles.cont3]=color_pop(hObject,handles,handles.pop3);
+[handles.c4,handles.cont4]=color_pop(hObject,handles,handles.pop4);
+[handles.c5,handles.cont5]=color_pop(hObject,handles,handles.pop5);
+[handles.c6,handles.cont6]=color_pop(hObject,handles,handles.pop6);
+[handles.c7,handles.cont7]=color_pop(hObject,handles,handles.pop7);
+[handles.c8,handles.cont8]=color_pop(hObject,handles,handles.pop8);
+[handles.c9,handles.cont9]=color_pop(hObject,handles,handles.pop9);
+[handles.c10,handles.cont10]=color_pop(hObject,handles,handles.pop10);
+[handles.c11,handles.cont11]=color_pop(hObject,handles,handles.pop11);
 
+guidata(hObject, handles);
 %car=get(handles.car,'Value');
 %car=get(handles.car,'Value');
 %Fulskript som plottar noder och v�gar f�r att visualisera s� att debugging
