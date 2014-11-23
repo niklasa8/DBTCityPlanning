@@ -1,0 +1,3 @@
+Har lagt till en fotnot i d2: G, som motsvarar en tur som startar vid Vasaplan och avslutas i Ersmark.
+
+Avgångar i XML-fil efter 00:00 vid helgdagar var inskrivna på tidigare dag. Har ändrat dessa.

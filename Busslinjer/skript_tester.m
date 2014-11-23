@@ -53,20 +53,27 @@ textFile(24) = {'Fotnoter/4/l4_d2_.txt'};
 
 % Linje 5
 textFile(25) = {'Fotnoter/5/l5_d1_.txt'};
-textFile(26) = {'Fotnoter/5/l5_d1_c.txt'};
-textFile(27) = {'Fotnoter/5/l5_d1_e.txt'};
-textFile(28) = {'Fotnoter/5/l5_d1_ce.txt'};
-textFile(29) = {'Fotnoter/5/l5_d1_k.txt'};
-textFile(30) = {'Fotnoter/5/l5_d1_kc.txt'};
-textFile(31) = {'Fotnoter/5/l5_d1_v.txt'};
+textFile(26) = {'Fotnoter/5/l5_d1_g.txt'};
+textFile(27) = {'Fotnoter/5/l5_d1_c.txt'};
+textFile(28) = {'Fotnoter/5/l5_d1_e.txt'};
+textFile(29) = {'Fotnoter/5/l5_d1_eg.txt'};
+textFile(30) = {'Fotnoter/5/l5_d1_ce.txt'};
+textFile(31) = {'Fotnoter/5/l5_d1_k.txt'};
+textFile(32) = {'Fotnoter/5/l5_d1_kc.txt'};
+textFile(33) = {'Fotnoter/5/l5_d1_v.txt'};
+textFile(34) = {'Fotnoter/5/l5_d2_.txt'};
+textFile(35) = {'Fotnoter/5/l5_d2_a.txt'};
+textFile(36) = {'Fotnoter/5/l5_d2_av.txt'};
+textFile(37) = {'Fotnoter/5/l5_d2_kb.txt'};
+textFile(38) = {'Fotnoter/5/l5_d2_v.txt'};
 
 % Linje 6
-textFile(32) = {'Fotnoter/6/l6_d1_.txt'};
-textFile(33) = {'Fotnoter/6/l6_d2_.txt'};
+textFile(39) = {'Fotnoter/6/l6_d1_.txt'};
+textFile(40) = {'Fotnoter/6/l6_d2_.txt'};
 
 % Linje 7
-textFile(34) = {'Fotnoter/7/l7_d1_.txt'};
+textFile(41) = {'Fotnoter/7/l7_d1_.txt'};
 
+% kolla v också
 
-
-[table,fotnoter] = BussData(textFile(34),xmlFile(7));
+[table,fotnoter] = BussData(textFile(8),xmlFile(1));

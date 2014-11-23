@@ -25,6 +25,7 @@ xmlFile(16)={'XML/Ultra_81_140929_150426.xml'};
 num_notes = zeros(1,16);
 
 % Linje 1
+num_notes(1) = 1;
 textFile(1) = {'Fotnoter/1/l1_d1_.txt'};
 textFile(2) = {'Fotnoter/1/l1_d1_d.txt'};
 textFile(3) = {'Fotnoter/1/l1_d1_g.txt'};
@@ -38,9 +39,9 @@ textFile(9) = {'Fotnoter/1/l1_d1_n.txt'};
 textFile(10) = {'Fotnoter/1/l1_d2_.txt'};
 textFile(11) = {'Fotnoter/1/l1_d2_k.txt'};
 textFile(12) = {'Fotnoter/1/l1_d2_mn.txt'};
-num_notes(1) = 12;
 
 % Linje 2
+num_notes(2) = 13;
 textFile(13) = {'Fotnoter/2/l2_d1_.txt'};
 textFile(14) = {'Fotnoter/2/l2_d1_d.txt'};
 textFile(15) = {'Fotnoter/2/l2_d1_e.txt'};
@@ -50,52 +51,53 @@ textFile(17) = {'Fotnoter/2/l2_d2_.txt'};
 textFile(18) = {'Fotnoter/2/l2_d2_a.txt'};
 textFile(19) = {'Fotnoter/2/l2_d2_c.txt'};
 textFile(20) = {'Fotnoter/2/l2_d2_h.txt'};
-num_notes(2) = 8;
 
 % Linje 3
+num_notes(3) = 21;
 textFile(21) = {'Fotnoter/3/l3_d1_.txt'};
 textFile(22) = {'Fotnoter/3/l3_d2_.txt'};
-num_notes(3) = 2;
 
 % Linje 4
+num_notes(4) = 23;
 textFile(23) = {'Fotnoter/4/l4_d1_.txt'};
 textFile(24) = {'Fotnoter/4/l4_d2_.txt'};
-num_notes(4) = 2;
 
 % Linje 5
+num_notes(5) = 25;
 textFile(25) = {'Fotnoter/5/l5_d1_.txt'};
-textFile(26) = {'Fotnoter/5/l5_d1_c.txt'};
-textFile(27) = {'Fotnoter/5/l5_d1_e.txt'};
-textFile(28) = {'Fotnoter/5/l5_d1_ce.txt'};
-textFile(29) = {'Fotnoter/5/l5_d1_k.txt'};
-textFile(30) = {'Fotnoter/5/l5_d1_kc.txt'};
-textFile(31) = {'Fotnoter/5/l5_d1_v.txt'};
-num_notes(5) = 7;
+textFile(26) = {'Fotnoter/5/l5_d1_g.txt'};
+textFile(27) = {'Fotnoter/5/l5_d1_c.txt'};
+textFile(28) = {'Fotnoter/5/l5_d1_e.txt'};
+textFile(29) = {'Fotnoter/5/l5_d1_eg.txt'};
+textFile(30) = {'Fotnoter/5/l5_d1_ce.txt'};
+textFile(31) = {'Fotnoter/5/l5_d1_k.txt'};
+textFile(32) = {'Fotnoter/5/l5_d1_kc.txt'};
+textFile(33) = {'Fotnoter/5/l5_d1_v.txt'};
+textFile(34) = {'Fotnoter/5/l5_d2_.txt'};
+textFile(35) = {'Fotnoter/5/l5_d2_a.txt'};
+textFile(36) = {'Fotnoter/5/l5_d2_av.txt'};
+textFile(37) = {'Fotnoter/5/l5_d2_kb.txt'};
+textFile(38) = {'Fotnoter/5/l5_d2_v.txt'};
 
 % Linje 6
-textFile(32) = {'Fotnoter/6/l6_d1_.txt'};
-textFile(33) = {'Fotnoter/6/l6_d2_.txt'};
+num_notes(6) = 39;
+textFile(39) = {'Fotnoter/6/l6_d1_.txt'};
+textFile(40) = {'Fotnoter/6/l6_d2_.txt'};
+
+% Linje 7
+num_notes(7) = 41;
 
 %% Spara data i .mat filer
-% index = 1
-% for i=1:16
-%     i
-%     for j=index:num_notes(i)+index       
-% %         dataName = textFile{j}(10:end-4);
-% %         path = strcat('BussData/',dataName,'.mat');
-% %         [table,fotnoter] = BussData(textFile(i),xmlFile(i));
-% %         save(path,'table')
-%         index = index+1
-%     %     save(strcat('BussData/',dataName,'_Fotnoter.mat'),'fotnoter')
-%     end    
-% end
 
-    for i=23:24     
-        dataName = textFile{i}(10:end-4);
+for i=1:6
+    disp(xmlFile(i))
+    for j=num_notes(i):num_notes(i+1)-1               
+        dataName = textFile{j}(10:end-4);
         path = strcat('BussData/',dataName,'.mat');
-        [table,fotnoter] = BussData(textFile(i),xmlFile(4));
-        save(path,'table')     
-%         save(strcat('BussData/',dataName,'_Fotnoter.mat'),'fotnoter')
-    end 
+        [table,fotnoter] = BussData(textFile(j),xmlFile(i));
+        save(path,'table')        
+    %     save(strcat('BussData/',dataName,'_Fotnoter.mat'),'fotnoter')
+    end    
+end
 
 disp('...Färdig')
