@@ -86,10 +86,37 @@ textFile(40) = {'Fotnoter/6/l6_d2_.txt'};
 
 % Linje 7
 num_notes(7) = 41;
+textFile(41) = {'Fotnoter/7/l7_d1_.txt'};
+textFile(42) = {'Fotnoter/7/l7_d1_a.txt'};
+textFile(43) = {'Fotnoter/7/l7_d1_b.txt'};
+textFile(44) = {'Fotnoter/7/l7_d2_.txt'};
+textFile(45) = {'Fotnoter/7/l7_d2_v.txt'};
 
+% Linje 8
+num_notes(8) = 46;
+textFile(46) = {'Fotnoter/8/l8_d1_.txt'};
+textFile(47) = {'Fotnoter/8/l8_d1_k.txt'};
+textFile(48) = {'Fotnoter/8/l8_d1_u.txt'};
+textFile(49) = {'Fotnoter/8/l8_d2_.txt'};
+textFile(50) = {'Fotnoter/8/l8_d2_k.txt'};
+
+% Linje 9
+num_notes(9) = 51;
+textFile(51) = {'Fotnoter/9/l9_d1_.txt'};
+textFile(52) = {'Fotnoter/9/l9_d1_k.txt'};
+textFile(53) = {'Fotnoter/9/l9_d1_kc.txt'};
+textFile(54) = {'Fotnoter/9/l9_d1_v.txt'};
+textFile(55) = {'Fotnoter/9/l9_d2_.txt'};
+textFile(56) = {'Fotnoter/9/l9_d2_e.txt'};
+textFile(57) = {'Fotnoter/9/l9_d2_a.txt'};
+textFile(58) = {'Fotnoter/9/l9_d2_b.txt'};
+textFile(59) = {'Fotnoter/9/l9_d2_k.txt'};
+
+% Linje 72
+num_notes(10) = 60;
 %% Spara data i .mat filer
 
-for i=1:6
+for i=9:9
     disp(xmlFile(i))
     for j=num_notes(i):num_notes(i+1)-1               
         dataName = textFile{j}(10:end-4);

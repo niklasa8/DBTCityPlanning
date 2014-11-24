@@ -1,0 +1,33 @@
+Carlshöjd	153189435
+Kvartsvägen	1149693649
+Porfyrvägen	1062497482
+Kolbäcksvägen	294500759
+Elevstråket	229809260
+Assistentvägen	291141864
+Laboratorvägen	229822631
+Klintvägen	1257199136
+Universum	295095193
+Universitetssjukhuset	2076294620
+Östermalmsgatan	155156420
+Östra Strandgatan	167024486
+Fabriksgatan	291135635
+Församlingsgården	283324901
+Vasaplan	283324062
+Varvsgatan	166976634
+Obbolavägen	295095228
+Ishallen	1511880808
+Tegsvägen	302115669
+Tegs centralskola	274732912
+Bryggargatan	295213775
+Svedjebacken	305950666
+Laxgränd	270655422
+Umeliivägen	262999261
+Volvo	2458407308
+Tranbärsvägen	295216772
+Päronvägen	1658706866
+Klarbärsvägen	302115407
+Travbanevägen	305941870
+Grusåsvägen	305941882
+Röbäcks Centrum	1682263544
+Rosettvägen	1550754326
+Mantelvägen	1627176703
