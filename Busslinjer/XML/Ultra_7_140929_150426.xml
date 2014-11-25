@@ -87,9 +87,6 @@
               <Dir>1</Dir>
               <CallTrip>0</CallTrip>
               <Times>
-			    <Time pos="0">
-                  <DepArrTime lsT="1">07:48:00</DepArrTime>
-                </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">08:05:00</DepArrTime>
                 </Time>
@@ -97,6 +94,11 @@
                   <DepArrTime lsT="1">08:17:00</DepArrTime>
                 </Time>
               </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>B</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
@@ -1005,7 +1007,7 @@
               </Times>
               <TripFootnotes>
                 <TripFootnote>
-                  
+                  <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -1059,7 +1061,7 @@
                 <Time pos="0">
                   <DepArrTime lsT="1">06:10:00</DepArrTime>
                 </Time>
-                <Time pos="1">
+                <Time pos="2">
                   <DepArrTime lsT="1">06:22:00</DepArrTime>
                 </Time>
               </Times>
@@ -1418,7 +1420,7 @@
                 <Time pos="0">
                   <DepArrTime lsT="1">06:10:00</DepArrTime>
                 </Time>
-                <Time pos="1">
+                <Time pos="2">
                   <DepArrTime lsT="1">06:22:00</DepArrTime>
                 </Time>
               </Times>
@@ -1735,7 +1737,7 @@
                 <Time pos="0">
                   <DepArrTime lsT="1">06:10:00</DepArrTime>
                 </Time>
-                <Time pos="1">
+                <Time pos="2">
                   <DepArrTime lsT="1">06:22:00</DepArrTime>
                 </Time>
               </Times>

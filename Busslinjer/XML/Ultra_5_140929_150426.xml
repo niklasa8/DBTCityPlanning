@@ -1921,7 +1921,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>fredag</DayName>
+          <DayName>lördag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -1938,11 +1938,16 @@
                   <DepArrTime lsT="1">00:57:00</DepArrTime>
                 </Time>
               </Times>
+			  <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>G</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
         <DayType>
-          <DayName>fredag</DayName>
+          <DayName>lördag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -1960,12 +1965,15 @@
                 <TripFootnote>
                   <TripFootnoteId>E</TripFootnoteId>
                 </TripFootnote>
+				<TripFootnote>
+                  <TripFootnoteId>G</TripFootnoteId>
+                </TripFootnote>
               </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
         <DayType>
-          <DayName>fredag</DayName>
+          <DayName>lördag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -1982,6 +1990,11 @@
                   <DepArrTime lsT="1">02:52:00</DepArrTime>
                 </Time>
               </Times>
+			  <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>G</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
@@ -2484,6 +2497,9 @@
                 <Time pos="2">
                   <DepArrTime lsT="1">16:42:00</DepArrTime>
                 </Time>
+				<Time pos="3">
+                  <DepArrTime lsT="1">16:52:00</DepArrTime>
+                </Time>
               </Times>
               <TripFootnotes>
                 <TripFootnote>
@@ -2539,6 +2555,9 @@
                 </Time>
                 <Time pos="2">
                   <DepArrTime lsT="1">17:42:00</DepArrTime>
+                </Time>
+				<Time pos="3">
+                  <DepArrTime lsT="1">17:52:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -2737,7 +2756,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>lördag</DayName>
+          <DayName>söndag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -2754,11 +2773,16 @@
                   <DepArrTime lsT="1">00:57:00</DepArrTime>
                 </Time>
               </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>G</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
         <DayType>
-          <DayName>lördag</DayName>
+          <DayName>söndag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -2776,12 +2800,15 @@
                 <TripFootnote>
                   <TripFootnoteId>E</TripFootnoteId>
                 </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>G</TripFootnoteId>
+                </TripFootnote>
               </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
         <DayType>
-          <DayName>lördag</DayName>
+          <DayName>söndag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -2798,6 +2825,11 @@
                   <DepArrTime lsT="1">02:52:00</DepArrTime>
                 </Time>
               </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>G</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
@@ -3315,6 +3347,9 @@
                 <Time pos="2">
                   <DepArrTime lsT="1">16:42:00</DepArrTime>
                 </Time>
+				 <Time pos="3">
+                  <DepArrTime lsT="1">16:52:00</DepArrTime>
+                </Time>
               </Times>
               <TripFootnotes>
                 <TripFootnote>
@@ -3370,6 +3405,9 @@
                 </Time>
                 <Time pos="2">
                   <DepArrTime lsT="1">17:42:00</DepArrTime>
+                </Time>
+				 <Time pos="3">
+                  <DepArrTime lsT="1">17:52:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -5027,6 +5065,9 @@
                 <Time pos="2">
                   <DepArrTime lsT="1">17:53:00</DepArrTime>
                 </Time>
+				<Time pos="4">
+                  <DepArrTime lsT="1">18:14:00</DepArrTime>
+                </Time>
               </Times>
               <TripFootnotes>
                 <TripFootnote>
@@ -5319,7 +5360,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>fredag</DayName>
+          <DayName>lördag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -5335,7 +5376,7 @@
                 <Time pos="2">
                   <DepArrTime lsT="1">01:12:00</DepArrTime>
                 </Time>
-                <Time pos="3">
+                <Time pos="4">
                   <DepArrTime lsT="1">01:28:00</DepArrTime>
                 </Time>
               </Times>
@@ -5835,6 +5876,15 @@
               <Dir>2</Dir>
               <CallTrip>0</CallTrip>
               <Times>
+			    <Time pos="0">
+                  <DepArrTime lsT="1">16:26:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:35:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:38:00</DepArrTime>
+                </Time>
                 <Time pos="4">
                   <DepArrTime lsT="1">16:59:00</DepArrTime>
                 </Time>
@@ -6071,7 +6121,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>lördag</DayName>
+          <DayName>söndag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -6087,7 +6137,7 @@
                 <Time pos="2">
                   <DepArrTime lsT="1">01:12:00</DepArrTime>
                 </Time>
-                <Time pos="3">
+                <Time pos="4">
                   <DepArrTime lsT="1">01:28:00</DepArrTime>
                 </Time>
               </Times>
@@ -6577,6 +6627,15 @@
               <Dir>2</Dir>
               <CallTrip>0</CallTrip>
               <Times>
+			    <Time pos="0">
+                  <DepArrTime lsT="1">16:26:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:35:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="1">16:38:00</DepArrTime>
+                </Time>
                 <Time pos="4">
                   <DepArrTime lsT="1">16:59:00</DepArrTime>
                 </Time>

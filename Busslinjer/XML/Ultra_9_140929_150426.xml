@@ -48,10 +48,12 @@
                 <Time pos="0">
                   <DepArrTime lsT="1">05:03:00</DepArrTime>
                 </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">05:26:00</DepArrTime>
+                </Time>				
               </Times>
               <TripFootnotes>
                 <TripFootnote>
-                  <TripFootnoteId>D</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
                   <TripFootnoteId>V</TripFootnoteId>
@@ -193,6 +195,9 @@
                 <Time pos="0">
                   <DepArrTime lsT="1">07:37:00</DepArrTime>
                 </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">08:00:00</DepArrTime>
+                </Time>
               </Times>
               <TripFootnotes>
                 <TripFootnote>
@@ -971,6 +976,11 @@
                   <DepArrTime lsT="1">00:54:00</DepArrTime>
                 </Time>
               </Times>
+			  <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>C</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
@@ -1036,6 +1046,9 @@
               <Times>
                 <Time pos="0">
                   <DepArrTime lsT="1">06:02:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">06:25:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -1863,6 +1876,11 @@
                   <DepArrTime lsT="1">00:54:00</DepArrTime>
                 </Time>
               </Times>
+			  <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>C</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
@@ -1928,6 +1946,9 @@
               <Times>
                 <Time pos="0">
                   <DepArrTime lsT="1">06:02:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">06:25:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -2946,7 +2967,7 @@
                 <Time pos="1">
                   <DepArrTime lsT="1">07:50:00</DepArrTime>
                 </Time>
-                <Time pos="2">
+                <Time pos="3">
                   <DepArrTime lsT="1">08:00:00</DepArrTime>
                 </Time>
               </Times>
@@ -3723,6 +3744,11 @@
                   <DepArrTime lsT="1">00:51:00</DepArrTime>
                 </Time>
               </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>E</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
             </Row>
           </Rows>
         </DayType>
@@ -4639,6 +4665,11 @@
                   <DepArrTime lsT="1">00:51:00</DepArrTime>
                 </Time>
               </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>E</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
             </Row>
           </Rows>
         </DayType>

@@ -1,0 +1,5 @@
+Har lagt till en fotnot för d1: C, turen startar på Vasaplan(istället för Mantelvägen) och går till Carlshöjd.
+
+Har tagit bort fotnot D.
+
+Har lagt till en fotnot för d2: E, turen startar på Vasaplan(istället för Carlshöjd) och går till Mantelvägen.
