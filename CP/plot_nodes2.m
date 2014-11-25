@@ -40,6 +40,6 @@ for i = 1:n_ways %Plottar vägarna mellan noderna, notera att ALLA noder används 
             Y(j) = node(id_map(way(i).ndref{j})).lat;
         end
 
-        line('Ydata',Y,'Xdata',X);
+        line('Ydata',Y,'Xdata',X,'Color','black');
     end
 end
