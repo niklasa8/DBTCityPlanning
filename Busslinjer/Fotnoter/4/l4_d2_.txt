@@ -8,9 +8,3 @@ Maskinvägen	167005505
 Lärlingsgränd	167005516
 Alviksgränd	2043054479
 Umeå Airport	1477609588
-Hällastrandsvägen	1639157903
-Degernäsvägen	25300053
-Degernäs 1	1627175743
-Degernäs 2	1627175749
-Väståkra gård	1627175814
-Stöcksjö	2066926395

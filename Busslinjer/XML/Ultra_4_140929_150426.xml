@@ -12,7 +12,7 @@
       <Head>Stöcksjö - Vasaplan</Head>
       <Cols>
         <Col pos="0">
-          <StopName print="1">Stöcksjö</StopName>
+          <StopName print="1">Umeå Airport</StopName>
           <AccessR>0</AccessR>
           <AccessS>0</AccessS>
           <AccessH>0</AccessH>
@@ -34,7 +34,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">14:55:00</DepArrTime>
+                  <DepArrTime lsT="1">15:06:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">15:17:00</DepArrTime>
@@ -57,7 +57,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">17:45:00</DepArrTime>
+                  <DepArrTime lsT="1">17:56:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">18:07:00</DepArrTime>
@@ -84,7 +84,7 @@
           <AccessH>0</AccessH>
         </Col>
         <Col pos="1">
-          <StopName print="1">Stöcksjö</StopName>
+          <StopName print="1">Umeå Airport</StopName>
           <AccessR>0</AccessR>
           <AccessS>0</AccessS>
           <AccessH>0</AccessH>
@@ -103,7 +103,7 @@
                   <DepArrTime lsT="1">14:25:00</DepArrTime>
                 </Time>
                 <Time pos="1">
-                  <DepArrTime lsT="1">14:54:00</DepArrTime>
+                  <DepArrTime lsT="1">14:37:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -126,7 +126,7 @@
                   <DepArrTime lsT="1">17:10:00</DepArrTime>
                 </Time>
                 <Time pos="1">
-                  <DepArrTime lsT="1">17:44:00</DepArrTime>
+                  <DepArrTime lsT="1">17:22:00</DepArrTime>
                 </Time>
               </Times>
             </Row>

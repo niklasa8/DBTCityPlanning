@@ -96,4 +96,13 @@ textFile(57) = {'Fotnoter/9/l9_d2_a.txt'};
 textFile(58) = {'Fotnoter/9/l9_d2_b.txt'};
 textFile(59) = {'Fotnoter/9/l9_d2_k.txt'};
 
-[table,fotnoter] = BussData(textFile(59),xmlFile(9));
+% Linje 72
+textFile(60) = {'Fotnoter/72/l72_d1_a.txt'};
+textFile(61) = {'Fotnoter/72/l72_d2_cd.txt'};
+
+% Linje 73
+textFile(62) = {'Fotnoter/73/l73_d1_a.txt'};
+
+
+
+[table,fotnoter] = BussData(textFile(24),xmlFile(4));
