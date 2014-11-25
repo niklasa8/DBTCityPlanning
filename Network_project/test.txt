@@ -1,0 +1,71 @@
+  <node id="1" lat="0.00000000" lon="1000.00000"/>
+  <node id="2" lat="1000.00000" lon="2000.00000"/>
+  <node id="3" lat="1000.00000" lon="0000.00000"/>
+  <node id="4" lat="1000.00000" lon="3500.00000"/>
+  <node id="5" lat="2000.00000" lon="1000.00000"/>
+  <node id="6" lat="3000.00000" lon="1500.00000"/>
+  <node id="7" lat="2000.00000" lon="5000.00000"/>
+  <node id="8" lat="1700.00000" lon="3000.00000"/>
+  <node id="9" lat="30000.00000" lon="40000.00000"/>
+  <way id="1">
+    <nd ref="1"/>
+    <nd ref="2"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="2">
+    <nd ref="7"/>
+    <nd ref="9"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="3">
+    <nd ref="1"/>
+    <nd ref="3"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="4">
+    <nd ref="3"/>
+    <nd ref="5"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="5">
+    <nd ref="2"/>
+    <nd ref="5"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="6">
+    <nd ref="8"/>
+    <nd ref="7"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="7">
+    <nd ref="4"/>
+    <nd ref="7"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="50"/>
+  </way>
+  <way id="8">
+    <nd ref="5"/>
+    <nd ref="8"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="9">
+    <nd ref="8"/>
+    <nd ref="4"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="50"/>
+  </way>
+  <way id="10">
+    <nd ref="2"/>
+    <nd ref="6"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="11">
+    <nd ref="4"/>
+    <nd ref="7"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="12">
+    <nd ref="6"/>
+    <nd ref="7"/>
+    <tag k="highway" v="residential"/>
+  </way>

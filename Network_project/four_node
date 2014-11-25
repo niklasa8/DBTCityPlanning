@@ -1,0 +1,25 @@
+  <node id="1" lat="0.00000000" lon="100.000000" version="8" timestamp="2010-12-23T02:28:26Z" changeset="6741904" uid="53931" user="Cohan"/>
+  <node id="2" lat="100.000000" lon="200.000000" version="9" timestamp="2011-05-11T19:08:39Z" changeset="8115355" uid="53931" user="Cohan"/>
+  <node id="3" lat="100.000000" lon="0.00000000" version="7" timestamp="2011-05-11T19:08:39Z" changeset="8115355" uid="53931" user="Cohan"/>
+  <node id="4" lat="200.000000" lon="100.000000" version="6" timestamp="2010-12-23T02:28:03Z" changeset="6741904" uid="53931" user="Cohan"/>
+  <way id="1" version="16" timestamp="2011-08-22T21:14:39Z" changeset="9098494" uid="454771" user="Adrianod">
+    <nd ref="1"/>
+    <nd ref="2"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="2" version="16" timestamp="2011-08-22T21:14:39Z" changeset="9098494" uid="454771" user="Adrianod">
+    <nd ref="2"/>
+    <nd ref="4"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="3" version="16" timestamp="2011-08-22T21:14:39Z" changeset="9098494" uid="454771" user="Adrianod">
+    <nd ref="1"/>
+    <nd ref="3"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="4" version="16" timestamp="2011-08-22T21:14:39Z" changeset="9098494" uid="454771" user="Adrianod">
+    <nd ref="3"/>
+    <nd ref="4"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  

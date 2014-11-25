@@ -1,0 +1,24 @@
+  <node id="1" lat="0.00000000" lon="1000.00000"/>
+  <node id="2" lat="1000.00000" lon="2000.00000"/>
+  <node id="3" lat="1000.00000" lon="0000.00000"/>
+  <node id="4" lat="2000.00000" lon="1000.00000"/>
+  <way id="1">
+    <nd ref="1"/>
+    <nd ref="2"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="2">
+    <nd ref="2"/>
+    <nd ref="4"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="3">
+    <nd ref="1"/>
+    <nd ref="3"/>
+    <tag k="highway" v="residential"/>
+  </way>
+  <way id="4">
+    <nd ref="3"/>
+    <nd ref="4"/>
+    <tag k="highway" v="residential"/>
+  </way>
