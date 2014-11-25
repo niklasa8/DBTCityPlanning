@@ -1,0 +1,18 @@
+Ersforsen Norra	151246427
+Ersforsen Södra	2318296213
+Måttgränd	1426149838
+Gräddvägen	182854479
+Kylgränd	301119315
+Regementet	1004430683
+Nygatan	281032452
+Renmarkstorget	291136953
+Vasaplan	283324062
+
+Vasaplan	283324062
+Renmarkstorget	291136953
+Nygatan	281032452
+Kylgränd	301119315
+Gräddvägen	182854479
+Måttgränd	1426149838
+Ersforsen Södra	2318296213
+Ersforsen Norra	151246427

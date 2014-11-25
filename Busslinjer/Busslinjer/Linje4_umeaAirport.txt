@@ -1,0 +1,23 @@
+Vasaplan	283324062
+Renmarkstorget	291136953
+Tegsborg	286383990
+Tegs Centrum	1402080824
+Tegs sjukhem	1402065734
+Ringvägen	167003671
+Maskinvägen	167005505
+Lärlingsgränd	167005516
+Alviksgränd	2043054479
+Umeå Airport	1477609588
+
+
+Umeå Airport	1477609588
+Alviksgränd	2043054479
+Lärlingsgränd	167005516
+Maskinvägen	167005505
+Ringvägen	167003671
+Tegs sjukhem	1402065734
+Tegs Centrum	1402080824
+Tegsborg	286383990
+Kungsgatan	263196874
+Renmarkstorget	291136953
+Vasaplan	283324062
