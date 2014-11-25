@@ -75,7 +75,7 @@ end
 car_all_shortest_path = graphallshortestpaths(sparse(graph_file.Car_graph_matrix));
 walk_all_shortest_path = graphallshortestpaths(sparse(graph_file.Walk_graph_matrix));
 car_path_toParking = car_all_shortest_path(:,intnd_map(park_nodes));
-clear car_all_shortest_path
+%clear car_all_shortest_path
 walk_path_fromParking = walk_all_shortest_path(intnd_map(park_nodes),:);
 carTo_walkFrom_parking = zeros(intnd_count);
 bicycling_path = graphallshortestpaths(sparse(graph_file.Bicycle_graph_matrix));
@@ -88,4 +88,4 @@ end
 clear car_path_toParking
 clear walk_path_fromParking
 
-save('graph_data.mat','carTo_walkFrom_parking','bicycling_path','intnd_map','id_map','intnd_count','intnd','walk_all_shortest_path','-append')
+save('graph_data.mat','carTo_walkFrom_parking','bicycling_path','intnd_map','id_map','intnd_count','intnd','walk_all_shortest_path','car_all_shortest_path','-append')

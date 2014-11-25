@@ -59,33 +59,15 @@ while ischar(A) %Förstsätt läsa in rader tills allt har lästs in.
         if map_created == 0 %När 'way' lästs in första gången är alla noder inlästa och då skapas en map (?) för noderna. id_map returnerar nodens nummer i grafen, och inparametern till id_map är nodens globala OSM ID.
             id_map = containers.Map({node.id},1:node_count);
             map_created = 1; %Mappen skall inte skapas igen om den redan är skapad.
-            node(id_map('613495002')).bus_stop = 1; %Busshållplatser läggs in manuellt.
-            node(id_map('1917895812')).bus_stop = 1;
-            node(id_map('301142256')).bus_stop = 1;
-            node(id_map('282252233')).bus_stop = 1;
-            node(id_map('2076294631')).bus_stop = 1;
-            node(id_map('283324062')).bus_stop = 1;
-            node(id_map('301742816')).bus_stop = 1;
-            node(id_map('334746087')).bus_stop = 1;
-            node(id_map('2075347365')).bus_stop = 1;
-            node(id_map('182858864')).bus_stop = 1;
-            node(id_map('613494992')).bus_stop = 1;
-            node(id_map('260642516')).bus_stop = 1;
-            node(id_map('25478281')).bus_stop = 1;
-            node(id_map('291140580')).bus_stop = 1;
-            node(id_map('153193859')).bus_stop = 1;
-            node(id_map('2087751643')).bus_stop = 1;
-            node(id_map('1614952475')).bus_stop = 1;
-            node(id_map('153189435')).bus_stop = 1;
-            node(id_map('1231595034')).bus_stop = 1;
-            node(id_map('1286288144')).bus_stop = 1;
-            node(id_map('1542779917')).bus_stop = 1;
-            node(id_map('2561598361')).bus_stop = 1;
-            node(id_map('274741674')).bus_stop = 1;
-            node(id_map('1946746474')).bus_stop = 1;
-            node(id_map('2043054425')).bus_stop = 1;
-            node(id_map('1983283008')).bus_stop = 1;
-            node(id_map('158587486')).bus_stop = 1;
+            file_id=fopen('sorted_data_tabbed.txt', 'r', 'n', 'UTF-8');%Busshållplatser läggs in manuellt.
+            Bu=fgetl(file_id);
+            while ~feof(file_id)
+                Bu=fgetl(file_id);
+                Bu=strsplit(Bu, '\t');
+                node(id_map(char(Bu(end)))).bus_stop = 1;
+            end
+            fclose(file_id);
+
         end
         
         way_count = way_count + 1;
