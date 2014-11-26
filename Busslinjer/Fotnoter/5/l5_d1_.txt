@@ -34,10 +34,3 @@ Gräddvägen	182854479
 Måttgränd	1426149838
 Ersforsen Södra	2318296213
 Ersforsen Norra	151246427
-Bron	263197136
-Gärssjöbäcksvägen	1629944076
-Skymningsvägen	263197752
-Onsdagsvägen	1629944221
-Morgonvägen	132106051
-Aftonvägen	1629944254
-Ersmark	290367981

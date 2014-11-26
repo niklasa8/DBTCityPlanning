@@ -8,4 +8,5 @@ Rälsvägen	1386645560
 VK	1286195118
 Soldattorpet	135439137
 Nygatan	281032452
+Renmarkstorget	291136953
 Vasaplan	283324062

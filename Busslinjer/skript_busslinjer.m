@@ -114,9 +114,50 @@ textFile(59) = {'Fotnoter/9/l9_d2_k.txt'};
 
 % Linje 72
 num_notes(10) = 60;
+textFile(60) = {'Fotnoter/72/l72_d1_a.txt'};
+textFile(61) = {'Fotnoter/72/l72_d2_cd.txt'};
+
+% Linje 73
+num_notes(11) = 62;
+textFile(62) = {'Fotnoter/73/l73_d1_a.txt'};
+
+% Linje 75
+num_notes(12) = 63;
+textFile(63) = {'Fotnoter/75/l75_d1_.txt'};
+textFile(64) = {'Fotnoter/75/l75_d2_.txt'};
+
+% Linje 76
+num_notes(13) = 65;
+textFile(65) = {'Fotnoter/76/l76_d1_.txt'};
+
+% Linje 78
+num_notes(14) = 66;
+textFile(66) = {'Fotnoter/78/l78_d1_z.txt'};
+textFile(67) = {'Fotnoter/78/l78_d1_e.txt'};
+textFile(68) = {'Fotnoter/78/l78_d1_g.txt'};
+textFile(69) = {'Fotnoter/78/l78_d2_.txt'};
+textFile(70) = {'Fotnoter/78/l78_d2_b.txt'};
+textFile(71) = {'Fotnoter/78/l78_d2_c.txt'};
+
+% Linje 80
+num_notes(15) = 72;
+textFile(72) = {'Fotnoter/80/l80_d1_a.txt'};
+textFile(73) = {'Fotnoter/80/l80_d1_az.txt'};
+textFile(74) = {'Fotnoter/80/l80_d2_a.txt'};
+textFile(75) = {'Fotnoter/80/l80_d2_az.txt'};
+
+% Linje 81
+num_notes(16) = 76;
+textFile(76) = {'Fotnoter/81/l81_d1_.txt'};
+textFile(77) = {'Fotnoter/81/l81_d1_ac.txt'};
+textFile(78) = {'Fotnoter/81/l81_d1_b.txt'};
+textFile(79) = {'Fotnoter/81/l81_d2_.txt'};
+textFile(80) = {'Fotnoter/81/l81_d2_e.txt'};
+num_notes(17) = 81;
+
 %% Spara data i .mat filer
 
-for i=9:9
+for i=1:16
     disp(xmlFile(i))
     for j=num_notes(i):num_notes(i+1)-1               
         dataName = textFile{j}(10:end-4);

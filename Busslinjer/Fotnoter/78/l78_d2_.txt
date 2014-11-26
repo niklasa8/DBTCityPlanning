@@ -1,4 +1,5 @@
 Vasaplan	283324062
+Renmarkstorget	291136953
 Nygatan	291136995
 Soldattorpet	135439137
 VK	1286195118

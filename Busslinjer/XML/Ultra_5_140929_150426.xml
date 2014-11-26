@@ -42,7 +42,7 @@
           <AccessH>0</AccessH>
         </Col>
         <Col pos="5">
-          <StopName print="1">Ersmark</StopName>
+          <StopName print="1">Ersforsen Norra</StopName>
           <AccessR>0</AccessR>
           <AccessS>0</AccessS>
           <AccessH>0</AccessH>
@@ -205,7 +205,7 @@
                   <DepArrTime lsT="1">07:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">07:53:00</DepArrTime>
+                  <DepArrTime lsT="1">07:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -269,7 +269,7 @@
                   <DepArrTime lsT="1">08:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">08:23:00</DepArrTime>
+                  <DepArrTime lsT="1">08:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -333,7 +333,7 @@
                   <DepArrTime lsT="1">08:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">08:53:00</DepArrTime>
+                  <DepArrTime lsT="1">08:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -397,7 +397,7 @@
                   <DepArrTime lsT="1">09:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">09:23:00</DepArrTime>
+                  <DepArrTime lsT="1">09:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -461,7 +461,7 @@
                   <DepArrTime lsT="1">09:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">09:53:00</DepArrTime>
+                  <DepArrTime lsT="1">09:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -525,7 +525,7 @@
                   <DepArrTime lsT="1">10:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">10:21:00</DepArrTime>
+                  <DepArrTime lsT="1">10:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -589,7 +589,7 @@
                   <DepArrTime lsT="1">10:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">10:51:00</DepArrTime>
+                  <DepArrTime lsT="1">10:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -653,7 +653,7 @@
                   <DepArrTime lsT="1">11:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">11:21:00</DepArrTime>
+                  <DepArrTime lsT="1">11:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -717,7 +717,7 @@
                   <DepArrTime lsT="1">11:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">11:51:00</DepArrTime>
+                  <DepArrTime lsT="1">11:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -781,7 +781,7 @@
                   <DepArrTime lsT="1">12:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">12:21:00</DepArrTime>
+                  <DepArrTime lsT="1">12:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -845,7 +845,7 @@
                   <DepArrTime lsT="1">12:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">12:51:00</DepArrTime>
+                  <DepArrTime lsT="1">12:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -909,7 +909,7 @@
                   <DepArrTime lsT="1">13:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">13:21:00</DepArrTime>
+                  <DepArrTime lsT="1">13:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -973,7 +973,7 @@
                   <DepArrTime lsT="1">13:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">13:51:00</DepArrTime>
+                  <DepArrTime lsT="1">13:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1037,7 +1037,7 @@
                   <DepArrTime lsT="1">14:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">14:21:00</DepArrTime>
+                  <DepArrTime lsT="1">14:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1101,7 +1101,7 @@
                   <DepArrTime lsT="1">14:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">14:51:00</DepArrTime>
+                  <DepArrTime lsT="1">14:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1165,7 +1165,7 @@
                   <DepArrTime lsT="1">15:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">15:21:00</DepArrTime>
+                  <DepArrTime lsT="1">15:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1229,7 +1229,7 @@
                   <DepArrTime lsT="1">15:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">15:51:00</DepArrTime>
+                  <DepArrTime lsT="1">15:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1293,7 +1293,7 @@
                   <DepArrTime lsT="1">16:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">16:23:00</DepArrTime>
+                  <DepArrTime lsT="1">16:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1323,7 +1323,7 @@
                   <DepArrTime lsT="1">16:29:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">16:38:00</DepArrTime>
+                  <DepArrTime lsT="1">16:34:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1353,7 +1353,7 @@
                   <DepArrTime lsT="1">16:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">16:53:00</DepArrTime>
+                  <DepArrTime lsT="1">16:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1383,7 +1383,7 @@
                   <DepArrTime lsT="1">16:59:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">17:08:00</DepArrTime>
+                  <DepArrTime lsT="1">17:04:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1413,7 +1413,7 @@
                   <DepArrTime lsT="1">17:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">17:23:00</DepArrTime>
+                  <DepArrTime lsT="1">17:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1477,7 +1477,7 @@
                   <DepArrTime lsT="1">17:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">17:53:00</DepArrTime>
+                  <DepArrTime lsT="1">17:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1541,7 +1541,7 @@
                   <DepArrTime lsT="1">18:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">18:23:00</DepArrTime>
+                  <DepArrTime lsT="1">18:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1605,7 +1605,7 @@
                   <DepArrTime lsT="1">18:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">18:51:00</DepArrTime>
+                  <DepArrTime lsT="1">18:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1667,7 +1667,7 @@
                   <DepArrTime lsT="1">19:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">19:21:00</DepArrTime>
+                  <DepArrTime lsT="1">19:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1697,7 +1697,7 @@
                   <DepArrTime lsT="1">19:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">19:51:00</DepArrTime>
+                  <DepArrTime lsT="1">19:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1727,7 +1727,7 @@
                   <DepArrTime lsT="1">20:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">20:21:00</DepArrTime>
+                  <DepArrTime lsT="1">20:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1757,7 +1757,7 @@
                   <DepArrTime lsT="1">20:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">20:51:00</DepArrTime>
+                  <DepArrTime lsT="1">20:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1787,7 +1787,7 @@
                   <DepArrTime lsT="1">21:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">21:21:00</DepArrTime>
+                  <DepArrTime lsT="1">21:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1817,7 +1817,7 @@
                   <DepArrTime lsT="1">21:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">21:51:00</DepArrTime>
+                  <DepArrTime lsT="1">21:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1847,7 +1847,7 @@
                   <DepArrTime lsT="1">22:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">22:21:00</DepArrTime>
+                  <DepArrTime lsT="1">22:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1880,7 +1880,7 @@
                   <DepArrTime lsT="1">22:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">22:51:00</DepArrTime>
+                  <DepArrTime lsT="1">22:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -1909,7 +1909,7 @@
                   <DepArrTime lsT="1">23:42:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">23:49:00</DepArrTime>
+                  <DepArrTime lsT="1">23:47:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -1921,7 +1921,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>lördag</DayName>
+          <DayName>fredag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -1935,7 +1935,7 @@
                   <DepArrTime lsT="1">00:50:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">00:57:00</DepArrTime>
+                  <DepArrTime lsT="1">00:55:00</DepArrTime>
                 </Time>
               </Times>
 			  <TripFootnotes>
@@ -1947,7 +1947,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>lördag</DayName>
+          <DayName>fredag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -1973,7 +1973,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>lördag</DayName>
+          <DayName>fredag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -1987,7 +1987,7 @@
                   <DepArrTime lsT="1">02:45:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">02:52:00</DepArrTime>
+                  <DepArrTime lsT="1">02:50:00</DepArrTime>
                 </Time>
               </Times>
 			  <TripFootnotes>
@@ -2054,7 +2054,7 @@
                   <DepArrTime lsT="1">07:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">07:53:00</DepArrTime>
+                  <DepArrTime lsT="1">07:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2084,7 +2084,7 @@
                   <DepArrTime lsT="1">08:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">08:53:00</DepArrTime>
+                  <DepArrTime lsT="1">08:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2114,7 +2114,7 @@
                   <DepArrTime lsT="1">09:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">09:53:00</DepArrTime>
+                  <DepArrTime lsT="1">09:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2144,7 +2144,7 @@
                   <DepArrTime lsT="1">10:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">10:51:00</DepArrTime>
+                  <DepArrTime lsT="1">10:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2174,7 +2174,7 @@
                   <DepArrTime lsT="1">11:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">11:51:00</DepArrTime>
+                  <DepArrTime lsT="1">11:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2204,7 +2204,7 @@
                   <DepArrTime lsT="1">12:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">12:21:00</DepArrTime>
+                  <DepArrTime lsT="1">12:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2234,7 +2234,7 @@
                   <DepArrTime lsT="1">12:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">12:51:00</DepArrTime>
+                  <DepArrTime lsT="1">12:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2264,7 +2264,7 @@
                   <DepArrTime lsT="1">13:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">13:21:00</DepArrTime>
+                  <DepArrTime lsT="1">13:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2294,7 +2294,7 @@
                   <DepArrTime lsT="1">13:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">13:51:00</DepArrTime>
+                  <DepArrTime lsT="1">13:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2324,7 +2324,7 @@
                   <DepArrTime lsT="1">14:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">14:21:00</DepArrTime>
+                  <DepArrTime lsT="1">14:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2354,7 +2354,7 @@
                   <DepArrTime lsT="1">14:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">14:51:00</DepArrTime>
+                  <DepArrTime lsT="1">14:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2384,7 +2384,7 @@
                   <DepArrTime lsT="1">15:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">15:21:00</DepArrTime>
+                  <DepArrTime lsT="1">15:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2414,7 +2414,7 @@
                   <DepArrTime lsT="1">15:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">15:53:00</DepArrTime>
+                  <DepArrTime lsT="1">15:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2444,7 +2444,7 @@
                   <DepArrTime lsT="1">16:14:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">16:23:00</DepArrTime>
+                  <DepArrTime lsT="1">16:19:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2474,7 +2474,7 @@
                   <DepArrTime lsT="1">16:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">16:53:00</DepArrTime>
+                  <DepArrTime lsT="1">16:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2533,7 +2533,7 @@
                   <DepArrTime lsT="1">17:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">17:53:00</DepArrTime>
+                  <DepArrTime lsT="1">17:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2592,7 +2592,7 @@
                   <DepArrTime lsT="1">18:43:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">18:51:00</DepArrTime>
+                  <DepArrTime lsT="1">18:48:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2622,7 +2622,7 @@
                   <DepArrTime lsT="1">19:43:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">19:51:00</DepArrTime>
+                  <DepArrTime lsT="1">19:48:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2652,7 +2652,7 @@
                   <DepArrTime lsT="1">20:43:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">20:51:00</DepArrTime>
+                  <DepArrTime lsT="1">20:48:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2682,7 +2682,7 @@
                   <DepArrTime lsT="1">21:43:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">21:51:00</DepArrTime>
+                  <DepArrTime lsT="1">21:48:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2715,7 +2715,7 @@
                   <DepArrTime lsT="1">22:43:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">22:51:00</DepArrTime>
+                  <DepArrTime lsT="1">22:48:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2744,7 +2744,7 @@
                   <DepArrTime lsT="1">23:41:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">23:49:00</DepArrTime>
+                  <DepArrTime lsT="1">23:46:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -2756,7 +2756,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>söndag</DayName>
+          <DayName>lördag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -2770,7 +2770,7 @@
                   <DepArrTime lsT="1">00:49:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">00:57:00</DepArrTime>
+                  <DepArrTime lsT="1">00:54:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -2782,7 +2782,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>söndag</DayName>
+          <DayName>lördag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -2808,7 +2808,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>söndag</DayName>
+          <DayName>lördag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -2822,7 +2822,7 @@
                   <DepArrTime lsT="1">02:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">02:52:00</DepArrTime>
+                  <DepArrTime lsT="1">02:49:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -2889,7 +2889,7 @@
                   <DepArrTime lsT="1">07:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">07:53:00</DepArrTime>
+                  <DepArrTime lsT="1">07:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2919,7 +2919,7 @@
                   <DepArrTime lsT="1">08:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">08:53:00</DepArrTime>
+                  <DepArrTime lsT="1">08:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2949,7 +2949,7 @@
                   <DepArrTime lsT="1">09:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">09:53:00</DepArrTime>
+                  <DepArrTime lsT="1">09:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -2979,7 +2979,7 @@
                   <DepArrTime lsT="1">10:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">10:51:00</DepArrTime>
+                  <DepArrTime lsT="1">10:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3009,7 +3009,7 @@
                   <DepArrTime lsT="1">11:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">11:51:00</DepArrTime>
+                  <DepArrTime lsT="1">11:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3072,7 +3072,7 @@
                   <DepArrTime lsT="1">12:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">12:51:00</DepArrTime>
+                  <DepArrTime lsT="1">12:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3135,7 +3135,7 @@
                   <DepArrTime lsT="1">13:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">13:51:00</DepArrTime>
+                  <DepArrTime lsT="1">13:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3198,7 +3198,7 @@
                   <DepArrTime lsT="1">14:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">14:51:00</DepArrTime>
+                  <DepArrTime lsT="1">14:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3261,7 +3261,7 @@
                   <DepArrTime lsT="1">15:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">15:53:00</DepArrTime>
+                  <DepArrTime lsT="1">15:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3324,7 +3324,7 @@
                   <DepArrTime lsT="1">16:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">16:53:00</DepArrTime>
+                  <DepArrTime lsT="1">16:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3383,7 +3383,7 @@
                   <DepArrTime lsT="1">17:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">17:53:00</DepArrTime>
+                  <DepArrTime lsT="1">17:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3442,7 +3442,7 @@
                   <DepArrTime lsT="1">18:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">18:51:00</DepArrTime>
+                  <DepArrTime lsT="1">18:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3472,7 +3472,7 @@
                   <DepArrTime lsT="1">19:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">19:51:00</DepArrTime>
+                  <DepArrTime lsT="1">19:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3502,7 +3502,7 @@
                   <DepArrTime lsT="1">20:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">20:51:00</DepArrTime>
+                  <DepArrTime lsT="1">20:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3532,7 +3532,7 @@
                   <DepArrTime lsT="1">21:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">21:51:00</DepArrTime>
+                  <DepArrTime lsT="1">21:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3565,7 +3565,7 @@
                   <DepArrTime lsT="1">22:44:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">22:51:00</DepArrTime>
+                  <DepArrTime lsT="1">22:49:00</DepArrTime>
                 </Time>
               </Times>
             </Row>
@@ -3594,7 +3594,7 @@
                   <DepArrTime lsT="1">23:42:00</DepArrTime>
                 </Time>
                 <Time pos="5">
-                  <DepArrTime lsT="1">23:49:00</DepArrTime>
+                  <DepArrTime lsT="1">23:47:00</DepArrTime>
                 </Time>
               </Times>
               <TripFootnotes>
@@ -3633,7 +3633,7 @@
       <Head>Ersmark - Vasaplan - Strömpilen</Head>
       <Cols>
         <Col pos="0">
-          <StopName print="1">Ersmark</StopName>
+          <StopName print="1">Ersforsen Norra</StopName>
           <AccessR>0</AccessR>
           <AccessS>0</AccessS>
           <AccessH>0</AccessH>
@@ -3685,7 +3685,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">05:56:00</DepArrTime>
+                  <DepArrTime lsT="1">06:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">06:05:00</DepArrTime>
@@ -3715,7 +3715,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">06:11:00</DepArrTime>
+                  <DepArrTime lsT="1">06:15:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">06:20:00</DepArrTime>
@@ -3745,7 +3745,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">06:26:00</DepArrTime>
+                  <DepArrTime lsT="1">06:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">06:35:00</DepArrTime>
@@ -3775,7 +3775,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">06:41:00</DepArrTime>
+                  <DepArrTime lsT="1">06:45:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">06:50:00</DepArrTime>
@@ -3805,7 +3805,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">06:56:00</DepArrTime>
+                  <DepArrTime lsT="1">07:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">07:05:00</DepArrTime>
@@ -3835,7 +3835,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">07:11:00</DepArrTime>
+                  <DepArrTime lsT="1">07:15:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">07:20:00</DepArrTime>
@@ -3865,7 +3865,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">07:26:00</DepArrTime>
+                  <DepArrTime lsT="1">07:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">07:35:00</DepArrTime>
@@ -3923,7 +3923,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">07:56:00</DepArrTime>
+                  <DepArrTime lsT="1">08:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">08:05:00</DepArrTime>
@@ -3981,7 +3981,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">08:26:00</DepArrTime>
+                  <DepArrTime lsT="1">08:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">08:35:00</DepArrTime>
@@ -4039,7 +4039,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">08:56:00</DepArrTime>
+                  <DepArrTime lsT="1">09:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">09:05:00</DepArrTime>
@@ -4097,7 +4097,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">09:26:00</DepArrTime>
+                  <DepArrTime lsT="1">09:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">09:35:00</DepArrTime>
@@ -4155,7 +4155,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">09:56:00</DepArrTime>
+                  <DepArrTime lsT="1">10:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">10:05:00</DepArrTime>
@@ -4213,7 +4213,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">10:26:00</DepArrTime>
+                  <DepArrTime lsT="1">10:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">10:35:00</DepArrTime>
@@ -4271,7 +4271,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">10:56:00</DepArrTime>
+                  <DepArrTime lsT="1">11:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">11:05:00</DepArrTime>
@@ -4329,7 +4329,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">11:26:00</DepArrTime>
+                  <DepArrTime lsT="1">11:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">11:35:00</DepArrTime>
@@ -4387,7 +4387,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">11:56:00</DepArrTime>
+                  <DepArrTime lsT="1">12:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">12:05:00</DepArrTime>
@@ -4445,7 +4445,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">12:26:00</DepArrTime>
+                  <DepArrTime lsT="1">12:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">12:35:00</DepArrTime>
@@ -4503,7 +4503,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">12:56:00</DepArrTime>
+                  <DepArrTime lsT="1">13:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">13:05:00</DepArrTime>
@@ -4561,7 +4561,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">13:26:00</DepArrTime>
+                  <DepArrTime lsT="1">13:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">13:35:00</DepArrTime>
@@ -4619,7 +4619,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">13:56:00</DepArrTime>
+                  <DepArrTime lsT="1">14:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">14:05:00</DepArrTime>
@@ -4677,7 +4677,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">14:26:00</DepArrTime>
+                  <DepArrTime lsT="1">14:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">14:35:00</DepArrTime>
@@ -4735,7 +4735,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">14:56:00</DepArrTime>
+                  <DepArrTime lsT="1">15:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">15:05:00</DepArrTime>
@@ -4793,7 +4793,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">15:26:00</DepArrTime>
+                  <DepArrTime lsT="1">15:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">15:35:00</DepArrTime>
@@ -4851,7 +4851,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">15:56:00</DepArrTime>
+                  <DepArrTime lsT="1">16:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">16:05:00</DepArrTime>
@@ -4909,7 +4909,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">16:26:00</DepArrTime>
+                  <DepArrTime lsT="1">16:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">16:35:00</DepArrTime>
@@ -4939,7 +4939,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">16:41:00</DepArrTime>
+                  <DepArrTime lsT="1">16:45:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">16:50:00</DepArrTime>
@@ -4969,7 +4969,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">16:56:00</DepArrTime>
+                  <DepArrTime lsT="1">17:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">17:05:00</DepArrTime>
@@ -4999,7 +4999,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">17:11:00</DepArrTime>
+                  <DepArrTime lsT="1">17:15:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">17:20:00</DepArrTime>
@@ -5029,7 +5029,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">17:26:00</DepArrTime>
+                  <DepArrTime lsT="1">17:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">17:35:00</DepArrTime>
@@ -5086,7 +5086,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">17:56:00</DepArrTime>
+                  <DepArrTime lsT="1">18:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">18:05:00</DepArrTime>
@@ -5116,7 +5116,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">18:26:00</DepArrTime>
+                  <DepArrTime lsT="1">18:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">18:35:00</DepArrTime>
@@ -5146,7 +5146,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">18:56:00</DepArrTime>
+                  <DepArrTime lsT="1">19:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">19:05:00</DepArrTime>
@@ -5176,7 +5176,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">19:26:00</DepArrTime>
+                  <DepArrTime lsT="1">19:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">19:35:00</DepArrTime>
@@ -5206,7 +5206,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">19:56:00</DepArrTime>
+                  <DepArrTime lsT="1">20:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">20:05:00</DepArrTime>
@@ -5236,7 +5236,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">20:26:00</DepArrTime>
+                  <DepArrTime lsT="1">20:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">20:35:00</DepArrTime>
@@ -5266,7 +5266,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">20:56:00</DepArrTime>
+                  <DepArrTime lsT="1">21:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">21:05:00</DepArrTime>
@@ -5296,7 +5296,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">21:56:00</DepArrTime>
+                  <DepArrTime lsT="1">22:00:00</DepArrTime>
                   <TimeFootnoteId>K</TimeFootnoteId>
                 </Time>
                 <Time pos="1">
@@ -5332,7 +5332,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">22:56:00</DepArrTime>
+                  <DepArrTime lsT="1">23:00:00</DepArrTime>
                   <TimeFootnoteId>K</TimeFootnoteId>
                 </Time>
                 <Time pos="1">
@@ -5360,7 +5360,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>lördag</DayName>
+          <DayName>fredag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -5368,7 +5368,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">01:00:00</DepArrTime>
+                  <DepArrTime lsT="1">01:04:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">01:09:00</DepArrTime>
@@ -5397,7 +5397,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">05:56:00</DepArrTime>
+                  <DepArrTime lsT="1">06:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">06:05:00</DepArrTime>
@@ -5427,7 +5427,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">06:56:00</DepArrTime>
+                  <DepArrTime lsT="1">07:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">07:05:00</DepArrTime>
@@ -5457,7 +5457,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">07:56:00</DepArrTime>
+                  <DepArrTime lsT="1">08:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">08:05:00</DepArrTime>
@@ -5487,7 +5487,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">08:56:00</DepArrTime>
+                  <DepArrTime lsT="1">09:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">09:05:00</DepArrTime>
@@ -5517,7 +5517,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">09:56:00</DepArrTime>
+                  <DepArrTime lsT="1">10:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">10:05:00</DepArrTime>
@@ -5547,7 +5547,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">10:56:00</DepArrTime>
+                  <DepArrTime lsT="1">11:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">11:05:00</DepArrTime>
@@ -5577,7 +5577,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">11:26:00</DepArrTime>
+                  <DepArrTime lsT="1">11:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">11:35:00</DepArrTime>
@@ -5607,7 +5607,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">11:56:00</DepArrTime>
+                  <DepArrTime lsT="1">12:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">12:05:00</DepArrTime>
@@ -5637,7 +5637,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">12:26:00</DepArrTime>
+                  <DepArrTime lsT="1">12:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">12:35:00</DepArrTime>
@@ -5667,7 +5667,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">12:56:00</DepArrTime>
+                  <DepArrTime lsT="1">13:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">13:05:00</DepArrTime>
@@ -5697,7 +5697,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">13:26:00</DepArrTime>
+                  <DepArrTime lsT="1">13:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">13:35:00</DepArrTime>
@@ -5727,7 +5727,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">13:56:00</DepArrTime>
+                  <DepArrTime lsT="1">14:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">14:05:00</DepArrTime>
@@ -5757,7 +5757,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">14:26:00</DepArrTime>
+                  <DepArrTime lsT="1">14:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">14:35:00</DepArrTime>
@@ -5787,7 +5787,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">14:56:00</DepArrTime>
+                  <DepArrTime lsT="1">15:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">15:05:00</DepArrTime>
@@ -5817,7 +5817,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">15:26:00</DepArrTime>
+                  <DepArrTime lsT="1">15:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">15:35:00</DepArrTime>
@@ -5847,7 +5847,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">15:56:00</DepArrTime>
+                  <DepArrTime lsT="1">16:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">16:05:00</DepArrTime>
@@ -5877,7 +5877,7 @@
               <CallTrip>0</CallTrip>
               <Times>
 			    <Time pos="0">
-                  <DepArrTime lsT="1">16:26:00</DepArrTime>
+                  <DepArrTime lsT="1">16:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">16:35:00</DepArrTime>
@@ -5907,7 +5907,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">16:56:00</DepArrTime>
+                  <DepArrTime lsT="1">17:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">17:05:00</DepArrTime>
@@ -5937,7 +5937,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">17:56:00</DepArrTime>
+                  <DepArrTime lsT="1">18:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">18:05:00</DepArrTime>
@@ -5967,7 +5967,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">18:56:00</DepArrTime>
+                  <DepArrTime lsT="1">19:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">19:05:00</DepArrTime>
@@ -5997,7 +5997,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">19:56:00</DepArrTime>
+                  <DepArrTime lsT="1">20:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">20:05:00</DepArrTime>
@@ -6027,7 +6027,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">20:56:00</DepArrTime>
+                  <DepArrTime lsT="1">21:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">21:05:00</DepArrTime>
@@ -6057,7 +6057,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">21:56:00</DepArrTime>
+                  <DepArrTime lsT="1">22:00:00</DepArrTime>
                   <TimeFootnoteId>K</TimeFootnoteId>
                 </Time>
                 <Time pos="1">
@@ -6093,7 +6093,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">22:56:00</DepArrTime>
+                  <DepArrTime lsT="1">23:00:00</DepArrTime>
                   <TimeFootnoteId>K</TimeFootnoteId>
                 </Time>
                 <Time pos="1">
@@ -6121,7 +6121,7 @@
           </Rows>
         </DayType>
         <DayType>
-          <DayName>söndag</DayName>
+          <DayName>lördag</DayName>
           <Rows>
             <Row>
               <LineNo>5</LineNo>
@@ -6129,7 +6129,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">01:00:00</DepArrTime>
+                  <DepArrTime lsT="1">01:04:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">01:09:00</DepArrTime>
@@ -6158,7 +6158,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">05:56:00</DepArrTime>
+                  <DepArrTime lsT="1">06:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">06:05:00</DepArrTime>
@@ -6188,7 +6188,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">06:56:00</DepArrTime>
+                  <DepArrTime lsT="1">07:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">07:05:00</DepArrTime>
@@ -6218,7 +6218,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">07:56:00</DepArrTime>
+                  <DepArrTime lsT="1">08:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">08:05:00</DepArrTime>
@@ -6248,7 +6248,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">08:56:00</DepArrTime>
+                  <DepArrTime lsT="1">09:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">09:05:00</DepArrTime>
@@ -6278,7 +6278,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">09:56:00</DepArrTime>
+                  <DepArrTime lsT="1">10:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">10:05:00</DepArrTime>
@@ -6308,7 +6308,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">10:56:00</DepArrTime>
+                  <DepArrTime lsT="1">11:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">11:05:00</DepArrTime>
@@ -6366,7 +6366,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">11:56:00</DepArrTime>
+                  <DepArrTime lsT="1">12:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">12:05:00</DepArrTime>
@@ -6424,7 +6424,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">12:56:00</DepArrTime>
+                  <DepArrTime lsT="1">13:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">13:05:00</DepArrTime>
@@ -6482,7 +6482,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">13:56:00</DepArrTime>
+                  <DepArrTime lsT="1">14:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">14:05:00</DepArrTime>
@@ -6540,7 +6540,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">14:56:00</DepArrTime>
+                  <DepArrTime lsT="1">15:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">15:05:00</DepArrTime>
@@ -6598,7 +6598,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">15:56:00</DepArrTime>
+                  <DepArrTime lsT="1">16:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">16:05:00</DepArrTime>
@@ -6628,7 +6628,7 @@
               <CallTrip>0</CallTrip>
               <Times>
 			    <Time pos="0">
-                  <DepArrTime lsT="1">16:26:00</DepArrTime>
+                  <DepArrTime lsT="1">16:30:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">16:35:00</DepArrTime>
@@ -6658,7 +6658,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">16:56:00</DepArrTime>
+                  <DepArrTime lsT="1">17:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">17:05:00</DepArrTime>
@@ -6688,7 +6688,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">17:56:00</DepArrTime>
+                  <DepArrTime lsT="1">18:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">18:05:00</DepArrTime>
@@ -6718,7 +6718,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">18:56:00</DepArrTime>
+                  <DepArrTime lsT="1">19:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">19:05:00</DepArrTime>
@@ -6748,7 +6748,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">19:56:00</DepArrTime>
+                  <DepArrTime lsT="1">20:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">20:05:00</DepArrTime>
@@ -6778,7 +6778,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">20:56:00</DepArrTime>
+                  <DepArrTime lsT="1">21:00:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">21:05:00</DepArrTime>
@@ -6808,7 +6808,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">21:56:00</DepArrTime>
+                  <DepArrTime lsT="1">22:00:00</DepArrTime>
                   <TimeFootnoteId>K</TimeFootnoteId>
                 </Time>
                 <Time pos="1">
@@ -6844,7 +6844,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">22:56:00</DepArrTime>
+                  <DepArrTime lsT="1">23:00:00</DepArrTime>
                   <TimeFootnoteId>K</TimeFootnoteId>
                 </Time>
                 <Time pos="1">

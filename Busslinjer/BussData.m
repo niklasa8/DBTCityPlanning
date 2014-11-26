@@ -77,6 +77,7 @@ for k=1:2:dayTypes.getLength-1
         
     footNote = strcat(timeFootnote,tripFootnote);  
     
+    % Antal gånger varje fotnot förekommer
     if ~isKey(noteMap,footNote)
         noteMap(footNote) = 1;
     else
@@ -104,7 +105,7 @@ for k=1:2:dayTypes.getLength-1
                             nums = strsplit(depArrTime,':');
                             depArrTime = str2double(nums(1)) + str2double(nums(2))/100; 
                             % lägg till tid i tidtabell för hållplats
-                            if strcmp(dayName,'måndag-fredag')
+                            if strcmp(dayName,'måndag-fredag') || strcmp(dayName,'måndag-torsdag')
                                 stop(i).MT = [stop(i).MT,depArrTime];                               
                             end
                             if strcmp(dayName,'fredag')
@@ -127,8 +128,16 @@ for k=1:2:dayTypes.getLength-1
 end
 
 % Sätt ihop måndag-fredag med de speciella tiderna för fredag
-for i=1:stopnr-1    
-    if length(stop(i).MT) > 0
+% Om fotnot Z i textfil, lägg ej ihop, tiderna gäller endast mån-tors.
+% Förkommer endast för linje 78.
+for i=1:stopnr-1 
+    % Sortera avgångstider
+    stop(i).MT = sort(stop(i).MT);
+    stop(i).F = sort(stop(i).F);
+    stop(i).L = sort(stop(i).L);
+    stop(i).S = sort(stop(i).S);
+    
+    if (length(stop(i).MT) > 0) && isempty(strfind(fileFnote,'Z'))
         MT = stop(i).MT;
         F = stop(i).F;
         F_merge = sort(cat(2,MT,F));

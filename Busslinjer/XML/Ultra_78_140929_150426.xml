@@ -51,7 +51,7 @@
                   <TripFootnoteId>E</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>S</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -74,13 +74,13 @@
               </Times>
               <TripFootnotes>
                 <TripFootnote>
-                  <TripFootnoteId>D</TripFootnoteId>
+                  <TripFootnoteId>Z</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>H</TripFootnoteId>
+                  
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>S</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -242,7 +242,7 @@
               </Times>
               <TripFootnotes>
                 <TripFootnote>
-                  <TripFootnoteId>H</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -268,10 +268,10 @@
                   <TripFootnoteId>B</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>H</TripFootnoteId>
+                  
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>S</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>

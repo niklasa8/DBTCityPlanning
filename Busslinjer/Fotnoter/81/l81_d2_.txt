@@ -1,5 +1,6 @@
 Vasaplan	283324062
 Renmarkstorget	291136953
+Nygatan	291136995
 Dragonfältet	263187033
 Dressyrgatan	305950651
 Sandåkern	2425638040

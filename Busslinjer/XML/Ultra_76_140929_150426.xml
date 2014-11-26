@@ -12,7 +12,7 @@
       <Head>Ersmark - Vasaplan</Head>
       <Cols>
         <Col pos="0">
-          <StopName print="1">Ersmark</StopName>
+          <StopName print="1">Ersforsen Norra</StopName>
           <AccessR>0</AccessR>
           <AccessS>0</AccessS>
           <AccessH>0</AccessH>
@@ -34,7 +34,7 @@
               <CallTrip>0</CallTrip>
               <Times>
                 <Time pos="0">
-                  <DepArrTime lsT="1">07:30:00</DepArrTime>
+                  <DepArrTime lsT="1">07:35:00</DepArrTime>
                 </Time>
                 <Time pos="1">
                   <DepArrTime lsT="1">07:55:00</DepArrTime>
@@ -42,7 +42,7 @@
               </Times>
               <TripFootnotes>
                 <TripFootnote>
-                  <TripFootnoteId>A</TripFootnoteId>
+
                 </TripFootnote>
               </TripFootnotes>
             </Row>

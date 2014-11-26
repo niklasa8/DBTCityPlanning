@@ -11,5 +11,6 @@ Hartvigsgatan	158587486
 Sandåkern	2425638040
 Dressyrgatan	305950651
 Dragonfältet	263187033
+Nygatan	291136995
 Renmarkstorget	291136953
 Vasaplan	283324062

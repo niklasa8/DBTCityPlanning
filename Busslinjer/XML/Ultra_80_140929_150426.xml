@@ -860,7 +860,7 @@
                   <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>B</TripFootnoteId>
+                  <TripFootnoteId>Z</TripFootnoteId>
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -1575,7 +1575,7 @@
           <FootnoteText>Avvikelser förekommer. Se under rubriken Trafik vid helgdagar.</FootnoteText>
         </Footnote>
         <Footnote>
-          <FootnoteId>B</FootnoteId>
+          <FootnoteId>Z</FootnoteId>
           <FootnoteText>Trafikeras måndag - torsdag</FootnoteText>
         </Footnote>
       </Footnotes>
@@ -1755,7 +1755,7 @@
                   <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>V</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -1781,7 +1781,7 @@
                   <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>V</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -2172,10 +2172,10 @@
               </Times>
               <TripFootnotes>
                 <TripFootnote>
-                  <TripFootnoteId>V</TripFootnoteId>
+                  <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>A</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -2201,7 +2201,7 @@
                   <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>V</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -2296,7 +2296,7 @@
                   <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>B</TripFootnoteId>
+                  <TripFootnoteId>Z</TripFootnoteId>
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -2322,7 +2322,7 @@
                   <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>V</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -2440,7 +2440,7 @@
                   <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>V</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -2466,7 +2466,7 @@
                   <TripFootnoteId>A</TripFootnoteId>
                 </TripFootnote>
                 <TripFootnote>
-                  <TripFootnoteId>V</TripFootnoteId>
+                  
                 </TripFootnote>
               </TripFootnotes>
             </Row>
@@ -2824,7 +2824,7 @@
           <FootnoteText>Avvikelser förekommer. Se under rubriken Trafik vid helgdagar.</FootnoteText>
         </Footnote>
         <Footnote>
-          <FootnoteId>B</FootnoteId>
+          <FootnoteId>Z</FootnoteId>
           <FootnoteText>Trafikeras  måndag - torsdag</FootnoteText>
         </Footnote>
         <Footnote>
