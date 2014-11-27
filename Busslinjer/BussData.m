@@ -8,10 +8,9 @@ dir = str2num(f(index(1)+2:index(2)-1));
 fileFnote = upper(f(index(2)+1:end-4));
 noteMap = containers.Map('KeyType','char','ValueType','int8'); % array med alla fotnotskombinationer i xmlfil
 
-% Loopa över alla senare
 file_idTXT = fopen(char(textFile),'r','n','UTF-8');
 
-% Läs in busshållplatser från fil
+% Läs in busshållplatser från textfil
 stopnr=1;
 while ~feof(file_idTXT)    
     B = fgetl(file_idTXT);
@@ -129,7 +128,7 @@ end
 
 % Sätt ihop måndag-fredag med de speciella tiderna för fredag
 % Om fotnot Z i textfil, lägg ej ihop, tiderna gäller endast mån-tors.
-% Förkommer endast för linje 78.
+% Förkommer endast för linje 78 och 80.
 for i=1:stopnr-1 
     % Sortera avgångstider
     stop(i).MT = sort(stop(i).MT);
@@ -145,7 +144,7 @@ for i=1:stopnr-1
     end
 end
 
-% Skapa cellarray av för alla fotnoter i xmlfil
+% Skapa cellarray med alla fotnoter i xmlfil
 fnotes = keys(noteMap)';
 fnotes(:,2) = values(noteMap);
 table = stop;
