@@ -132,4 +132,4 @@ textFile(79) = {'Fotnoter/81/l81_d2_.txt'};
 textFile(80) = {'Fotnoter/81/l81_d2_e.txt'};
 
 
-[table,fotnoter] = BussData(textFile(79),xmlFile(16));
+[table,fotnoter] = BussData(textFile(20),xmlFile(2));

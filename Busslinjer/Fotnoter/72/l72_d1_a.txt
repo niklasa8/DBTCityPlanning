@@ -7,7 +7,7 @@ Hedvägen	613406373
 Kungsänget	291138485
 Kronoparksvägen	158589637
 Gabrieljansvägen	158589633
-Hartvigsgatan	158587486
+Hartvigsgatan	158589628
 Sandåkern	2425638040
 Järnvägstorget	286123598
 Fridhem	155115168
