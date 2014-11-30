@@ -11,8 +11,18 @@ one=get(handles.one,'Value');
 only=get(handles.only,'Value');
 others=get(handles.others,'Value');
 park=get(handles.park,'Value');
-%handles.rv_pass=1;
-%guidata(hObject, handles);
+
+handles.car=car;
+handles.bic=bic;
+handles.bus=bus;
+
+handles.one=one;
+handles.only=only;
+handles.others=others;
+handles.park=park;
+
+handles.radiobutton1=get(handles.radiobutton1,'Value');
+
 
 [handles.c1,handles.cont1]=color_pop(hObject,handles,handles.pop1);
 [handles.c2,handles.cont2]=color_pop(hObject,handles,handles.pop2);
@@ -26,13 +36,11 @@ park=get(handles.park,'Value');
 [handles.c10,handles.cont10]=color_pop(hObject,handles,handles.pop10);
 [handles.c11,handles.cont11]=color_pop(hObject,handles,handles.pop11);
 
-set(test.apple,'Value',45)
-test.handlesrv=handles;
-guidata(hObject, test);
 
-guidata(hObject, handles);
-%car=get(handles.car,'Value');
-%car=get(handles.car,'Value');
+test.handlesrv=handles;
+guidata(handles.test, test);
+
+
 %Fulskript som plottar noder och v�gar f�r att visualisera s� att debugging
 %blir l�ttare.
 
@@ -57,27 +65,6 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
             Y(j) = data_umea.node(graph_data.id_map(data_umea.way(i).ndref{j})).lat;
         end
         
-        %car = 1;
-        %car=1;
-        %bus=1;
-        
-        
-        
-%         handles.c1='y';%bike alone
-%         handles.c2='r';%highway
-%         handles.c3='g';%bike + car not on highway
-%         handles.c4=[255 178 102]/256;%orange bus + car not on highway
-%         handles.c5='b';%highway bike
-%         handles.c6='c';%bike bus
-%         handles.c7='m';%highway bus
-%         handles.c8=[153 76 0]/256;%brown highway bike bus
-%         handles.c9=[128 128 128]/256;%grey; footway 
-%         handles.c10=[102 0 51]/256;%purple; parking
-%         handles.c11=[12 75 82]/256;%strange; car other than 
-        
-        
-        
-        %handles.one=1;
         
         
         
@@ -245,24 +232,28 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
         elseif park == 1
             if data_umea.way(i).parking == 1
                 line('Ydata',Y,'Xdata',X,'Color',handles.c10);
+            end
             
             
         end
-%        if one=1
-%         if data_umea.way(i).oneway == 1
-%             set(line, 'LineStyle', '--');
-%             set(line, 'Color','m')
+        if one==1
+            if data_umea.way(i).oneway == 1
+                line('Ydata',Y,'Xdata',X,'LineStyle', '--');
+%                set(line, 'LineStyle', '--');
+%                set(line, 'Color','m') % Later on no colour
 %             %+make sth with nodes
-%             if j==1 %data_umea.way(i).ndref()
-%                plot(X(j),Y(j), '.k')
+                if j==1 %data_umea.way(i).ndref()
+                    plot(X(j),Y(j), '*k','MarkerSize', 20)
+                end
                 
-%         end
+            end
+        end     
             
             
     elseif handles.footway  == 1
         a=3
         line('Ydata',Y,'Xdata',X,'Color',handles.c9,'LineStyle', ':' )
-             end
+             
     
     end 
 hold off    

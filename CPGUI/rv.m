@@ -58,7 +58,7 @@ handles.output = handles;
 handles.test=varargin{1};
 
 testf = guidata(handles.test);
-if isfield(testf,'rv3') == 0;
+if isfield(testf,'handlesrv') == 0;
     set(handles.pop1,'Value',1);
     set(handles.pop2,'Value',2);
     set(handles.pop3,'Value',3);
@@ -75,43 +75,42 @@ if isfield(testf,'rv3') == 0;
     set(handles.bus,'Value',1);
     set(handles.car,'Value',1);
     set(handles.others,'Value',1);
+    set(handles.uipanel3, 'Visible', 'off') %Advanced settings visibility
+    set(handles.one,'Value',1);
     
 else
-    rv3 = testf.rv3;
-%     %test2 = guidata(testf.rv3)
-%     test2=getfield(testf, 'rv3');
-%     test3 = test2.pr
-%     
-%     set(handles.pop1,'Value',test3.cont1);
-%     set(handles.pop2,'Value',test3.cont2);
-%     set(handles.pop3,'Value',test3.cont3);
-%     set(handles.pop4,'Value',test3.cont4);
-%     set(handles.pop5,'Value',test3.cont5);
-%     set(handles.pop6,'Value',test3.cont6);
-%     set(handles.pop7,'Value',test3.cont7);
-%     set(handles.pop8,'Value',test3.cont8);
-%     set(handles.pop9,'Value',test3.cont9);
-%     set(handles.pop10,'Value',test3.cont10);
-%     set(handles.pop11,'Value',test3.cont11);
+    test3 = testf.handlesrv;
+
+    set(handles.pop1,'Value',test3.cont1);
+    set(handles.pop2,'Value',test3.cont2);
+    set(handles.pop3,'Value',test3.cont3);
+    set(handles.pop4,'Value',test3.cont4);
+    set(handles.pop5,'Value',test3.cont5);
+    set(handles.pop6,'Value',test3.cont6);
+    set(handles.pop7,'Value',test3.cont7);
+    set(handles.pop8,'Value',test3.cont8);
+    set(handles.pop9,'Value',test3.cont9);
+    set(handles.pop10,'Value',test3.cont10);
+    set(handles.pop11,'Value',test3.cont11);
+    
+    set(handles.car,'Value',test3.car);
+    set(handles.bic,'Value',test3.bic);
+    set(handles.bus,'Value',test3.bus);
+    
+    set(handles.one,'Value',test3.one);
+    set(handles.only,'Value',test3.only);
+    set(handles.others,'Value',test3.others);
+    set(handles.park,'Value',test3.park);
+    
+    if test3.radiobutton1==0
+        set(handles.uipanel3, 'Visible', 'off');
+    else
+        set(handles.uipanel3, 'Visible', 'on');
+    end
+  
     
     
-    
-%     small_pop(hObject,handles,handles.pop1);
-%     small_pop(hObject,handles,handles.pop2);
-%     small_pop(hObject,handles,handles.pop3);
-%     small_pop(hObject,handles,handles.pop4);
-%     small_pop(hObject,handles,handles.pop5);
-%     small_pop(hObject,handles,handles.pop6);
-%     small_pop(hObject,handles,handles.pop7);
-%     small_pop(hObject,handles,handles.pop8);
-%     small_pop(hObject,handles,handles.pop9);
-%     small_pop(hObject,handles,handles.pop10);
-%     small_pop(hObject,handles,handles.pop11);
-%     
-%     small_pop(hObject,handles,handles.bic);
-%     small_pop(hObject,handles,handles.bus);
-%     small_pop(hObject,handles,handles.car);
-%     small_pop(hObject,handles,handles.others); 
+
     
 end
 
@@ -224,6 +223,17 @@ function radiobutton1_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of radiobutton1
+if get(hObject,'Value')
+    %set(uipanel3,'WindowButtonMotionFcn', @cursor_coord);
+    %set(handles.checkbox3,'Enable','off')
+    %u = handles.uipanel3
+    set(handles.uipanel3, 'Visible', 'on')
+    
+    
+    %guidata(hObject, handles);
+else
+    set(handles.uipanel3, 'Visible', 'off')
+end
 
 
 % --- Executes on button press in checkbox8.

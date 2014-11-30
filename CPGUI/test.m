@@ -159,10 +159,16 @@ ispoint = isfield(handles,'im3');
 if ispoint == 1;
     delete(handles.im3);
 end
-
-handles.im3 = impoint(gca,handles.pospoint);
-setColor(handles.im3,'y');
-guidata(hObject,handles);
+try
+    handles.im3 = impoint(gca,handles.pospoint);
+    setColor(handles.im3,'y');
+    guidata(hObject,handles);
+catch
+    disp('Please, choose a location to be able to see a choosen location')
+    waitbar(1,h);
+    delete(h)
+    exit
+end
 
 waitbar(1,h);
 delete(h)
@@ -171,7 +177,7 @@ delete(h)
 function time_edit_Callback(hObject, eventdata, handles)
 % hObject    handle to time_edit (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% handles    structure with handles and use r data (see GUIDATA)
 
 % Hints: get(hObject,'String') returns contents of time_edit as text
 %        str2double(get(hObject,'String')) returns contents of time_edit as a double
@@ -226,13 +232,10 @@ function pushbutton2_Callback(hObject, eventdata, handles)
 
 
 %plot_roads(handles.graph_data,handles.data_umea,handles);%göra spec handles för import
-test2=getfield(handles, 'rv3');
-handles.apple=0
-handles.rv3=rv(handles.figure1);
-%rv2=handles.rv3;
-%rv2 = guidata(handles.rv3);
-%handles.rv3 = guidata(handles.rv);
-test2=getfield(handles, 'rv3');
+%test2=getfield(handles, 'rv3');
+%handles.apple=0
+rv(handles.figure1);
+
 guidata(hObject,handles);
 
 
