@@ -114,6 +114,10 @@ dest_nodes = [28 29 42];
         if ~isempty(i3)
             dist_to_next(i3) = [car([car(i3).next_car]).dist] - temp_dist_array(i3);
             time_to_next(i3) = dist_to_next(i3)./[car(i3).vel]';
+            
+            % Remove NaN
+            temp_NaN = i3(find(isnan(time_to_next(i3))));
+            time_to_next(temp_NaN) = 4;
         end
         
         time_to_node = ([edge([car.edge]).dist] - temp_dist_array)./[car.vel];
@@ -131,17 +135,20 @@ dest_nodes = [28 29 42];
             force(d2 < 4) = break_force([car(i5).dist],[edge([car(i5).edge]).dist] - 2,[car(i5).vel],zeros(size(i5)));
             breaking(d2 < 4) = 1;
         end
-%         x = 0;
-%         for i = i5
-%             x = x + 1;
-%             d2 = (edge(edge(i4(x)).edge_to_right).dist - [car(edge(edge(i4(x)).edge_to_right).cars(1)).dist])./car(edge(edge(i4(x)).edge_to_right).cars(1)).vel;
-%             if d2 < 4
-%                 force(i) = -10;
-%             end
-%         end
+        x = 0;
+        for i = i5
+            x = x + 1;
+            d2 = (edge(edge(i4(x)).edge_to_right).dist - [car(edge(edge(i4(x)).edge_to_right).cars(1)).dist])./car(edge(edge(i4(x)).edge_to_right).cars(1)).vel;
+            if d2 < 4
+                force(i) = -10;
+            end
+        end
         
         temp_index4 = find(([car.vel] == 0).*(breaking)');
         force(temp_index4) = 0;
+        
+        
+        
         %% Rules
 %         for i = 1:n_cars
 %         %% H�GERREGELN
@@ -187,38 +194,49 @@ dest_nodes = [28 29 42];
 % %         end
 %         %% 
 %         
-%         
-%         
-%         if car(i).next_car > 0 %Rule that makes sure that the car has the same velocity as the car ahead.
-%             if car(i).vel > car(car(i).next_car).vel
-%                 vel1 = car(i).vel;
-%                 vel2 = car(car(i).next_car).vel;
-%                 dist1 = car(i).dist;
-%                 dist2 = car(car(i).next_car).dist;
-%                 temp_force = break_force(dist1,dist2,vel1,vel2);
-%                 breaking = 1;
-%                 if temp_force < force
-%                     force = temp_force;
-%                 end
-%             end
-%         end
-%         
-        i3t = find(0 < time_to_next(i3) < 3);%Rule that makes sure that the car in front is atleast 3 seconds ahead.
-            temp_force = (-20*(3 - time_to_next(i3t))./3)';
-            i3t = force(i3t) > temp_force;
-            force(i3t) = temp_force(i3t);
+% %         
+%                 i3
+%                 car(i3).vel
+%                 car(car(i3).next_car).vel
+% 
+if ~isempty(i3)
+    i3v = i3(find([car(i3).vel] > [car([car(i3).next_car]).vel]));
+
+    %Rule that makes sure that the car has the same velocity as the car ahead.
+    if ~isempty(i3v)
+
+        vel1 = [car(i3v).vel]
+        vel2 = [car([car(i3v).next_car]).vel]
+        dist1 = [car(i3v).dist]
+        dist2 = [car([car(i3v).next_car]).dist]
+        temp_force_v = break_force(dist1,dist2,vel1,vel2);
+        i3v2 = force(i3v) > temp_force_v;
+        i3v2
+        size(force)
+        size(temp_force_v)
+        temp_force_v(i3v2)
+        force(i3v(i3v2)) = temp_force_v(i3v2);
+    end
+end
+
+        
+            i3t = i3(find(0 < time_to_next(i3) < 3));%Rule that makes sure that the car in front is atleast 3 seconds ahead.
+            temp_force_t = (-20*(3 - time_to_next(i3t))./3)';
+            i3t2 = force(i3t) > temp_force_t;
+            force(i3t(i3t2)) = temp_force_t(i3t2);
         
             
-        i3d = find(0 < dist_to_next(i3) < 4);%Rule that makes sure that the car in front is at least 4 meters ahead.
-            temp_force = -20*(4 - dist_to_next(i3d))./4';
-            i3d = force(i)
-            if temp_force < force
-                force = temp_force;
-            end
+            i3d = i3(find(0 < dist_to_next(i3) < 4));%Rule that makes sure that the car in front is at least 4 meters ahead.
+            temp_force_d = (-20*(4 - dist_to_next(i3d))./4)';
+            i3d2 = force(i3d) > temp_force_d;
+            force(i3d(i3d2)) = temp_force_d(i3d2);
+
 %  
 %         end
           
         %% Update positions
+%         force
+        
         tempcell = num2cell(([car.vel] + force*dt).*(([car.vel] + force*dt) > 0));
         [car.vel] = tempcell{:};
         
