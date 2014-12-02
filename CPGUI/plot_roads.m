@@ -47,7 +47,7 @@ guidata(handles.test, test);
 %load('graph_data.mat','intnd_count','intnd','id_map')
 %load('data_umea.mat','node','way')
 
-[x,n_ways] = size(data_umea.way);
+[~,n_ways] = size(data_umea.way);
 hold on
 % for i = 1:graph_data.intnd_count %Plottar itersection nodes och f�rgl�gger dem enligt snabbaste f�rds�ttet.
 %     lat = graph_data.intnd(i).lat;
@@ -57,7 +57,7 @@ hold on
 
 for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�nds (�ven de som inte �r intersection nodes) f�r att rita ut v�garna.
     if data_umea.way(i).footway == 0 
-        [x, n_ndref] = size(data_umea.way(i).ndref);
+        [~, n_ndref] = size(data_umea.way(i).ndref);
         X = zeros(1,n_ndref);
         Y = zeros(1,n_ndref);
         for j = 1:n_ndref
@@ -239,12 +239,13 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
         if one==1
             if data_umea.way(i).oneway == 1
                 line('Ydata',Y,'Xdata',X,'LineStyle', '--');
+                plot(X(1),Y(1), '*m','MarkerSize', 20)
 %                set(line, 'LineStyle', '--');
 %                set(line, 'Color','m') % Later on no colour
 %             %+make sth with nodes
-                if j==1 %data_umea.way(i).ndref()
-                    plot(X(j),Y(j), '*k','MarkerSize', 20)
-                end
+%                 if j==1 %data_umea.way(i).ndref()
+%                     plot(X(j),Y(j), '*m','MarkerSize', 20)
+%                 end
                 
             end
         end     
@@ -256,6 +257,7 @@ for i = 1:n_ways %Plottar v�garna mellan noderna, notera att ALLA noder anv�
              
     
     end 
-hold off    
+   
 end
+hold off
 

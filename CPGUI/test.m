@@ -65,6 +65,11 @@ plot_nodes_init(handles.graph_data, handles.data_umea);
 waitbar(1,h);
 delete(h)
 
+
+% Sparar undan "children" till figuren (inneh�ller alla grafikobjekt som
+% tex v�gar och noder)
+handles.ch = get(handles.axes1,'children');
+
 % Choose default command line output for test
 handles.output = hObject;
 
@@ -152,7 +157,8 @@ end
 fastest_trip = bus(handles.current_node,handles.graph_data,travelTime);
 waitbar(0.5,h);
 axes(handles.axes1)
-plot_nodes2(fastest_trip,handles.current_node,handles.graph_data,handles.data_umea)
+%plot_nodes2(fastest_trip,handles.current_node,handles.graph_data,handles.data_umea)
+plot_nodes3(fastest_trip,handles)
 
 handles = guidata(hObject);
 ispoint = isfield(handles,'im3');

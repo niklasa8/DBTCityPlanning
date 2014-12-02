@@ -205,18 +205,12 @@ function radiobutton1_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of radiobutton1
 if get(hObject,'Value')
-    %set(uipanel3,'WindowButtonMotionFcn', @cursor_coord);
-    %set(handles.checkbox3,'Enable','off')
-    %u = handles.uipanel3
     set(handles.uipanel3, 'Visible', 'on')
     
     
     %guidata(hObject, handles);
 else
-    set(handles.uipanel3, 'Visible', 'off')
-    
-    
-    
+    set(handles.uipanel3, 'Visible', 'off')   
 end    
 
 
