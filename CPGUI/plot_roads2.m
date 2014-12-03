@@ -39,22 +39,8 @@ handles.one_direction=get(handles.one_direction,'Value');
 
 
 
-
-
-
-%Fulskript som plottar noder och v�gar f�r att visualisera s� att debugging
-%blir l�ttare.
-
-%load('graph_data.mat','intnd_count','intnd','id_map')
-%load('data_umea.mat','node','way')
-
 [~,n_ways] = size(data_umea.way);
 hold on
-% for i = 1:graph_data.intnd_count %Plottar itersection nodes och f�rgl�gger dem enligt snabbaste f�rds�ttet.
-%     lat = graph_data.intnd(i).lat;
-%     lon = graph_data.intnd(i).lon;
-    %plot(lon,lat, '.k')
-%end
 
 is = zeros(2,458);
 c_more=0;
@@ -299,15 +285,15 @@ if handles.one_direction == 1 && isfield(testf,'one_cre') == 0;
     testf.one_there=1;
     testf.ch = get(testf.axes1,'children');
 
-elseif handles.one_direction == 0 && isfield(testf,'one_cre') == 1;
-    %n = graph_data.intnd_count;
+elseif handles.one_direction == 0 && isfield(testf,'one_cre') == 1 && testf.one_there==1;
+   
     for i = 1:testf.n_one
         set(testf.ch(testf.n_one - i + 1),'Visible', 'off');
     end
     set(testf.one_there,'Value',0);
     
 elseif handles.one_direction == 1 && isfield(testf,'one_cre') == 1 && testf.one_there==0;
-    %n = graph_data.intnd_count;
+    
     for i = 1:testf.n_one
         set(testf.ch(testf.n_one - i + 1),'Visible', 'on');               
     end
@@ -318,8 +304,34 @@ end
 %         a=3
 %         set(testf.ch(n_ways + testf.n_one - i + 1),'Color',handles.c9,'LineStyle', ':' )
 
-testf.c_more = (c_more)*2;
+if handles.nonodes == 1 && isfield(testf,'nodes_manip') == 0;
+    n = graph_data.intnd_count;
+    for i = 1:n
+        set(testf.ch(n_ways + n +testf.n_one - i + 1),'Visible', 'off');
+    end
+    testf.nodes_there=0;
+    testf.nodes_manip=1;
+    
+elseif handles.nonodes == 0 && isfield(testf,'nodes_manip') == 1 && testf.nodes_there==0;
+    n = graph_data.intnd_count;
+    for i = 1:n
+        set(testf.ch(n_ways + n +testf.n_one - i + 1),'Visible', 'on');
+    end
+    set(testf.nodes_there,'Value',1);
+
+elseif handles.nonodes == 1 && isfield(testf,'nodes_manip') == 1 && testf.nodes_there==1;
+    n = graph_data.intnd_count;
+    for i = 1:n
+        set(testf.ch(n_ways + n +testf.n_one - i + 1),'Visible', 'off');
+    end
+    set(testf.nodes_there,'Value',0);
+       
+end 
+    
+
+    
 testf.handlesrv=handles;
 guidata(handles.test, testf);
 hold off
+end 
 
