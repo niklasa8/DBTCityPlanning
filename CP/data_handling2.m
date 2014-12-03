@@ -72,6 +72,8 @@ while ischar(A) %Förstsätt läsa in rader tills allt har lästs in.
             node(id_map('281032452')).bus_stop = 1; %Nygatan
             node(id_map('286123597')).bus_stop = 1; %Järnvägstorget
             node(id_map('613411032')).bus_stop = 1; %Länsstyrelsen
+            node(id_map('613411034')).bus_stop = 1; %Järnvägsgatan
+            node(id_map('258354235')).bus_stop = 1; %varvsgatan
         end
         
         way_count = way_count + 1;
