@@ -1,0 +1,33 @@
+function n=check_footnote_mat_files()
+datafiles={};
+k=1;
+BussData=dir('../BussData');
+for i=3:length(BussData)
+    directory=['../BussData/' BussData(i).name '/'];
+    A=dir([directory 'l*.mat']);
+    for j=1:length(A)
+        datafiles(k)={[directory A(j).name]};
+        k=k+1;
+    end
+end
+datafiles
+
+Names={};
+IDs={};
+for i=1:length(datafiles)
+    data=load(datafiles{i});
+    data=data.table;
+    for j=1:length(data)
+        name=data(j).name;
+        id=data(j).id;
+        
+        %Check duplicity
+        [ID_present, ID_index]=ismember(id, IDs);
+        [Name_present, Name_index]=ismember(name, Names);
+    end
+end
+
+%Sortera all data i bokstavsordning
+[B, I]=sort(Names);
+sorted_data=[Names(I); IDs(I)]';
+end
