@@ -47,6 +47,7 @@ ICA	148976257
 IKSU-hallen	613494992
 Ishallen	1511880808
 Istidsgatan	1536202587
+Järnvägsgatan	613411034
 Järnvägstorget	286123598
 Kajsa Söders väg	205332885
 Kanslihuset	144839560
@@ -72,6 +73,7 @@ Laboratorvägen	229822631
 Lagervägen	1302057753
 Laxgränd	270655422
 Liljansberget	1117711621
+Länsstyrelsen	613411032
 Lärlingsgränd	167005516
 Löftets gränd	301742691
 Löjtnantsgatan	296161445
