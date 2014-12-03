@@ -22,7 +22,7 @@ function varargout = rv(varargin)
 
 % Edit the above text to modify the response to help rv
 
-% Last Modified by GUIDE v2.5 18-Nov-2014 22:25:02
+% Last Modified by GUIDE v2.5 03-Dec-2014 09:39:23
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -101,12 +101,19 @@ else
     set(handles.only,'Value',test3.only);
     set(handles.others,'Value',test3.others);
     set(handles.park,'Value',test3.park);
+    set(handles.radiobutton1,'Value',test3.radiobutton1);
+    
     
     if test3.radiobutton1==0
         set(handles.uipanel3, 'Visible', 'off');
     else
         set(handles.uipanel3, 'Visible', 'on');
     end
+    
+    if test3.one==0
+        set(handles.one_direction, 'Enable', 'off');
+    end
+        
   
     
     
@@ -196,7 +203,12 @@ function one_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of one
-
+if get(hObject,'Value') == 0
+    set(handles.one_direction,'Enable','off')
+    set(handles.one_direction,'Value', 0)
+else
+    set(handles.one_direction,'Enable','on')
+end
 
 % --- Executes on button press in park.
 function park_Callback(hObject, eventdata, handles)
@@ -990,3 +1002,12 @@ function nonodes_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of nonodes
+
+
+% --- Executes on button press in one_direction.
+function one_direction_Callback(hObject, eventdata, handles)
+% hObject    handle to one_direction (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of one_direction

@@ -69,6 +69,7 @@ delete(h)
 % Sparar undan "children" till figuren (inneh�ller alla grafikobjekt som
 % tex v�gar och noder)
 handles.ch = get(handles.axes1,'children');
+handles.n_one = 0;
 
 % Choose default command line output for test
 handles.output = hObject;
