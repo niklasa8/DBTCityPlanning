@@ -35,6 +35,10 @@ for i=1:length(textfiles)
             IDs=[IDs A(2)];
             file_history=[file_history i];
         elseif ID_present && ~Name_present
+            Names=[Names A(1)];
+            IDs=[IDs A(2)];
+            file_history=[file_history i];
+            
             disp(' ');
             disp('ID match and name difference: ');
             disp(IDs(ID_index));
@@ -42,31 +46,37 @@ for i=1:length(textfiles)
             disp(A(1));
             disp(textfiles(file_history(ID_index)));
             disp(Names(ID_index));
-        elseif ~ID_present && Name_present && ...
-                ~strcmp(A{1},'Universitetssjukhuset') && ...
+        elseif ~ID_present && Name_present            
+            Names=[Names A(1)];
+            IDs=[IDs A(2)];
+            file_history=[file_history i];
+            
+            if  ~strcmp(A{1},'Universitetssjukhuset') && ...
                 ~strcmp(A{1},'Nygatan') && ...
                 ~strcmp(A{1},'Varvsgatan') && ...
                 ~strcmp(A{1},'Järnvägstorget') && ...
                 ~strcmp(A{1},'Obbolavägen')
-                
-            disp(' ');
-            disp('Name match and ID difference: ');
-            disp(Names(Name_index));
-            disp(textfiles(i));
-            disp(A(2));
-            disp(textfiles(file_history(Name_index)));
-            disp(IDs(Name_index));
+
+                disp(' ');
+                disp('Name match and ID difference: ');
+                disp(Names(Name_index));
+                disp(textfiles(i));
+                disp(A(2));
+                disp(textfiles(file_history(Name_index)));
+                disp(IDs(Name_index));
+            end
+            
         end
     end
     fclose(file_id);
 end
 
-[B, I]=sort(Names);
+[~, I]=sort(Names);
 sorted_data=[Names(I); IDs(I)]';
 
-fid1=fopen('sorted_data_for_reading2.txt','wt');
-fid2=fopen('sorted_data_tabbed2.txt', 'wt');
-fid3=fopen('sorted_data_semicolon2.txt', 'wt');
+fid1=fopen('sorted_data_for_reading_footnote.txt','wt');
+fid2=fopen('sorted_data_tabbed_footnote.txt', 'wt');
+fid3=fopen('sorted_data_semicolon_footnote.txt', 'wt');
 [rows,cols]=size(sorted_data);
 for i=1:rows
       fprintf(fid1,'%-30s',sorted_data{i,1});
