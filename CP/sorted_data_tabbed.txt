@@ -49,6 +49,7 @@ Ishallen	1511880808
 Istidsgatan	1536202587
 Järnvägsgatan	613411034
 Järnvägstorget	286123598
+Järnvägstorget	286123597
 Kajsa Söders väg	205332885
 Kanslihuset	144839560
 Kapellvägen	249309916
@@ -93,9 +94,11 @@ Måttgränd	1426149838
 Nornaplatsen	434092981
 Nydala	282252349
 Nygatan	291136995
+Nygatan	281032452
 Obbolavägen	295095228
+Obbolavägen	166973579
 Ostkroken	257128
-Paradisgränd	533996636
+Paradisgränd	158633948
 Parkvägen	2398729607
 Porfyrvägen	1062497482
 Päronvägen	1658706866
@@ -143,6 +146,7 @@ Travbanevägen	305941870
 Tuvgränd	247782033
 Umeliivägen	262999261
 Umeå Airport	1477609588
+Universitetssjukhuset	2076294620
 Universitetssjukhuset	2076294619
 Universum	295095193
 Uttervägen	182940888
@@ -150,6 +154,7 @@ V.Ersboda Centrum	2075347365
 VK	1286195118
 Vallarestigen	1611123156
 Vargvägen	131923256
+Varvsgatan	258354235
 Varvsgatan	166976634
 Vasaplan	283324062
 Vintergatan	166978617
