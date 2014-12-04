@@ -31,24 +31,24 @@ for i=1:length(datafiles)
     data=data.table;
     for j=1:length(data)
         name=data(j).name;
-        id=data(j).id;
+        id=str2double(data(j).id);
         
         if ~isKey(busMap,id)
            busMap(id) = num_stops+1;
            num_stops = num_stops+1;
         end       
         
-        if ~ismember(id, IDs)
-            IDs=[IDs id];
-        end
-        
-        if ~ismember(name, Names);
-            Names=[Names name];
-        end
+%         if ~ismember(id, IDs)
+%             IDs=[IDs id];
+%         end
+%         
+%         if ~ismember(name, Names);
+%             Names=[Names name];
+%         end
     end
 end
 
-n = length(IDs);  % Total number of busstops 
+n = max(size(busMap));  % Total number of busstops 
 
 Arr = cell(n);  % Arrival times
 Dep = cell(n);  % Departure times
@@ -59,13 +59,21 @@ for file=1%max(size(datafiles))
     
     
     for i=1:max(size(table))-1
+        % Index in arr/dep matrices
+        from = busMap(str2double(table(i).id));
+        to = busMap(str2double(table(i+1).id));
         
+        % If arr/dep element empty, create day/minute matrix
+        if isempty(Arr(from,to))
+           Arr{from,to} = zeros(4,1440);
+           Dep{from,to} = zeros(4,1440);
+        end
         
+        % Handle roundoffs in waitingtime
         if isempty(table(i).waiting_time)
             table(i).waiting_time = 0;
         end
         
-        % Handle roundoffs in waitingtime
         wait_time = round(table(i).waiting_time);
         if wait_time-table(i).waiting_time < 0
            table(i+1).waiting_time = abs(wait_time-table(i).waiting_time) + table(i+1).waiting_time
@@ -79,6 +87,7 @@ for file=1%max(size(datafiles))
         if ~isempty(table(1).MT)
             dep = TimeToMin(table(i+1).MT) - TimeToMin(table(i).MT) + round(table(i).waiting_time);
             arr = TimeToMin(table(i+1).MT);
+            Arr{from,to}(1,arr:end) = arr;
         end
         
         if isempty(table(1).F)
