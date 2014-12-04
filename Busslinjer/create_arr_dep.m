@@ -59,7 +59,7 @@ Dep = cell(n);  % Departure times
 
 for file=1:max(size(datafiles))
     load(char(datafiles(file)));   
-    
+    disp(char(datafiles(file)));
     
     for i=1:max(size(table))-1
         % Index in arr/dep matrices
@@ -79,9 +79,9 @@ for file=1:max(size(datafiles))
         
         wait_time = round(table(i).waiting_time);
         if wait_time-table(i).waiting_time < 0
-           table(i+1).waiting_time = abs(wait_time-table(i).waiting_time) + table(i+1).waiting_time
+           table(i+1).waiting_time = abs(wait_time-table(i).waiting_time) + table(i+1).waiting_time;
         elseif wait_time-table(i).waiting_time > 0
-           table(i+1).waiting_time = table(i).waiting_time - abs(wait_time-table(i).waiting_time)
+           table(i+1).waiting_time = table(i).waiting_time - abs(wait_time-table(i).waiting_time);
         end
         table(i).waiting_timeround = wait_time;
         
@@ -96,7 +96,7 @@ for file=1:max(size(datafiles))
             
             % Add each arrival- and departuretime
             for j=1:length(arr)
-                % Shift time from 00:00-24:00 to 04:00-04:00
+                % Shift time from 00:00-24:00 to 04:01-04:00
                 if dep(j)>=0 & dep(j)<=240
                     dep(j) = dep(j) + 1200;
                 else
@@ -108,13 +108,14 @@ for file=1:max(size(datafiles))
                     arr(j) = arr(j) - 240;
                 end
                 
-                for k=j:1440-1
+                
+                for k=int16(arr(j)):1440
                     % If current dep/arr time is less than new
-                    if Arr{from,to}(1,int8(arr(k))) < arr(j)
-                        Arr{from,to}(1,int8(arr(k))) = arr(j);
+                    if Arr{from,to}(1,k) <= arr(j)
+                        Arr{from,to}(1,k) = arr(j);
                     end
-                    if Dep{from,to}(1,int8(dep(k))) < dep(j)
-                        Dep{from,to}(1,int8(dep(k))) = dep(j);
+                    if Dep{from,to}(1,k) <= dep(j)
+                        Dep{from,to}(1,k) = dep(j);
                     end
                 end                    
 %                 Arr{from,to}(1,arr(j):end) = arr(j);
@@ -139,13 +140,13 @@ for file=1:max(size(datafiles))
                 else
                     arr(j) = arr(j) - 240;
                 end
-                for k=j:1440
+                for k=int16(arr(j)):1440
                     % If current dep/arr time is less than new
-                    if Arr{from,to}(2,int8(arr(k))) < arr(j)
-                        Arr{from,to}(2,int8(arr(k))) = arr(j);
+                    if Arr{from,to}(2,k) <= arr(j)
+                        Arr{from,to}(2,k) = arr(j);
                     end
-                    if Dep{from,to}(2,int8(dep(k))) < dep(j)
-                        Dep{from,to}(2,int8(dep(k))) = dep(j);
+                    if Dep{from,to}(2,k) <= dep(j)
+                        Dep{from,to}(2,k) = dep(j);
                     end
                 end
 %                 Arr{from,to}(2,arr(j):end) = arr(j);
@@ -169,13 +170,13 @@ for file=1:max(size(datafiles))
                 else
                     arr(j) = arr(j) - 240;
                 end
-                for k=j:1440
+                for k=int16(arr(j)):1440
                     % If current dep/arr time is less than new
-                    if Arr{from,to}(3,int8(arr(k))) < arr(j)
-                        Arr{from,to}(3,int8(arr(k))) = arr(j);
+                    if Arr{from,to}(3,k) <= arr(j)
+                        Arr{from,to}(3,k) = arr(j);
                     end
-                    if Dep{from,to}(3,int8(dep(k))) < dep(j)
-                        Dep{from,to}(3,int8(dep(k))) = dep(j);
+                    if Dep{from,to}(3,k) <= dep(j)
+                        Dep{from,to}(3,k) = dep(j);
                     end
                 end
 %                 Arr{from,to}(3,arr(j):end) = arr(j);
@@ -200,13 +201,13 @@ for file=1:max(size(datafiles))
                 else
                     arr(j) = arr(j) - 240;
                 end
-                for k=j:1440
+                for k=int16(arr(j)):1440
                     % If current dep/arr time is less than new
-                    if Arr{from,to}(4,int8(arr(k))) < arr(j)
-                        Arr{from,to}(4,int8(arr(k))) = arr(j);
+                    if Arr{from,to}(4,k) <= arr(j)
+                        Arr{from,to}(4,k) = arr(j);
                     end
-                    if Dep{from,to}(4,int8(dep(k))) < dep(j)
-                        Dep{from,to}(4,int8(dep(k))) = dep(j);
+                    if Dep{from,to}(4,k) <= dep(j)
+                        Dep{from,to}(4,k) = dep(j);
                     end
                 end
 %                 Arr{from,to}(4,arr(j):end) = arr(j);
