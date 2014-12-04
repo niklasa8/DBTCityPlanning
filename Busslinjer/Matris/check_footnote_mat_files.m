@@ -10,7 +10,6 @@ for i=3:length(BussData)
         k=k+1;
     end
 end
-datafiles
 
 Names={};
 IDs={};
@@ -38,32 +37,40 @@ for i=1:length(datafiles)
             disp(name);
             disp(datafiles(file_history(ID_index)));
             disp(Names(ID_index));
-        elseif ~ID_present && Name_present && ...
-                ~strcmp(name(1),'Universitetssjukhuset') && ...
+            
+            Names=[Names name];
+            IDs=[IDs id];
+            file_history=[file_history i];
+        elseif ~ID_present && Name_present
+            Names=[Names name];
+            IDs=[IDs id];
+            file_history=[file_history i];
+            if  ~strcmp(name(1),'Universitetssjukhuset') && ...
                 ~strcmp(name(1),'Nygatan') && ...
                 ~strcmp(name(1),'Varvsgatan') && ...
                 ~strcmp(name(1),'Järnvägstorget') && ...
                 ~strcmp(name(1),'Obbolavägen')
                 
-            disp(' ');
-            disp('Name match and ID difference: ');
-            disp(Names(Name_index));
-            disp(datafiles(i));
-            disp(id);
-            disp(datafiles(file_history(Name_index)));
-            disp(IDs{Name_index});
+                disp(' ');
+                disp('Name match and ID difference: ');
+                disp(Names(Name_index));
+                disp(datafiles(i));
+                disp(id);
+                disp(datafiles(file_history(Name_index)));
+                disp(IDs{Name_index});
+            end
         end
     end
 end
 
 %Sortera all data i bokstavsordning
-[B, I]=sort(Names);
+[~, I]=sort(Names);
 sorted_data=[Names(I); IDs(I)]';
 
 %Skriv data till filer
-fid1=fopen('sorted_data_for_reading2.txt','wt');
-fid2=fopen('sorted_data_tabbed2.txt', 'wt');
-fid3=fopen('sorted_data_semicolon2.txt', 'wt');
+fid1=fopen('sorted_data_for_reading_mat.txt','wt');
+fid2=fopen('sorted_data_tabbed_mat.txt', 'wt');
+fid3=fopen('sorted_data_semicolon_mat.txt', 'wt');
 [rows,~]=size(sorted_data);
 for i=1:rows
       fprintf(fid1,'%-30s',sorted_data{i,1});
