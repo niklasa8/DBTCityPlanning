@@ -14,7 +14,7 @@ end
 nr_of_lights = j;
 
 
-% modes: time= 1, traffic = 2
+% modes: time= 1, traffic = 2, green wave = 3
 
 light_object = (nr_of_lights);
 for i = 1:nr_of_lights
@@ -23,9 +23,11 @@ for i = 1:nr_of_lights
     light(i).second = 0;
     light(i).firstEdges = edges(i*2-1,:);
     light(i).secondEdges = edges(i*2,:);
-    light(i).period = 40.0;
+    light(i).period = 45.0;
     light(i).timer = 0;
     light(i).node = node(i);
-    light(i).mode = 2;
+    light(i).mode = 3;
+    light(i).GW_nr = i;
+    light(i).GW_tot = 3;
     
 end

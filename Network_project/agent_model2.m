@@ -40,10 +40,10 @@ car_pos = [intnd(car(1).prev_node).lon intnd(car(1).prev_node).lat];
 car_object(1) = rectangle('position',[car_pos 5 5],'facecolor','k');
 cars_in_network = n_cars;
 [x n_intnd] = size(intnd);
-source_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
-%source_nodes = [38 1 44];
-dest_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
-%source_nodes = [1 23];
+source_nodes = [1 7 8 12 20 22 23 28 29 30 34 37 42 44 45 46 47];
+% source_nodes = [30];
+dest_nodes = [1 7 8 12 20 22 23 28 29 30 34 37 42 44 45 46 47];
+% dest_nodes = [34];
 [x n_sources] = size(source_nodes);
 
  for t = 1:n
@@ -148,7 +148,7 @@ dest_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
                           %d1 = edge(car(i).edge).dist - temp_dist; % Distance to node for car i.
                           d2 = edge(car(edge(edge(car(i).edge).edge_to_right).cars(1)).edge).dist - car(edge(edge(car(i).edge).edge_to_right).cars(1)).dist; % Distance to node for car on the edge to right.
                           if d2/(car(edge(edge(car(i).edge).edge_to_right).cars(1)).vel) < 4
-                              force = break_force(car(i).dist,edge(car(i).edge).dist - 2,car(i).vel,0);
+                              force = break_force(car(i).dist,edge(car(i).edge).dist - 2,car(i).vel,edge(car(i).edge).vel_lim*0.3);
                               breaking = 1;
                           end
                       end
@@ -177,10 +177,28 @@ dest_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
             end
         end
         
-%         end
-        %% 
+        %% TURNING. Slow down as the car approaches a turn
+        if breaking == 0
+        right = 0;
+        left = 0;
+        if edge(car(i).edge).edge_to_right ~= 0
+            right = (car(i).path(car(i).it + 1) == edge(edge(car(i).edge).edge_to_right).from);
+        end
+        if edge(car(i).edge).edge_to_left ~= 0
+            left =(car(i).path(car(i).it + 1) == edge(edge(car(i).edge).edge_to_left).from);
+        end
+        if right || left
+            d = edge(car(i).edge).dist - car(i).dist;
+            if d < 10 && car(i).vel > edge(car(i).edge).vel_lim*0.5
+                breaking = 1;
+                force = break_force(car(i).dist,edge(car(i).edge).dist,car(i).vel,edge(car(i).edge).vel_lim*0.5);
+            end    
+        end
+        end
+        %%
         
         
+        %%
         
         if car(i).next_car > 0 %Rule that makes sure that the car has the same velocity as the car ahead.
             if car(i).vel > car(car(i).next_car).vel
@@ -289,7 +307,7 @@ dest_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
         if light(k).mode == 1% Depend only on time
             light(k).timer = light(k).timer + dt;
             if abs(light(k).timer - light(k).period/2) < 10^(-6)
-                set(light_object(k), 'facecolor', 'green');
+                set(light_object(k), 'facecolor', 'red');
                 light(i).first = 0;
                 light(i).second = 1;
             end
@@ -297,7 +315,7 @@ dest_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
             light(k).timer
             light(k).period
             if abs(light(k).timer - light(k).period) < 10^(-6)
-                set(light_object(k), 'facecolor', 'red');
+                set(light_object(k), 'facecolor', 'green');
                 light(k).first = 1;
                 light(k).second = 0;
                 light(k).timer = 0;
@@ -309,12 +327,12 @@ dest_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
                     if isempty(edge(light(k).firstEdges(j)).cars)
                         light(k).first = 0;
                         light(k).second = 1;
-                        set(light_object(k), 'facecolor', 'green');
+                        set(light_object(k), 'facecolor', 'red');
                     end
                     if isempty(edge(light(k).secondEdges(j)).cars)
                         light(k).first = 1;
                         light(k).second = 0;
-                        set(light_object(k), 'facecolor', 'red');
+                        set(light_object(k), 'facecolor', 'green');
                     end
                 end
             elseif abs(light(k).timer-light(k).period/2) < 10^(-6)
@@ -324,7 +342,7 @@ dest_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
                             light(k).first = 0;
                             light(k).second = 1;
                             light(k).timer = 0;
-                            set(light_object(k), 'facecolor', 'green');
+                            set(light_object(k), 'facecolor', 'red');
                         else
                             light(k).timer = 0;
                         end
@@ -333,7 +351,7 @@ dest_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
                             light(k).first = 1;
                             light(k).second = 0;
                             light(k).timer = 0;
-                            set(light_object(k), 'facecolor', 'red');
+                            set(light_object(k), 'facecolor', 'green');
                         else
                             light(k).timer = 0;
                         end
@@ -343,9 +361,42 @@ dest_nodes = [1 7 8 12 13 20 22 23 28 29 30 34 37 42 44 45 46 47];
                 end
             end
             light(k).timer = light(k).timer + dt;
-            light(k).timer
+%             light(k).timer
             
         end
+        if light(k).mode == 3% Green wave
+            if abs(light(k).timer -light(k).period/light(k).GW_tot*(light(k).GW_nr-1)) < 10^(-6)
+                light(k).second = 0;
+                light(k).first = 1;
+                set(light_object(k), 'facecolor', 'green');
+            end
+            if light(k).GW_nr == light(k).GW_tot
+                if abs(light(k).timer -light(k).period/light(k).GW_tot) < 10^(-6)
+                    light(k).second = 1;
+                    light(k).first = 0;
+                    set(light_object(k), 'facecolor', 'red');
+                end
+            elseif (light(k).GW_nr + 1) == light(k).GW_tot    
+                light(k).timer
+                if light(k).timer < 10^(-6)
+                    light(k).second = 1;
+                    light(k).first = 0;
+                    set(light_object(k), 'facecolor', 'red');
+                end                
+            else
+                if abs(light(k).timer - 2*light(k).period/light(k).GW_tot*(light(k).GW_nr)) < 10^(-6)
+                    light(k).second = 1;
+                    light(k).first = 0;
+                    set(light_object(k), 'facecolor', 'red');
+                end
+            end
+            light(k).timer = light(k).timer + dt;
+            
+            if abs(light(k).timer - light(k).period) < 10^(-6)
+                light(k).timer = 0;
+            end
+        end
+        
         
     end
     %%
