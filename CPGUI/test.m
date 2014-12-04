@@ -22,7 +22,7 @@ function varargout = test(varargin)
 
 % Edit the above text to modify the response to help test
 
-% Last Modified by GUIDE v2.5 21-Nov-2014 09:52:27
+% Last Modified by GUIDE v2.5 04-Dec-2014 08:23:43
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -70,6 +70,10 @@ delete(h)
 % tex v�gar och noder)
 handles.ch = get(handles.axes1,'children');
 handles.n_one = 0;
+handles.n_footways=0;
+handles.n2_one = 0;
+handles.n2_footways=0;
+
 
 % Choose default command line output for test
 handles.output = hObject;
@@ -322,3 +326,27 @@ function axes1_ButtonDownFcn(hObject, eventdata, handles)
 % hObject    handle to axes1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function Untitled_1_Callback(hObject, eventdata, handles)
+% hObject    handle to Untitled_1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --------------------------------------------------------------------
+function uitoggletool6_ClickedCallback(hObject, eventdata, handles)
+% hObject    handle to uitoggletool6 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+reset(gca)
+
+
+% --- Executes on button press in pushbutton5.
+function pushbutton5_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton5 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+win2(handles.figure1);
+guidata(hObject,handles);

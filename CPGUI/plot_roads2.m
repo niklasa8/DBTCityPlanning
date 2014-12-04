@@ -23,6 +23,9 @@ handles.park=park;
 
 handles.radiobutton1=get(handles.radiobutton1,'Value');
 handles.one_direction=get(handles.one_direction,'Value');
+handles.footway=get(handles.footway,'Value');
+
+handles.nonodes=get(handles.nonodes,'Value');
 
 
 [handles.c1,handles.cont1]=color_pop(hObject,handles,handles.pop1);
@@ -279,30 +282,30 @@ if handles.one_direction == 1 && isfield(testf,'one_cre') == 0;
         plot(X(2),Y(2), 'og','MarkerSize', 10)
         
     end
-    testf.one_dir=1;
+    %testf.one_dir=1;
     testf.one_cre=1;
     testf.n_one = c_more*2;
     testf.one_there=1;
     testf.ch = get(testf.axes1,'children');
+    if testf.n_footways > 0
+        testf.n2_one = testf.n_one;
+    end
 
 elseif handles.one_direction == 0 && isfield(testf,'one_cre') == 1 && testf.one_there==1;
    
     for i = 1:testf.n_one
-        set(testf.ch(testf.n_one - i + 1),'Visible', 'off');
+        set(testf.ch(testf.n2_footways + testf.n_one - i + 1),'Visible', 'off');
     end
-    set(testf.one_there,'Value',0);
+    testf.one_there=0;
     
 elseif handles.one_direction == 1 && isfield(testf,'one_cre') == 1 && testf.one_there==0;
     
     for i = 1:testf.n_one
-        set(testf.ch(testf.n_one - i + 1),'Visible', 'on');               
+        set(testf.ch(testf.n2_footways + testf.n_one - i + 1),'Visible', 'on');               
     end
-    set(testf.one_there,'Value',1);
+    testf.one_there=1;
 end
 
-% elseif handles.footway  == 1
-%         a=3
-%         set(testf.ch(n_ways + testf.n_one - i + 1),'Color',handles.c9,'LineStyle', ':' )
 
 if handles.nonodes == 1 && isfield(testf,'nodes_manip') == 0;
     n = graph_data.intnd_count;
@@ -317,19 +320,64 @@ elseif handles.nonodes == 0 && isfield(testf,'nodes_manip') == 1 && testf.nodes_
     for i = 1:n
         set(testf.ch(n_ways + n +testf.n_one - i + 1),'Visible', 'on');
     end
-    set(testf.nodes_there,'Value',1);
+    testf.nodes_there=1;
 
 elseif handles.nonodes == 1 && isfield(testf,'nodes_manip') == 1 && testf.nodes_there==1;
     n = graph_data.intnd_count;
     for i = 1:n
         set(testf.ch(n_ways + n +testf.n_one - i + 1),'Visible', 'off');
     end
-    set(testf.nodes_there,'Value',0);
+    testf.nodes_there=0;
        
 end 
+
+if handles.footway  == 1 % && sth 
+         
+
+    [~,n_footways] = size(foot_way);%data_umea.way
+
+
+
+    for i = 1:n_footways %Plottar v�garna mellan noderna, notera att ALLA noder anv�nds (�ven de som inte �r intersection nodes) f�r att rita ut v�garna.
+        
+        [~, n_ndref] = size(data_umea.foot_way(i).ndref);
+        X = zeros(1,n_ndref);
+        Y = zeros(1,n_ndref);
+        for j = 1:n_ndref
+            X(j) = data_umea.node(graph_data.id_map(data_umea.way(i).ndref{j})).lon;
+            Y(j) = data_umea.node(graph_data.id_map(data_umea.way(i).ndref{j})).lat;
+        end
+        
+        line('Ydata',Y,'Xdata',X,'Color',handles.c9,'LineStyle', ':');
+        
+    end
+    %testf.foot_dir=1;
+    testf.foot_cre=1;
+    testf.n_footways = n_footways;
+    testf.foot_there=1;
+    testf.ch = get(testf.axes1,'children');
+    if testf.n_one > 0
+        testf.n2_footways = testf.n_footways;
+    end
+
+elseif handles.footway == 0 && isfield(testf,'foot_cre') == 1 && testf.foot_there==1;
+   
+    for i = 1:testf.n_footways
+        set(testf.ch(testf.n_footways + testf.n2_one - i + 1),'Visible', 'off');
+    end
+    testf.foot_there=0;
+    
+elseif handles.footway == 1 && isfield(testf,'foot_cre') == 1 && testf.foot_there==0;
+    
+    for i = 1:testf.n_one
+        set(testf.ch(testf.n_footways + testf.n2_one - i + 1),'Visible', 'on');               
+    end
+    testf.foot_there=1;
+end
     
 
     
+             
 testf.handlesrv=handles;
 guidata(handles.test, testf);
 hold off
