@@ -1,4 +1,4 @@
-function n=number_of_bus_stops(bus_data_directory)
+function [nIDs, nNames]=number_of_bus_stops(bus_data_directory)
 datafiles={};
 k=1;
 BussData=dir(bus_data_directory);
@@ -10,7 +10,6 @@ for i=3:length(BussData)
         k=k+1;
     end
 end
-datafiles
 
 Names={};
 IDs={};
@@ -31,6 +30,6 @@ for i=1:length(datafiles)
     end
 end
 
-n=length(IDs);
-n=length(Names);
+nIDs=length(IDs);
+nNames=length(Names);
 end
