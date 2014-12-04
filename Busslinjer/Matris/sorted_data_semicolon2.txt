@@ -95,7 +95,7 @@ Nydala;282252349
 Nygatan;291136995
 Obbolavägen;295095228
 Ostkroken;257128
-Paradisgränd;533996636
+Paradisgränd;158633948
 Parkvägen;2398729607
 Porfyrvägen;1062497482
 Päronvägen;1658706866

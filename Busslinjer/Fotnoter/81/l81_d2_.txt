@@ -4,7 +4,7 @@ Nygatan	291136995
 Dragonfältet	263187033
 Dressyrgatan	305950651
 Sandåkern	2425638040
-Hartvigsgatan	158587486
+Hartvigsgatan	158589628
 Aspvägen	1357160265
 Stickvägen	1297815279
 Kronoparken	1470708378
