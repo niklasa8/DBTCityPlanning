@@ -1,11 +1,8 @@
 clear all
 clc
 
-
-
 % Function
 TimeToMin = @(t) mod(t,1)*100+floor(t)*60; %t=7.56-> 7 h 56 min omvandlar detta till antal minuter från 00:00
-
 
 % Read filenames
 datafiles = {};
@@ -40,14 +37,6 @@ for i=1:length(datafiles)
            busMap(id) = num_stops+1;
            num_stops = num_stops+1;
         end       
-        
-%         if ~ismember(id, IDs)
-%             IDs=[IDs id];
-%         end
-%         
-%         if ~ismember(name, Names);
-%             Names=[Names name];
-%         end
     end
 end
 
@@ -114,13 +103,9 @@ for file=1:max(size(datafiles))
                     % If current dep/arr time is less than new
                     if Arr{from,to}(1,k) <= arr(j)
                         Arr{from,to}(1,k) = arr(j);
-                    end
-                    if Dep{from,to}(1,k) <= dep(j)
                         Dep{from,to}(1,k) = dep(j);
                     end
                 end                    
-%                 Arr{from,to}(1,arr(j):end) = arr(j);
-%                 Dep{from,to}(1,dep(j):end) = dep(j);
             end
         end
         
@@ -145,13 +130,9 @@ for file=1:max(size(datafiles))
                     % If current dep/arr time is less than new
                     if Arr{from,to}(2,k) <= arr(j)
                         Arr{from,to}(2,k) = arr(j);
-                    end
-                    if Dep{from,to}(2,k) <= dep(j)
                         Dep{from,to}(2,k) = dep(j);
                     end
                 end
-%                 Arr{from,to}(2,arr(j):end) = arr(j);
-%                 Dep{from,to}(2,dep(j):end) = dep(j);
             end
         end
         
@@ -175,13 +156,9 @@ for file=1:max(size(datafiles))
                     % If current dep/arr time is less than new
                     if Arr{from,to}(3,k) <= arr(j)
                         Arr{from,to}(3,k) = arr(j);
-                    end
-                    if Dep{from,to}(3,k) <= dep(j)
                         Dep{from,to}(3,k) = dep(j);
                     end
                 end
-%                 Arr{from,to}(3,arr(j):end) = arr(j);
-%                 Dep{from,to}(3,dep(j):end) = dep(j);
             end
         end
         
@@ -206,16 +183,15 @@ for file=1:max(size(datafiles))
                     % If current dep/arr time is less than new
                     if Arr{from,to}(4,k) <= arr(j)
                         Arr{from,to}(4,k) = arr(j);
-                    end
-                    if Dep{from,to}(4,k) <= dep(j)
                         Dep{from,to}(4,k) = dep(j);
                     end
                 end
-%                 Arr{from,to}(4,arr(j):end) = arr(j);
-%                 Dep{from,to}(4,dep(j):end) = dep(j);
             end
-        end
-        
+        end        
     end
     toc
 end
+
+save('ArrDep/Arrivals.mat','Arr')
+save('ArrDep/Departures.mat','Dep')
+

@@ -3,17 +3,9 @@ load('data_umea','departure_','arrival_','bus_stop','bus_stop_nodes')
 
 %% Skapar busTo_bs
 n_stops = max(size(busMap));
-
-day_min = cell(4,1440);
+busTo_bs = cell(4,1440);
 traveltime = cell(175,175);
-% t = 1:1440;
-% clear t_matrix
-% t_matrix(1,1,:) = t;
-% t_matrix = repmat(t_matrix,[n_stops,n_stops]);
-% idx = find(departure_);
-% busTo_bs(idx) = (t_matrix(idx) - departure_(idx))/60;
-% idx = find(busTo_bs < 0);
-% busTo_bs(idx) = busTo_bs(idx) + 24;
+
 
 Arrival = zeros(175,175);
 for i=1:175
@@ -22,12 +14,6 @@ for i=1:175
     end
 end
 
-Departure = zeros(175,175);
-for i=1:175
-    for j=1:175
-        Departure(i,j) = ~isempty(Dep{i,j});
-    end
-end
 
 for i=1:4
     tic
@@ -43,17 +29,21 @@ for i=1:4
     end
     
     for t = 1:1440
-        busTo_bs = zeros(n_stops,n_stops);
+        busMat_min = zeros(n_stops,n_stops);
+
+        ind = find(Arrival);
         
-        
-        
-        busTo_bs = graphallshortestpaths(sparse(busTo_bs));
-        day_min{i,t} = busTo_bs;
-    end
+        for l=1:length(ind)
+            busMat_min(ind(l)) = traveltime{ind(l)}(i,t);      
+        end        
+        busMat_min = graphallshortestpaths(sparse(busMat_min));
+        busTo_bs{i,t} = busMat_min;
+    end 
     toc
 end
 
-%busTo_bs - bus to bus station. Används på följande vis: busTo_bs(i,j,t)
+%busTo_bs - bus to bus station. Används på följande vis: busTo_bs(d,t,i,j)
+%d: Veckoda(ar) - 1=Måndag-Torsdag, 2=Fredag, 3=Lördag, 4=Söndag.
 %i: Ett heltal mellan 1 och antalet busshållplatser (27), anger vilken
 %busshållplats man vill åka från.
 %j: Busshållplats man vill åka till
