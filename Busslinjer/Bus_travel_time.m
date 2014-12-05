@@ -77,7 +77,7 @@ for file=1:max(size(datafiles))
         %wait_time=sum([table(1:i-1).waiting_time]);
         if ~isempty(table(1).MT) & isempty(table(i).MT)
             arr_time=TimeToMin(table(i-1).MT);
-            if ~isempty(table(i-1).waiting_time)
+            if isempty(table(i-1).waiting_time)
                table(i-1).waiting_time=0; 
             end
             arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time); %better to always round up?
@@ -87,7 +87,7 @@ for file=1:max(size(datafiles))
         if ~isempty(table(1).F) & isempty(table(i).F)
             %arr_time=TimeToMin(table(1).F);
             arr_time=TimeToMin(table(i-1).F);
-            if ~isempty(table(i-1).waiting_time)
+            if isempty(table(i-1).waiting_time)
                table(i-1).waiting_time=0; 
             end
             arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time); %better to always round up?
@@ -98,7 +98,7 @@ for file=1:max(size(datafiles))
         if ~isempty(table(1).L) & isempty(table(i).L)
             %arr_time=TimeToMin(table(1).L);
             arr_time=TimeToMin(table(i-1).L);
-            if ~isempty(table(i-1).waiting_time)
+            if isempty(table(i-1).waiting_time)
                table(i-1).waiting_time=0; 
             end
             arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time); %better to always round up?            
@@ -109,7 +109,7 @@ for file=1:max(size(datafiles))
         if~isempty(table(1).S) & isempty(table(i).S)
             %arr_time=TimeToMin(table(1).S);
             arr_time=TimeToMin(table(i-1).S);
-            if ~isempty(table(i-1).waiting_time)
+            if isempty(table(i-1).waiting_time)
                table(i-1).waiting_time=0; 
             end
             arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time); %better to always round up?            
