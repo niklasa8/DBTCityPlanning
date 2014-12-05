@@ -41,7 +41,7 @@ end
 n=length(id2idx);
 arr=cell(n);
 dpt=cell(n);
-tic
+
 for i=1:length(datafiles) %For each .mat-file.
     datafiles{i}
     %Extract names and ids.
@@ -62,10 +62,9 @@ for i=1:length(datafiles) %For each .mat-file.
         end
         wait{j+1}=wait{j+1}+wait{j}-round(wait{j});
         wait{j}=int16(round(wait{j}));
-        %wait{j}=round(wait{j});
     end
-    toc
     for j=1:length(names)-1 %For each pair of stops.
+        tic
         %Identify indices for the stops.
         from=id2idx(ids{j});
         to=id2idx(ids{j+1});
@@ -75,6 +74,7 @@ for i=1:length(datafiles) %For each .mat-file.
         MT2=table(j+1).MT; F2=table(j+1).F; L2=table(j+1).L;
         S2=table(j+1).S; days2={MT2 F2 L2 S2};
         %Fill if empty field.
+        
         if isempty(arr{from,to})
             
            arr{from,to} = zeros(4,1440,'int16');
@@ -82,14 +82,16 @@ for i=1:length(datafiles) %For each .mat-file.
            %arr{from,to} = zeros(4,1440);
            %dpt{from,to} = zeros(4,1440);
         end
-        
+        toc
         for k=1:4 %For each day.
             for l=1:length(days1{k}) %For each departure.
                 %arr_time=timeToMin(days2{k}(l));
                 %dpt_time=timeToMin(days1{k}(l))+wait{j};
                 arr_time=int16(timeToMin(days2{k}(l)));
                 dpt_time=int16(timeToMin(days1{k}(l))+wait{j});
-                                
+                if arr_time-dpt_time<0
+                    disp(arr_time-dpt_time);
+                end
                 for m=arr_time:int16(1440) %For each minute of the day.
                 %for m=floor(arr_time):1440 %For each minute of the day.
                     %Check if this departure is better.
@@ -98,10 +100,11 @@ for i=1:length(datafiles) %For each .mat-file.
                         dpt{from,to}(k,m)=dpt_time;
                     end
                 end
-                toc
+                
             end
-            toc
+            
         end
-        toc
+        
     end
+    
 end

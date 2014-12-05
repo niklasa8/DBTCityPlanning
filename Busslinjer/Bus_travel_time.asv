@@ -86,7 +86,7 @@ for file=1:max(size(datafiles))
     end
 
     travel={table.travel_time};
-    for i=size(travel,2)
+    for i=size(wait,2)
         if isempty(wait{j})
             travel{j}=0;
         end
@@ -94,8 +94,8 @@ for file=1:max(size(datafiles))
             travel{j+1}=0;
         end
         travel{j+1}=travel{j+1}+travel{j}-round(travel{j});
-        wait{j}=round(travel{j});
-        table(j).travel_time=travel{j};
+        wait{j}=round(trave{j});
+        table(j).waiting_time=wait{j};
     end
     
     
