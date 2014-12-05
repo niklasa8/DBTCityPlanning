@@ -1,4 +1,4 @@
-xload('graph_data.mat','id_map')
+load('graph_data.mat','id_map')
 ultra_file(1) = {'Ultra_1_140929_150426.xml'};
 ultra_file(2) = {'Ultra_2_140929_150426.xml'};
 ultra_file(3) = {'Ultra_3_140929_150426.xml'};

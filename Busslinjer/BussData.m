@@ -131,15 +131,15 @@ end
 % Förkommer endast för linje 78 och 80.
 for i=1:stopnr-1 
     % Sortera avgångstider
-    stop(i).MT = sort(stop(i).MT);
-    stop(i).F = sort(stop(i).F);
-    stop(i).L = sort(stop(i).L);
-    stop(i).S = sort(stop(i).S);
+%     stop(i).MT = sort(stop(i).MT);
+%     stop(i).F = sort(stop(i).F);
+%     stop(i).L = sort(stop(i).L);
+%     stop(i).S = sort(stop(i).S);
     
     if (length(stop(i).MT) > 0) && isempty(strfind(fileFnote,'Z'))
         MT = stop(i).MT;
         F = stop(i).F;
-        F_merge = sort(cat(2,MT,F));
+        F_merge = cat(2,MT,F);
         stop(i).F = F_merge;
     end
 end
