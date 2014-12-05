@@ -8,16 +8,15 @@ TimeToMin = @(t) mod(t,1)*100+floor(t)*60; %t=7.56-> 7 h 56 min omvandlar detta 
 
 
 % Read filenames
-datafiles = {};
-k = 1;
-BussData = dir('BussData')
-
-for i=3:max(size(BussData))
-    directory=['BussData/' BussData(i).name '/'];
+datafiles={};
+k=1;
+BussData=dir();
+for i=3:length(BussData)
+    directory=[BussData(i).name '/'];
     A=dir([directory 'l*.mat']);
-    for j=1:max(size(A))
-        datafiles(k,1)={[directory A(j).name]};
-        k=k+1;       
+    for j=1:length(A)
+        datafiles(k)={[directory A(j).name]};
+        k=k+1;
     end
 end
 
