@@ -73,31 +73,49 @@ for file=1:max(size(datafiles))
     end
 
     for i=2:nr_stop(2)
-        travel_time=sum([table(1:i).travel_time]);
-        wait_time=sum([table(1:i-1).waiting_time]);
+        %travel_time=sum([table(1:i).travel_time]);
+        %wait_time=sum([table(1:i-1).waiting_time]);
         if ~isempty(table(1).MT) & isempty(table(i).MT)
-            dep_time=TimeToMin(table(1).MT);
-            dep_time=round(dep_time+travel_time+wait_time); %better to always round up?
-            dep_time=MinToTime(dep_time);
-            table(i).MT=dep_time;
+            arr_time=TimeToMin(table(i-1).MT);
+            if ~isempty(table(i-1).waiting_time)
+               table(i-1).waiting_time=0; 
+            end
+            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time); %better to always round up?
+            arr_time=MinToTime(arr_time);
+            table(i).MT=arr_time;
         end
         if ~isempty(table(1).F) & isempty(table(i).F)
-            dep_time=TimeToMin(table(1).F);
-            dep_time=round(dep_time+travel_time+wait_time);
-            dep_time=MinToTime(dep_time);
-            table(i).F=dep_time;            
+            %arr_time=TimeToMin(table(1).F);
+            arr_time=TimeToMin(table(i-1).F);
+            if ~isempty(table(i-1).waiting_time)
+               table(i-1).waiting_time=0; 
+            end
+            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time); %better to always round up?
+            %arr_time=round(arr_time+travel_time+wait_time);
+            arr_time=MinToTime(arr_time);
+            table(i).F=arr_time;            
         end
         if ~isempty(table(1).L) & isempty(table(i).L)
-            dep_time=TimeToMin(table(1).L);
-            dep_time=round(dep_time+travel_time+wait_time);
-            dep_time=MinToTime(dep_time);
-            table(i).L=dep_time;        
+            %arr_time=TimeToMin(table(1).L);
+            arr_time=TimeToMin(table(i-1).L);
+            if ~isempty(table(i-1).waiting_time)
+               table(i-1).waiting_time=0; 
+            end
+            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time); %better to always round up?            
+            %arr_time=round(arr_time+travel_time+wait_time);
+            arr_time=MinToTime(arr_time);
+            table(i).L=arr_time;        
         end
         if~isempty(table(1).S) & isempty(table(i).S)
-            dep_time=TimeToMin(table(1).S);
-            dep_time=round(dep_time+travel_time+wait_time);
-            dep_time=MinToTime(dep_time);
-            table(i).S=dep_time;        
+            %arr_time=TimeToMin(table(1).S);
+            arr_time=TimeToMin(table(i-1).S);
+            if ~isempty(table(i-1).waiting_time)
+               table(i-1).waiting_time=0; 
+            end
+            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time); %better to always round up?            
+            %arr_time=round(arr_time+travel_time+wait_time);
+            arr_time=MinToTime(arr_time);
+            table(i).S=arr_time;        
         end
     end
     
