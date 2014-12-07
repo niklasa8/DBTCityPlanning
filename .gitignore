@@ -3,3 +3,15 @@ CPGUI/data_umea.mat
 CP/graph_data.mat
 CP/data_bus.m
 CP/data_bus.m
+
+Busslinjer/Arr_Linje_1_till_9.mat
+	
+Busslinjer/BussData.rar
+	
+Busslinjer/Dep_Linje_1_till_9.mat
+	
+Busslinjer/Mappning.mat
+	
+Busslinjer/test.m
+	
+CP/test_is_busstop_intnd.m

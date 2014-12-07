@@ -72,30 +72,33 @@ for file=1:max(size(datafiles))
         tt=tt+1;
     end
     
-    wait={table.waiting_time};
-    for i=size(wait,2)
-        if isempty(wait{j})
-            wait{j}=0;
+    %wait={table.waiting_time};
+    
+    for j=1:max(size(table))-1%size(wait,2)-1
+        if isempty(table(j).waiting_time)%isempty(wait{j})
+            table(j).waiting_time=0;%wait{j}=0;
         end
-        if isempty(wait{j+1})
-            wait{j+1}=0;
+        if isempty(table(j+1).waiting_time)%isempty(wait{j+1})
+            table(j+1).waiting_time=0;%wait{j+1}=0;
         end
-        wait{j+1}=wait{j+1}+wait{j}-round(wait{j});
-        wait{j}=round(wait{j});
-        table(j).waiting_time=wait{j};
+        table(j+1).waiting_time=table(j+1).waiting_time+table(j).waiting_time-round(table(j).waiting_time);%wait{j+1}=wait{j+1}+wait{j}-round(wait{j});
+        table(j).waiting_time=round(table(j).waiting_time);%wait{j}=round(wait{j});
+        %table(j).waiting_time=wait{j};
+        %table(j+1).waiting_time=wait{j+1};
     end
 
-    travel={table.travel_time};
-    for i=size(travel,2)
-        if isempty(wait{j})
-            travel{j}=0;
+    %travel={table.travel_time};
+    for j=1:max(size(table))-1;%size(travel,2)-1
+        if isempty(table(j).travel_time)%wait{j})
+            table(j).travel_time=0;%travel{j}=0;
         end
-        if isempty(wait{j+1})
-            travel{j+1}=0;
+        if isempty(table(j+1).travel_time)%wait{j+1})
+            table(j+1).travel_time=0;%travel{j+1}=0;
         end
-        travel{j+1}=travel{j+1}+travel{j}-round(travel{j});
-        wait{j}=round(travel{j});
-        table(j).travel_time=travel{j};
+        table(j+1).travel_time=table(j+1).travel_time+table(j).travel_time-round(table(j).travel_time);% travel{j+1}=travel{j+1}+travel{j}-round(travel{j});
+        table(j).travel_time=round(table(j).travel_time);% travel{j}=round(travel{j});
+        %table(j).travel_time=travel{j};
+        %table(j+1).travel_time=travel{j+1};
     end
     
     
