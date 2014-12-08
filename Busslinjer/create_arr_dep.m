@@ -22,7 +22,8 @@ end
 Names={};
 IDs={};
 busMap = containers.Map('KeyType','double','ValueType','int32');
-busMapName = containers.Map('KeyType','double','ValueType','char');
+busMapName = containers.Map('KeyType','int32','ValueType','char');
+busMapInt = containers.Map('KeyType','int32','ValueType','double');
 
 num_stops = 0;
 for i=1:length(datafiles)
@@ -33,7 +34,8 @@ for i=1:length(datafiles)
         id=str2double(data(j).id);
         
         if ~isKey(busMap,id)
-           busMapName(id) = name;
+           busMapInt(num_stops+1) = id;
+           busMapName(num_stops+1) = name;
            busMap(id) = num_stops+1;
            num_stops = num_stops+1;
         end       
@@ -80,7 +82,7 @@ for file=1:max(size(datafiles))
         if ~isempty(table(1).MT)
             
             % dep: Arrivaltime at stop i + waitingtime at stop i
-            dep = TimeToMin(table(i).MT) + round(table(i).waiting_time);
+            dep = TimeToMin(table(i).MT) + floor(table(i).waiting_time);
             % arr: Arrivaltime at stop j
             arr = TimeToMin(table(i+1).MT);                       
             
@@ -110,7 +112,7 @@ for file=1:max(size(datafiles))
         end
         
         if ~isempty(table(1).F)
-            dep = TimeToMin(table(i).F) + round(table(i).waiting_time);
+            dep = TimeToMin(table(i).F) + floor(table(i).waiting_time);
             arr = TimeToMin(table(i+1).F);
             
             
@@ -137,7 +139,7 @@ for file=1:max(size(datafiles))
         end
         
         if ~isempty(table(1).L)
-            dep = TimeToMin(table(i).L) + round(table(i).waiting_time);
+            dep = TimeToMin(table(i).L) + floor(table(i).waiting_time);
             arr = TimeToMin(table(i+1).L);
             
             % Add each arrival- and departuretime
@@ -163,7 +165,7 @@ for file=1:max(size(datafiles))
         end
         
         if ~isempty(table(1).S)
-            dep = TimeToMin(table(i).S) + round(table(i).waiting_time);
+            dep = TimeToMin(table(i).S) + floor(table(i).waiting_time);
             arr = TimeToMin(table(i+1).S);
             
   
