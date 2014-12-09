@@ -17,20 +17,21 @@ for i = 1:nr_of_lights
     light(i).second = 0;
     
     
-    node_from = find(edge_index(:,i));
-    index_edges_in = edge_index(node_from,i);
-    [nr_in_edge,~] = size(index_edges_in);
+    node_to = find(edge_index(node(i),:));
+    [~,nr_in_edge] = size(node_to);
     edgesF = [0 0];
     edgesS = [0 0];
     if 1 < nr_in_edge
-        edgesF(1) = index_edges_in(1);
-        edgesF(2) = edge(index_edges_in(1)).in_front;
+        edgesF(1) = edge_index(node_to(1));
+        if edge(edge_index(node_to(1))).edge_to_front ~= 0
+            edgesF(2) = edge(edge_index(node_to(1))).edge_to_front;
+        end
     end
     if 3 < nr_in_edge
         for j = 2:nr_in_edge
-            if index_edges_in(j) ~= edgesF
-                edgesS(1) = index_edges_in(j);
-                edgesS(2) = edge(index_edges_in(j)).in_front;
+            if node_to(j) ~= edgesF
+                edgesS(1) = edge_index(node_to(j));
+                edgesS(2) = edge(edge_index(node_to(j))).edge_to_front;
             end
         end
     end
