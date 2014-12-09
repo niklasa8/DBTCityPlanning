@@ -1,0 +1,11 @@
+data_handling2
+configure_example % Behövs inte om configure_graph = 0
+create_graph_all_agent
+create_spawn_path
+agent_model22
+
+% om Ostra
+data_handling
+create_graph_all
+create_spawn_path % måste modifieras
+agent_model22 % lägg dit grafiskt för debug

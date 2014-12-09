@@ -324,12 +324,12 @@ dest_nodes = [1 7 8 12 20 22 23 28 29 30 34 37 42 44 45 46 47];
         if light(k).mode == 2% depend on traffic
             if light(k).timer < 10^(-6)
                 for j = 1:2
-                    if isempty(edge(light(k).firstEdges(j)).cars)
+                    if light(k).firstEdges(j) ~= 0 && isempty(edge(light(k).firstEdges(j)).cars)
                         light(k).first = 0;
                         light(k).second = 1;
                         set(light_object(k), 'facecolor', 'red');
                     end
-                    if isempty(edge(light(k).secondEdges(j)).cars)
+                    if light(k).secondEdges(j) ~= 0 && isempty(edge(light(k).secondEdges(j)).cars)
                         light(k).first = 1;
                         light(k).second = 0;
                         set(light_object(k), 'facecolor', 'green');
@@ -337,7 +337,7 @@ dest_nodes = [1 7 8 12 20 22 23 28 29 30 34 37 42 44 45 46 47];
                 end
             elseif abs(light(k).timer-light(k).period/2) < 10^(-6)
                 for j = 1:2
-                    if (~isempty(edge(light(k).secondEdges(j)).cars))
+                    if light(k).secondEdges(j) ~= 0 && (~isempty(edge(light(k).secondEdges(j)).cars))
                         if (light(k).first == 1)
                             light(k).first = 0;
                             light(k).second = 1;
@@ -346,7 +346,7 @@ dest_nodes = [1 7 8 12 20 22 23 28 29 30 34 37 42 44 45 46 47];
                         else
                             light(k).timer = 0;
                         end
-                    elseif (~isempty(edge(light(k).firstEdges(j)).cars))
+                    elseif light(k).firstEdges(j) ~= 0 && (~isempty(edge(light(k).firstEdges(j)).cars))
                         if (light(k).second == 1)
                             light(k).first = 1;
                             light(k).second = 0;

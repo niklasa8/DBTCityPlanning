@@ -101,7 +101,7 @@ for i = 1:n_ways %Loopar �ver alla v�gar f�r att spara relevanta noder som
 end
 
 %% H�GERREGELN. Look for if an edge has a row to the right.
-for i = 1:43
+for i = 1:47
     node_from = find(edge_index(:,i));
     index_edges_in = edge_index(node_from,i);
     [nr_in_edge,~] = size(index_edges_in);
@@ -139,7 +139,7 @@ end
 %%
 
 %% VÄJNINGSPLIKT. Look for if an edge has a row to the left.
-for i = 1:43
+for i = 1:47
     node_from = find(edge_index(:,i));
     index_edges_in = edge_index(node_from,i);
     [nr_in_edge,~] = size(index_edges_in);
@@ -169,7 +169,7 @@ end
 %%
 
 %% VÄJNINGSPLIKT. Look for if an edge has a row in front of it.
-for i = 1:43
+for i = 1:47
     node_from = find(edge_index(:,i));
     index_edges_in = edge_index(node_from,i);
     [nr_in_edge,~] = size(index_edges_in);
@@ -210,6 +210,17 @@ for i = 1:edge_count-1
     end
 end
 
+%%
+
+%% PARKING. Add parking spots
+% for i = [10 11 27 35]
+%     node_from = find(edge_index(:,i));
+%     index_edges_in = edge_index(node_from,i);
+%     [nr_in_edge,~] = size(index_edges_in);
+%     for j = 1:nr_in_edge
+%        edge(index_edges_in(j)).parking = 1; 
+%     end
+% end
 %%
 
 save('graph_data.mat','intnd_map','id_map','node','intnd','edge','length','edge_index','graph_matrix')
