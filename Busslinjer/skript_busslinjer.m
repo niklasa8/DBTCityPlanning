@@ -1,5 +1,5 @@
-clear all 
-clc
+% clear all 
+% clc
 
 disp('Genererar bussdata....')
 %% XML-filer

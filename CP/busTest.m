@@ -6,8 +6,6 @@ n_stops = max(size(busMap));
 busTo_bs = cell(4,1440);
 traveltime = cell(175,175);
 t_vec = 1:1440;
-% clear t_matrix
-% t_matrix(1,1,:) = tvec;
 t_matrix = repmat(t_vec,4,1440);
 
 Arrival = zeros(175,175);
@@ -44,7 +42,7 @@ for i=1:4   % Loop over days - 1(Mon-Thur),2(Fri),3(Sat),4(Sun)
     end
     
     
-    ind = find(Arrival);
+    ind = find(Arrival); % index of nodes that are connected.
 
     for t = 1:1440
         busMat_min = zeros(n_stops,n_stops);
