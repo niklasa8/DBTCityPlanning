@@ -9,6 +9,9 @@ n_cars = 1; %number of cars.
 dt = 1;%seconds per timestep.
 max_wait_time = 100;
 
+
+traffic_lights;
+
 car(1).prev_node = 1; %First car spawning location.
 car(1).dest = 7; %First car destination.
 [~,car_path] = graphshortestpath(CGM_sparse,car(1).prev_node,car(1).dest); %Fastest path of first car.
@@ -98,6 +101,29 @@ profile on
         
         time_to_node = (edge(car(i).edge).dist - temp_dist)/(car(i).vel);
         
+        %% TRAFIKSIGNAL
+        if nr_of_lights > 0
+        for k = 1:nr_of_lights
+        if light(k).node == edge(car(i).edge).to
+            if find(light(k).firstEdges == car(i).edge)
+                if light(k).first == 0;
+                    if edge(car(i).edge).dist - car(i).dist < 10
+                        force = break_force(car(i).dist,edge(car(i).edge).dist - 2,car(i).vel,0);
+                        breaking = 1;
+                    end
+                end
+            elseif find(light(k).secondEdges == car(i).edge)
+                if light(k).second == 0;
+                    if edge(car(i).edge).dist - car(i).dist < 10
+                        force = break_force(car(i).dist,edge(car(i).edge).dist - 2,car(i).vel,0);
+                        breaking = 1;
+                    end
+                end
+            end
+        end
+        end
+        else
+        
           %% H�GERREGELN
           if edge(car(i).edge).edge_to_right ~= 0 %If there exist a edge to the right.
               if ~isempty(edge(edge(car(i).edge).edge_to_right).cars) % If there exist at least one car on that edge.
@@ -112,7 +138,7 @@ profile on
                   end
               end
           end
-        
+        end
         %% VÄJNINGSPLIKT. When turning to the left
         if car(i).dest ~= edge(car(i).edge).to
             if edge(car(i).edge).edge_to_front ~= 0
@@ -241,6 +267,104 @@ profile on
         car(n_cars).dist = 0;
         car(n_cars).car_behind = 0;
     end
+    
+        %% TRAFIKLJUS.
+    for k = 1:nr_of_lights
+        if light(k).mode == 1% Depend only on time
+            light(k).timer = light(k).timer + dt;
+            if abs(light(k).timer - light(k).period/2) < 10^(-6)
+%                 set(light_object(k), 'facecolor', 'red');
+                light(i).first = 0;
+                light(i).second = 1;
+            end
+            
+            light(k).timer
+            light(k).period
+            if abs(light(k).timer - light(k).period) < 10^(-6)
+%                 set(light_object(k), 'facecolor', 'green');
+                light(k).first = 1;
+                light(k).second = 0;
+                light(k).timer = 0;
+            end
+        end
+        if light(k).mode == 2% depend on traffic
+            if light(k).timer < 10^(-6)
+                for j = 1:2
+                    if light(k).firstEdges(j) ~= 0 && isempty(edge(light(k).firstEdges(j)).cars)
+                        light(k).first = 0;
+                        light(k).second = 1;
+%                         set(light_object(k), 'facecolor', 'red');
+                    end
+                    if light(k).secondEdges(j) ~= 0 && isempty(edge(light(k).secondEdges(j)).cars)
+                        light(k).first = 1;
+                        light(k).second = 0;
+%                         set(light_object(k), 'facecolor', 'green');
+                    end
+                end
+            elseif abs(light(k).timer-light(k).period/2) < 10^(-6)
+                for j = 1:2
+                    if light(k).secondEdges(j) ~= 0 && (~isempty(edge(light(k).secondEdges(j)).cars))
+                        if (light(k).first == 1)
+                            light(k).first = 0;
+                            light(k).second = 1;
+                            light(k).timer = 0;
+%                             set(light_object(k), 'facecolor', 'red');
+                        else
+                            light(k).timer = 0;
+                        end
+                    elseif light(k).firstEdges(j) ~= 0 && (~isempty(edge(light(k).firstEdges(j)).cars))
+                        if (light(k).second == 1)
+                            light(k).first = 1;
+                            light(k).second = 0;
+                            light(k).timer = 0;
+%                             set(light_object(k), 'facecolor', 'green');
+                        else
+                            light(k).timer = 0;
+                        end
+                    else
+                        light(k).timer = 0;
+                    end
+                end
+            end
+            light(k).timer = light(k).timer + dt;    
+        end
+        
+        if light(k).mode == 3% Green wave
+            if abs(light(k).timer -light(k).period/light(k).GW_tot*(light(k).GW_nr-1)) < 10^(-6)
+                light(k).second = 0;
+                light(k).first = 1;
+%                 set(light_object(k), 'facecolor', 'green');
+            end
+            if light(k).GW_nr == light(k).GW_tot
+                if abs(light(k).timer -light(k).period/light(k).GW_tot) < 10^(-6)
+                    light(k).second = 1;
+                    light(k).first = 0;
+%                     set(light_object(k), 'facecolor', 'red');
+                end
+            elseif (light(k).GW_nr + 1) == light(k).GW_tot    
+                light(k).timer
+                if light(k).timer < 10^(-6)
+                    light(k).second = 1;
+                    light(k).first = 0;
+%                     set(light_object(k), 'facecolor', 'red');
+                end                
+            else
+                if abs(light(k).timer - 2*light(k).period/light(k).GW_tot*(light(k).GW_nr)) < 10^(-6)
+                    light(k).second = 1;
+                    light(k).first = 0;
+%                     set(light_object(k), 'facecolor', 'red');
+                end
+            end
+            light(k).timer = light(k).timer + dt;
+            
+            if abs(light(k).timer - light(k).period) < 10^(-6)
+                light(k).timer = 0;
+            end
+        end
+        
+        
+    end
+    
  end
  
 profile viewer

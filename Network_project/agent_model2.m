@@ -11,6 +11,8 @@ max_wait_time = 100;
 test_plot; %Plot background.
 axis('equal')
 axis('tight')
+intnd(10).traffic_signals = 1;
+intnd(38).traffic_signals = 1;
 traffic_lights;
 
 % traffic_lights_index = find([intnd.traffic_lights]);

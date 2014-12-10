@@ -141,7 +141,7 @@ for i = 1:n_ways %Loopar �ver alla v�gar f�r att spara relevanta noder som
                     edge(edge_count).edge_to_right = 0;
                     edge(edge_count).edge_to_left = 0;
                     edge(edge_count).edge_to_front = 0;
-                    edge(edge_count).opposite = 0;
+
                     edge_index(intnd_map(id_map(way(i).ndref{j})),intnd_map(id_map(way(i).ndref{k}))) = edge_count;
                     edge_count = edge_count + 1;
                 end
