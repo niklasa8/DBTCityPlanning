@@ -1,111 +1,108 @@
-% Function timeToMin 5.05 (h.min)->305 (min)
+
+for i=1:length(table)
+    if isempty(table(i).pos)
+        table(i).MT=[]; table(i).F=[]; table(i).L=[]; table(i).S=[];
+    end
+    table(i).waiting_time=[];
+end
+
+
+
+%Function timeToMin 5.05 (h.min)->305 (min)
 timeToMin = @(t) mod(t,1)*100+floor(t)*60;
-
-datafiles={};
-k=1;
-BussData=dir();
-for i=3:length(BussData)
-    directory=[BussData(i).name '/'];
-    A=dir([directory 'l*.mat']);
-    for j=1:length(A)
-        datafiles(k)={[directory A(j).name]};
-        k=k+1;
-    end
-end
-
-% Get number of busstops
-Names={};
-IDs={};
-id2idx = containers.Map('KeyType','double','ValueType','int16');
-%id2idx = containers.Map('KeyType','double','ValueType','double');
-id2name = containers.Map('KeyType','double','ValueType','char');
-idx2name = containers.Map('KeyType','double','ValueType','char');
-stop_num=int16(1);
-%stop_num=1;
-for i=1:length(datafiles)
-    data=load(datafiles{i});
-    data=data.table;
-    for j=1:length(data)
-        name=char(data(j).name);
-        id=str2double(data(j).id);
+minToTime = @(t) floor(t/60)+rem(t,60)/100;
+for i=1:length(table) %For each pair.
+    %Identify pair.
+    if ~isempty(table(i).pos) && i~= length(table)
+        for j=i+1:length(table)
+            if ~isempty(table(j).pos)
+                break
+            end
+        end
+        if isempty(j)
+            break
+        end
         
-        if ~isKey(id2idx,id)
-           id2name(id) = name;
-           id2idx(id) = stop_num;
-           idx2name(stop_num) = name;
-           stop_num=stop_num+1;
-        end
-    end
-end
+        %Extract times.
+        days1={table(i).MT, table(i).F, table(i).L, table(i).S};
+        days2={table(j).MT, table(j).F, table(j).L, table(j).S};
+        for k=1:4 %For each day
+            if ~isempty(days1{k})
+                t1=days1{k}(1); t1=timeToMin(t1); t1=mod(t1-239,1440);
+                t2=days2{k}(1); t2=timeToMin(t2); t2=mod(t2-239,1440);
+                t1-t2
+                x=j-i+1;
 
-n=length(id2idx);
-arr=cell(n);
-dpt=cell(n);
+                %Extract and round up travel times.
+                bt=[];
+                for l=i+1:j
+                    bt=[bt table(l).travel_time];
+                end
+                bt=ceil(bt);
+                B=sum(bt);
 
-for i=1:length(datafiles) %For each .mat-file.
-    datafiles{i}
-    %Extract names and ids.
-    load(datafiles{i});
-    names={table.name};
-    ids={table.id};
-    for j=1:length(ids)
-        ids{j}=str2double(ids{j});
-    end
-    %Extract and round off waiting times.
-    wait={table.waiting_time};
-    for j=1:length(wait)-1
-        if isempty(wait{j})
-            wait{j}=0;
+                V=(t2-t1)-B;
+                v=V/(x-1);
+            end
         end
-        if isempty(wait{j+1})
-            wait{j+1}=0;
+
+        for k=1:length(bt)
+            table(i+k).travel_time=bt(k);
+            table(i+k).waiting_time=v;
         end
-        wait{j+1}=wait{j+1}+wait{j}-round(wait{j});
-        wait{j}=int16(round(wait{j}));
-        %wait{j}=round(wait{j});
-    end
-    for j=1:length(names)-1 %For each pair of stops.
-        tic
-        %Identify indices for the stops.
-        from=id2idx(ids{j});
-        to=id2idx(ids{j+1});
-        %Extract arrival times.
-        MT1=table(j).MT; F1=table(j).F; L1=table(j).L;
-        S1=table(j).S; days1={MT1 F1 L1 S1};
-        MT2=table(j+1).MT; F2=table(j+1).F; L2=table(j+1).L;
-        S2=table(j+1).S; days2={MT2 F2 L2 S2};
-        %Fill if empty field.
         
-        if isempty(arr{from,to})
-            
-           arr{from,to} = zeros(4,1440,'int16');
-           dpt{from,to} = zeros(4,1440,'int16');
-           %arr{from,to} = zeros(4,1440);
-           %dpt{from,to} = zeros(4,1440);
-        end
-        toc
-        for k=1:4 %For each day.
-            for l=1:length(days1{k}) %For each departure.
-                %arr_time=timeToMin(days2{k}(l));
-                %dpt_time=timeToMin(days1{k}(l))+wait{j};
-                arr_time=int16(timeToMin(days2{k}(l)));
-                dpt_time=int16(timeToMin(days1{k}(l))+wait{j});
-                if arr_time-dpt_time<0
-                    disp(arr_time-dpt_time);
-                end
-                for m=arr_time:int16(1440) %For each minute of the day.
-                %for m=floor(arr_time):1440 %For each minute of the day.
-                    %Check if this departure is better.
-                    if arr{from,to}(k,m)<arr_time
-                        arr{from,to}(k,m)=arr_time;
-                        dpt{from,to}(k,m)=dpt_time;
-                    end
-                end
+%        for k=i+1:j-1
+        for k=1:0
+            if ~isempty(table(k-1).L)
+                table(k+1).waiting_time=table(k+1).waiting_time+...
+                    rem(table(k).waiting_time,1);
+                table(k).waiting_time=table(k).waiting_time-...
+                    rem(table(k).waiting_time,1);
                 
+                 times=timeToMin(table(k-1).L);
+                 times=times+table(k).travel_time+table(k).waiting_time;
+                 times=minToTime(times);
+                 table(k).L = times;
             end
             
+            if ~isempty(table(k-1).MT)
+                table(k+1).waiting_time=table(k+1).waiting_time+...
+                    rem(table(k).waiting_time,1);
+                table(k).waiting_time=table(k).waiting_time-...
+                    rem(table(k).waiting_time,1);
+                
+                 times=timeToMin(table(k-1).MT);
+                 times=times+table(k).travel_time+table(k).waiting_time;
+                 times=minToTime(times);
+                 table(k).MT = times;
+            end
+            if ~isempty(table(k-1).S)
+                table(k+1).waiting_time=table(k+1).waiting_time+...
+                    rem(table(k).waiting_time,1);
+                table(k).waiting_time=table(k).waiting_time-...
+                    rem(table(k).waiting_time,1);
+                
+                 times=timeToMin(table(k-1).S);
+                 times=times+table(k).travel_time+table(k).waiting_time;
+                 times=minToTime(times);
+                 table(k).S = times;
+            end    
+            if ~isempty(table(k-1).F)
+                table(k+1).waiting_time=table(k+1).waiting_time+...
+                    rem(table(k).waiting_time,1);
+                table(k).waiting_time=table(k).waiting_time-...
+                    rem(table(k).waiting_time,1);
+                
+                 times=timeToMin(table(k-1).F);
+                 times=times+table(k).travel_time+table(k).waiting_time;
+                 times=minToTime(times);
+                 table(k).F = times;
+            end
+        end
+        
+        for k=i:j
+            table(k).waiting_time=int16(table(k).waiting_time);
         end
         
     end
-    
 end
