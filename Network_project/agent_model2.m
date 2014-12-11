@@ -329,12 +329,12 @@ dest_nodes = [1 7 8 12 20 22 23 28 29 30 34 37 42 44 45 46 47];
                     if light(k).firstEdges(j) ~= 0 && isempty(edge(light(k).firstEdges(j)).cars)
                         light(k).first = 0;
                         light(k).second = 1;
-                        set(light_object(k), 'facecolor', 'red');
+%                         set(light_object(k), 'facecolor', 'red');
                     end
                     if light(k).secondEdges(j) ~= 0 && isempty(edge(light(k).secondEdges(j)).cars)
                         light(k).first = 1;
                         light(k).second = 0;
-                        set(light_object(k), 'facecolor', 'green');
+%                         set(light_object(k), 'facecolor', 'green');
                     end
                 end
             elseif abs(light(k).timer-light(k).period/2) < 10^(-6)
@@ -344,7 +344,7 @@ dest_nodes = [1 7 8 12 20 22 23 28 29 30 34 37 42 44 45 46 47];
                             light(k).first = 0;
                             light(k).second = 1;
                             light(k).timer = 0;
-                            set(light_object(k), 'facecolor', 'red');
+%                             set(light_object(k), 'facecolor', 'red');
                         else
                             light(k).timer = 0;
                         end
@@ -353,7 +353,7 @@ dest_nodes = [1 7 8 12 20 22 23 28 29 30 34 37 42 44 45 46 47];
                             light(k).first = 1;
                             light(k).second = 0;
                             light(k).timer = 0;
-                            set(light_object(k), 'facecolor', 'green');
+%                             set(light_object(k), 'facecolor', 'green');
                         else
                             light(k).timer = 0;
                         end
@@ -370,26 +370,26 @@ dest_nodes = [1 7 8 12 20 22 23 28 29 30 34 37 42 44 45 46 47];
             if abs(light(k).timer -light(k).period/light(k).GW_tot*(light(k).GW_nr-1)) < 10^(-6)
                 light(k).second = 0;
                 light(k).first = 1;
-                set(light_object(k), 'facecolor', 'green');
+%                 set(light_object(k), 'facecolor', 'green');
             end
             if light(k).GW_nr == light(k).GW_tot
                 if abs(light(k).timer -light(k).period/light(k).GW_tot) < 10^(-6)
                     light(k).second = 1;
                     light(k).first = 0;
-                    set(light_object(k), 'facecolor', 'red');
+%                     set(light_object(k), 'facecolor', 'red');
                 end
             elseif (light(k).GW_nr + 1) == light(k).GW_tot    
                 light(k).timer
                 if light(k).timer < 10^(-6)
                     light(k).second = 1;
                     light(k).first = 0;
-                    set(light_object(k), 'facecolor', 'red');
+%                     set(light_object(k), 'facecolor', 'red');
                 end                
             else
                 if abs(light(k).timer - 2*light(k).period/light(k).GW_tot*(light(k).GW_nr)) < 10^(-6)
                     light(k).second = 1;
                     light(k).first = 0;
-                    set(light_object(k), 'facecolor', 'red');
+%                     set(light_object(k), 'facecolor', 'red');
                 end
             end
             light(k).timer = light(k).timer + dt;

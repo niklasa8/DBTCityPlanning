@@ -34,9 +34,10 @@ dest_nodes = 2000:5000;
 n_sources = max(size(source_nodes));
 
 profile on
-
+% car_plot = (n/4);
  for t = 1:n
     t*100/n
+    
     for i = cars_in_network
         
         temp_dist = car(i).dist + car(i).vel*dt;
@@ -230,6 +231,12 @@ profile on
 %         if car(i).dist < edge(car(i).edge).dist
 %             plot_car_i;
 %         end
+%% Add car position to memory
+        if mod(t,4) == 0
+            car_plot(t/4).cars_in_network = cars_in_network;
+            car_plot(t/4).dist(i) = car(i).dist;
+            car_plot(t/4).edge(i) = car(i).edge;
+        end
     end
 
     if mod(t,1) == 0 %Spawn new car.
@@ -370,3 +377,20 @@ profile on
 profile viewer
 p = profile('info');
 profsave(p,'profile_results')
+
+
+test_plot; %Plot background.
+axis('equal')
+axis('tight')
+
+for i = car_plot(t/4).cars_in_network
+    car_object(i) = rectangle('position',[car_pos 5 5],'facecolor',rand_color);
+    set(car_object(i),'visible','off')
+end
+
+for i = 1:t/4
+   for j = car_plot(i).cars_in_network
+       plot_car_i
+   end
+   pause;
+end
