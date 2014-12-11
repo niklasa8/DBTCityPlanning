@@ -2,6 +2,7 @@ IKSU-hallen	613494992
 Växthuset	138123943
 Universum	295095193
 Universitetssjukhuset	2076294620
+Fridhem	155115168
 Järnvägstorget	286123597
 Sandåkern	2425638040
 Hartvigsgatan	158589628
