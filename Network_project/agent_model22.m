@@ -1,6 +1,6 @@
 clear
 load('graph_data.mat','CGM_sparse','edge','intnd','id_map','edge_index','spawn_locs','spawn_loc_paths')
-%load('data_umea.mat','way','node')
+% load('data_umea.mat','way','node')
 %load('allToall_data.mat','spawn_loc_paths','spawn_locs')
 
 n = 864;%number of timesteps.
@@ -128,7 +128,7 @@ profile on
           %% H�GERREGELN
           if edge(car(i).edge).edge_to_right ~= 0 %If there exist a edge to the right.
               if ~isempty(edge(edge(car(i).edge).edge_to_right).cars) % If there exist at least one car on that edge.
-                      
+                      dbt2014
                   % Take into account velocity of cars..??
                   % Check time distance between cars
                   %d1 = edge(car(i).edge).dist - temp_dist; % Distance to node for car i.
@@ -152,7 +152,7 @@ profile on
                             %d1 = edge(car(i).edge).dist - temp_dist; % Distance to node for car i.
                             d2 = edge(car(edge(edge(car(i).edge).edge_to_front).cars(1)).edge).dist - car(edge(edge(car(i).edge).edge_to_front).cars(1)).dist; % Distance to node for car on the edge to right.
                             if d2/(car(edge(edge(car(i).edge).edge_to_front).cars(1)).vel) < 4
-                                force = break_force(car(i).dist,edge(car(i).edge).dist - 2,car(i).vel,0);
+                                forcedbt2014 = break_force(car(i).dist,edge(car(i).edge).dist - 2,car(i).vel,0);
                                 breaking = 1;
                             end
                         end
@@ -383,14 +383,27 @@ test_plot; %Plot background.
 axis('equal')
 axis('tight')
 
-for i = car_plot(t/4).cars_in_network
-    car_object(i) = rectangle('position',[car_pos 5 5],'facecolor',rand_color);
-    set(car_object(i),'visible','off')
-end
+% for i = car_plot(t/4).cars_in_network
+%     car_pos = [intnd(car(i).prev_node).lon intnd(car(i).prev_node).lat];
+%     rand_color = rand(1,3);
+%     car_object(i) = rectangle('position',[car_pos 1.6 1.6],'facecolor',rand_color);
+%     set(car_object(i),'position',[car_pos 4 4]); %The position of the car is plotted.
+%     set(car_object(i),'visible','off')
+% end
 
+node_pos = [edge(car_plot(1).edge(1)).node_matrix(1,1) edge(car_plot(1).edge(1)).node_matrix(2,1)];
+rand_color = rand(1,3);
+car_object(1) = rectangle('position',[car_pos 1.6 1.6],'facecolor',rand_color);
 for i = 1:t/4
    for j = car_plot(i).cars_in_network
-       plot_car_i
+       if car_plot(i).dist(j) < edge(car_plot(i).edge(j)).dist
+           if length(car_object) < j
+               node_pos = [edge(car_plot(i).edge(j)).node_matrix(1,1) edge(car_plot(i).edge(j)).node_matrix(2,1)];
+               rand_color = rand(1,3);
+               car_object(j) = rectangle('position',[car_pos 1.6 1.6],'facecolor',rand_color);
+           end
+           plot_car_i
+       end
    end
    pause;
 end

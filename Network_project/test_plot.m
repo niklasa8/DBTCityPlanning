@@ -1,4 +1,4 @@
-load('graph_data.mat')
+% load('graph_data.mat')
 load('data_umea.mat')
 close all
 grey=[0.5, 0.5, 0.5];
