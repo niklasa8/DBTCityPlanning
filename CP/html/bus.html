@@ -1,0 +1,178 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>bus</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-12-13"><meta name="DC.source" content="bus.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Skapar busTo_bs</a></li><li><a href="#3">R&auml;knar ut snabbaste v&auml;gen</a></li></ul></div><pre class="codeinput">load(<span class="string">'graph_data.mat'</span>,<span class="string">'walk_all_shortest_path'</span>,<span class="string">'intnd_count'</span>,<span class="string">'intnd_map'</span>)
+load(<span class="string">'data_umea'</span>,<span class="string">'departure_'</span>,<span class="string">'arrival_'</span>,<span class="string">'bus_stop'</span>,<span class="string">'bus_stop_nodes'</span>)
+</pre><h2>Skapar busTo_bs<a name="2"></a></h2><pre class="codeinput">n_stops = max(size(bus_stop_nodes));
+busTo_bs = zeros(n_stops,n_stops,1440);
+t = 1:1440;
+clear <span class="string">t_matrix</span>
+t_matrix(1,1,:) = t;
+t_matrix = repmat(t_matrix,[n_stops,n_stops]);
+idx = find(departure_);
+busTo_bs(idx) = (t_matrix(idx) - departure_(idx))/60;
+idx = find(busTo_bs &lt; 0);
+busTo_bs(idx) = busTo_bs(idx) + 24;
+
+<span class="keyword">for</span> t = 1:1440
+    busTo_bs(:,:,t) = graphallshortestpaths(sparse(busTo_bs(:,:,t)));
+<span class="keyword">end</span>
+
+<span class="comment">%busTo_bs - bus to bus station. Anv&auml;nds p&aring; f&ouml;ljande vis: busTo_bs(i,j,t)</span>
+<span class="comment">%i: Ett heltal mellan 1 och antalet bussh&aring;llplatser (27), anger vilken</span>
+<span class="comment">%bussh&aring;llplats man vill &aring;ka fr&aring;n.</span>
+<span class="comment">%j: Bussh&aring;llplats man vill &aring;ka till</span>
+<span class="comment">%t: tiden man SENAST vill vara p&aring; bussh&aring;llplatsen.</span>
+<span class="comment">%Output: Ger tiden i timmar det tar att &aring;ka fr&aring;n i till j givet att man vill vara</span>
+<span class="comment">%framme tiden t.</span>
+</pre><h2>R&auml;knar ut snabbaste v&auml;gen<a name="3"></a></h2><pre class="codeinput">walkTo_bs = walk_all_shortest_path(:,bus_stop_nodes); <span class="comment">%walkTo_bs - walk to bus station. Snabbaste v&auml;gen att g&aring; fr&aring;n godtycklig nod till alla bussh&aring;llplatser.</span>
+i = intnd_map(id_map(<span class="string">'444493179'</span>));
+t = 800; <span class="comment">%i och t &auml;r</span>
+limit_walk = 0.5; <span class="comment">%Algoritmen r&auml;knar inte ut hur l&aring;ng tid det tar att ta sig fr&aring;n en plats till en annan med buss om det tar &ouml;verdrivet l&aring;ng tid att g&aring; till bussh&aring;llplatsen.</span>
+limit_wait_time = 0.5;
+fastest_trip = inf(intnd_count,1);
+
+<span class="keyword">for</span> j = 1:n_stops <span class="comment">%Loop &ouml;ver alla slutstationer.</span>
+
+    <span class="keyword">if</span> walkTo_bs(i,j) &gt; limit_walk
+        <span class="keyword">continue</span>;
+    <span class="keyword">end</span>
+
+    <span class="keyword">for</span> k = 1:n_stops <span class="comment">%Loop &ouml;ver alla startstationer.</span>
+
+        trip_plus_wait_time = busTo_bs(k,j,int16(t-walkTo_bs(i,j)*60))/6 + walkTo_bs(:,k) + walkTo_bs(i,j);
+
+        idx = find(trip_plus_wait_time &lt; fastest_trip);
+
+        fastest_trip(idx) = trip_plus_wait_time(idx);
+
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="comment">%Denna del r&auml;knar ut snabbaste v&auml;gen att ta sig fr&aring;n alla noder till i med buss.</span>
+</pre><pre class="codeoutput error">Subscript indices must either be real positive integers or logicals.
+
+Error in bus (line 29)
+walkTo_bs = walk_all_shortest_path(:,bus_stop_nodes); %walkTo_bs - walk to bus station. Snabbaste v&auml;gen att g&aring; fr&aring;n godtycklig nod till alla bussh&aring;llplatser.
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+load('graph_data.mat','walk_all_shortest_path','intnd_count','intnd_map')
+load('data_umea','departure_','arrival_','bus_stop','bus_stop_nodes')
+
+%% Skapar busTo_bs
+n_stops = max(size(bus_stop_nodes));
+busTo_bs = zeros(n_stops,n_stops,1440);
+t = 1:1440;
+clear t_matrix
+t_matrix(1,1,:) = t;
+t_matrix = repmat(t_matrix,[n_stops,n_stops]);
+idx = find(departure_);
+busTo_bs(idx) = (t_matrix(idx) - departure_(idx))/60;
+idx = find(busTo_bs < 0);
+busTo_bs(idx) = busTo_bs(idx) + 24;
+
+for t = 1:1440
+    busTo_bs(:,:,t) = graphallshortestpaths(sparse(busTo_bs(:,:,t)));
+end
+
+%busTo_bs - bus to bus station. Används på följande vis: busTo_bs(i,j,t)
+%i: Ett heltal mellan 1 och antalet busshållplatser (27), anger vilken
+%busshållplats man vill åka från.
+%j: Busshållplats man vill åka till
+%t: tiden man SENAST vill vara på busshållplatsen.
+%Output: Ger tiden i timmar det tar att åka från i till j givet att man vill vara
+%framme tiden t.
+%% Räknar ut snabbaste vägen
+
+walkTo_bs = walk_all_shortest_path(:,bus_stop_nodes); %walkTo_bs - walk to bus station. Snabbaste vägen att gå från godtycklig nod till alla busshållplatser.
+i = intnd_map(id_map('444493179'));
+t = 800; %i och t är 
+limit_walk = 0.5; %Algoritmen räknar inte ut hur lång tid det tar att ta sig från en plats till en annan med buss om det tar överdrivet lång tid att gå till busshållplatsen.
+limit_wait_time = 0.5;
+fastest_trip = inf(intnd_count,1);
+
+for j = 1:n_stops %Loop över alla slutstationer.
+    
+    if walkTo_bs(i,j) > limit_walk
+        continue;
+    end
+        
+    for k = 1:n_stops %Loop över alla startstationer.
+
+        trip_plus_wait_time = busTo_bs(k,j,int16(t-walkTo_bs(i,j)*60))/6 + walkTo_bs(:,k) + walkTo_bs(i,j);
+
+        idx = find(trip_plus_wait_time < fastest_trip);
+        
+        fastest_trip(idx) = trip_plus_wait_time(idx);
+        
+    end
+end
+
+%Denna del räknar ut snabbaste vägen att ta sig från alla noder till i med buss. 
+##### SOURCE END #####
+--></body></html>

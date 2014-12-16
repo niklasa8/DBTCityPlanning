@@ -25,7 +25,7 @@ for file=1:max(size(datafiles))
         from=table(k-1).id{1};
         to=table(k).id{1};
         time=car_all_shortest_path(intnd_map(id_map(from)),intnd_map(id_map(to)))*60;%time in minutes
-        table(k).travel_time=time*1.15;
+        table(k).travel_time=time;
         
         if ~isempty(table(k).MT) & ~isempty(table(1).MT) %Om det finns XML data i table(k) -> beräkna väntetid utifrån föregånde XML data
             arr=TimeToMin(table(k).MT);  %arrivaltime according to XML files
@@ -118,41 +118,14 @@ for file=1:max(size(datafiles))
 %         %table(j+1).travel_time=travel{j+1};
 %     end
     
-        if ~isempty(table(1).MT)
-            diffMT = zeros(1,length(table(1).MT));
-        end
-        if ~isempty(table(1).F)
-            diffF = zeros(1,length(table(1).F));
-        end
-        if ~isempty(table(1).L)
-            diffL = zeros(1,length(table(1).L));
-        end
-        if ~isempty(table(1).S)
-            diffS = zeros(1,length(table(1).S));
-        end
-
-
-
+    
     for i=2:nr_stop(2)
-        if ~isempty(table(i).MT)
-            diffMT = zeros(1,length(table(i).MT));
-        end
-        if ~isempty(table(i).F)
-            diffF = zeros(1,length(table(i).F));
-        end
-        if ~isempty(table(i).L)
-            diffL = zeros(1,length(table(i).L));
-        end
-        if ~isempty(table(i).S)
-            diffS = zeros(1,length(table(i).S));
-        end
-       
-        if ~isempty(table(1).MT) & isempty(table(i).MT)           
+        if ~isempty(table(1).MT) & isempty(table(i).MT)
+           
             table(1).waiting_time_MT=0; %sätter väntetiden på första hållplatsen till 0
             arr_time=TimeToMin(table(i-1).MT); %ankomsttiden från föregående hållplats
             
-            arr_time=round(arr_time + table(i).travel_time+table(i-1).waiting_time_MT - 0.5*diffMT);
-            diffMT = arr_time - (TimeToMin(table(i-1).MT) + table(i).travel_time + table(i-1).waiting_time_MT);
+            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time_MT); 
             ind=find(arr_time>=1440); 
             arr_time(ind)=arr_time(ind)-1440;
 
@@ -163,8 +136,7 @@ for file=1:max(size(datafiles))
             table(1).waiting_time_F=0;
             arr_time=TimeToMin(table(i-1).F);
 
-            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time_F - 0.5*diffF);
-            diffF = arr_time - (TimeToMin(table(i-1).F) + table(i).travel_time + table(i-1).waiting_time_F);
+            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time_F);
             ind=find(arr_time>=1440); 
             arr_time(ind)=arr_time(ind)-1440;
 
@@ -175,8 +147,7 @@ for file=1:max(size(datafiles))
             table(1).waiting_time_L=0;
             arr_time=TimeToMin(table(i-1).L);
 
-            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time_L - 0.5*diffL);
-            diffL = arr_time - (TimeToMin(table(i-1).L) + table(i).travel_time + table(i-1).waiting_time_L);
+            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time_L);            
             ind=find(arr_time>=1440); 
             arr_time(ind)=arr_time(ind)-1440;
 
@@ -187,8 +158,7 @@ for file=1:max(size(datafiles))
             table(1).waiting_time_S=0;
             arr_time=TimeToMin(table(i-1).S);
 
-            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time_S - 0.5*diffS);
-            diffS = arr_time - (TimeToMin(table(i-1).S) + table(i).travel_time + table(i-1).waiting_time_S);
+            arr_time=round(arr_time+table(i).travel_time+table(i-1).waiting_time_S);            
             ind=find(arr_time>=1440); 
             arr_time(ind)=arr_time(ind)-1440;
 
