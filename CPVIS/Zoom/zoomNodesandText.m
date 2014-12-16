@@ -6,7 +6,7 @@ function zoomNodesandText(h_ax,h_nodes)
     ax = axis(h_ax);
 
     % Ursprunglig punktstorlek.
-    set(h_nodes,'MarkerSize',min([35,1/(ax(4)-ax(3))]));
+    set(h_nodes,'MarkerSize',max(5,min([35,1/(ax(4)-ax(3))])));
     % Text och ursprunglig textposition.
     h_text = text('String',' © OpenStreetMaps bidragsgivare ','FontSize',7);
     set(h_text,'Position',[ax(2), ax(3)],'HorizontalAlignment','left','VerticalAlignment','bottom');
@@ -20,7 +20,7 @@ function zoomNodesandText(h_ax,h_nodes)
         ax = axis(evd.Axes);
 
         % Ändra storlek på punkterna utifrån de nya axlarna.
-        set(h_nodes,'MarkerSize',min([35,1/(ax(4)-ax(3))]));
+        set(h_nodes,'MarkerSize',max(5,min(1/(ax(4)-ax(3)),35)));
         % Ändra textens position utifrån de nya axlarna.
         set(h_text,'Position',[ax(2), ax(3)]);
     end
@@ -34,7 +34,7 @@ function zoomNodesandText(h_ax,h_nodes)
         ax = axis(evd.Axes);
 
         % Ändra storlek på punkterna utifrån de nya axlarna.
-        set(h_nodes,'MarkerSize',min([35,0.75/(ax(4)-ax(3))]));
+        set(h_nodes,'MarkerSize',max(5,min(1/(ax(4)-ax(3)),35)));
         % Ändra textens position utifrån de nya axlarna.
         set(h_text,'Position',[ax(2), ax(3)]);
     end

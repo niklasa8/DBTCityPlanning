@@ -5,7 +5,7 @@ function zoomNodes(h_ax,h_nodes)
     ax = axis(h_ax);
 
     % Ursprunglig punktstorlek.
-    set(h_nodes,'MarkerSize',min([35,1/(ax(4)-ax(3))]));
+    set(h_nodes,'MarkerSize',max(5,min(1/(ax(4)-ax(3)),35)));
         
     h_z = zoom;
     set(h_z,'ActionPostCallback',@zoomCallBack);
@@ -16,6 +16,6 @@ function zoomNodes(h_ax,h_nodes)
         ax = axis(evd.Axes);
 
         % Ändra storlek på punkterna utifrån de nya axlarna.
-        set(h_nodes,'MarkerSize',min([35,1/(ax(4)-ax(3))]));
+        set(h_nodes,'MarkerSize',max(5,min(1/(ax(4)-ax(3)),35)));
     end
 end
