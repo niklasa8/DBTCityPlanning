@@ -16,10 +16,13 @@ end
 %Get number of busstops
 Names={};
 IDs={};
-id2idx = containers.Map('KeyType','double','ValueType','int16');
+id2idx = containers.Map('KeyType','double','ValueType','int32');
 id2name = containers.Map('KeyType','double','ValueType','char');
-idx2name = containers.Map('KeyType','double','ValueType','char');
-stop_num=int16(1);
+idx2name = containers.Map('KeyType','int32','ValueType','char');
+idx2id = containers.Map('KeyType','int32','ValueType','double');
+name2idx = container.Map('KeyType','char','ValueType','int32');
+name2id = containers.Map('KeyType','char','ValueType','double');
+stop_num=int32(1);
 for h=1:length(datafiles)
     data=load(datafiles{h});
     data=data.table;
@@ -29,8 +32,12 @@ for h=1:length(datafiles)
         
         if ~isKey(id2idx,id)
            id2name(id) = name;
-           id2idx(id) = stop_num;
+           id2idx(id) = stop_num;           
            idx2name(stop_num) = name;
+           idx2id(stop_num) = id;           
+           name2idx(name) = stop_num;
+           name2id(name) = id;
+           
            stop_num=stop_num+1;
         end
     end
@@ -65,7 +72,7 @@ for h=1:length(datafiles) %For each .mat-file.
             wait{j+1}=0;
         end
         wait{j+1}=wait{j+1}+wait{j}-round(wait{j});
-        wait{j}=int16(round(wait{j}));
+        wait{j}=int32(round(wait{j}));
     end
     
     for j=1:length(names)-1 %For each pair of stops.
@@ -79,16 +86,16 @@ for h=1:length(datafiles) %For each .mat-file.
         S2=table(j+1).S; days2={MT2 F2 L2 S2};
         %Fill if empty field.
         if isempty(arr{from,to})
-           arr{from,to} = zeros(4,1440,'int16');
-           dpt{from,to} = zeros(4,1440,'int16');
+           arr{from,to} = zeros(4,1440,'int32');
+           dpt{from,to} = zeros(4,1440,'int32');
         end
         for k=1:4 %For each day.
             for l=1:length(days1{k}) %For each departure.
                 
-                dpt_time=int16(timeToMin(days1{k}(l)));
-                %dpt_time=int16(timeToMin(days1{k}(l))+wait{j});
+                dpt_time=int32(timeToMin(days1{k}(l)));
+                %dpt_time=int32(timeToMin(days1{k}(l))+wait{j});
                 dpt_time=mod(dpt_time-239,1440);
-                arr_time=int16(timeToMin(days2{k}(l)));
+                arr_time=int32(timeToMin(days2{k}(l)));
                 arr_time=mod(arr_time-239,1440);
                 
                 if arr_time-dpt_time<0
@@ -97,7 +104,7 @@ for h=1:length(datafiles) %For each .mat-file.
                         idx2name(from), idx2name(to),...
                         datafiles{h}, dpt_time, arr_time, k}
                     Error=[Error; a];
-                    err_count=err_count+1                  
+                    err_count=err_count+1               
                 end
                 for m=arr_time:int16(1440) %For each minute of the day.
                     %Check if this departure is better.
@@ -110,3 +117,8 @@ for h=1:length(datafiles) %For each .mat-file.
         end
     end
 end
+
+save('hashtables.mat','id2idx', 'id2name', 'idx2name', 'idx2id',...
+    'name2idx', 'name2id');
+save('dpt.mat','dpt');
+save('arr.mat','arr');

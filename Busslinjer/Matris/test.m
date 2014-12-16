@@ -30,7 +30,7 @@ for i=1:length(table) %For each pair.
             if ~isempty(days1{k})
                 t1=days1{k}(1); t1=timeToMin(t1); t1=mod(t1-239,1440);
                 t2=days2{k}(1); t2=timeToMin(t2); t2=mod(t2-239,1440);
-                t1-t2
+                
                 x=j-i+1;
 
                 %Extract and round up travel times.
