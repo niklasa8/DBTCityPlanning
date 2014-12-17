@@ -398,6 +398,7 @@ axis('tight')
 %     set(car_object(i),'position',[car_pos 4 4]); %The position of the car is plotted.
 %     set(car_object(i),'visible','off')
 % end
+<<<<<<< HEAD
 car_object = zeros(1, car_plot(t/4).cars_in_network(length(car_plot(t/4).cars_in_network)));
 node_pos = [edge(car_plot(1).edge(1)).node_matrix(1,1) edge(car_plot(1).edge(1)).node_matrix(2,1)];
 rand_color = rand(1,3);
@@ -416,6 +417,22 @@ for i = 1:t/4
    end
    for k = car_plot(i).car_done
        set(car_object(k), 'visible', 'off');
+=======
+
+node_pos = [edge(car_plot(1).edge(1)).node_matrix(1,1) edge(car_plot(1).edge(1)).node_matrix(2,1)];
+rand_color = rand(1,3);
+car_object(1) = rectangle('position',[car_pos 1.6 1.6],'facecolor',rand_color);
+for i = 1:t/4
+   for j = car_plot(i).cars_in_network
+       if car_plot(i).dist(j) < edge(car_plot(i).edge(j)).dist
+           if length(car_object) < j
+               node_pos = [edge(car_plot(i).edge(j)).node_matrix(1,1) edge(car_plot(i).edge(j)).node_matrix(2,1)];
+               rand_color = rand(1,3);
+               car_object(j) = rectangle('position',[car_pos 1.6 1.6],'facecolor',rand_color);
+           end
+           plot_car_i
+       end
+>>>>>>> 2a674a127265236e22893e06e2932ac856aee659
    end
    pause(0.01);
 end
