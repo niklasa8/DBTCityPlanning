@@ -18,3 +18,5 @@ CP/test_is_busstop_intnd.m
 Busslinjer/DATA.mat
 Busslinjer/Bus_travel_timeBACKUP.m
 Busslinjer/traveltime/traveltime.mat
+CP/graph_data_umea2.mat
+CP/old/graph_data.mat

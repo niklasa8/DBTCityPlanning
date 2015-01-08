@@ -1,6 +1,6 @@
 %  This script completes the busstables for all bus routes using existing
 %  data in the tables and the shortest path for cars between stops.
-
+%  Requires: data_umea, graph_data
 
 % Read filenames in directory 'BussData'
 datafiles={};
@@ -95,32 +95,32 @@ for file=1:max(size(datafiles))
     end
     
     if ~isempty(table(1).MT)
-        diffMT = zeros(1,length(table(1).MT));
+        diffMT = zeros(1,size(table(1).MT,2));
     end
     if ~isempty(table(1).F)
-        diffF = zeros(1,length(table(1).F));
+        diffF = zeros(1,size(table(1).F,2));
     end
     if ~isempty(table(1).L)
-        diffL = zeros(1,length(table(1).L));
+        diffL = zeros(1,size(table(1).L,2));
     end
     if ~isempty(table(1).S)
-        diffS = zeros(1,length(table(1).S));
+        diffS = zeros(1,size(table(1).S,2));
     end
 
 
 
     for i=2:nr_stop(2)
         if ~isempty(table(i).MT)
-            diffMT = zeros(1,length(table(i).MT));
+            diffMT = zeros(1,size(table(i).MT,2));
         end
         if ~isempty(table(i).F)
-            diffF = zeros(1,length(table(i).F));
+            diffF = zeros(1,size(table(i).F,2));
         end
         if ~isempty(table(i).L)
-            diffL = zeros(1,length(table(i).L));
+            diffL = zeros(1,size(table(i).L,2));
         end
         if ~isempty(table(i).S)
-            diffS = zeros(1,length(table(i).S));
+            diffS = zeros(1,size(table(i).S,2));
         end
        
         if ~isempty(table(1).MT) & isempty(table(i).MT)           

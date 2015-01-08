@@ -2,9 +2,10 @@
 %relevant data. Det är OSMs overpass API som används.
 
 clear all
-file = fopen('Umea'); %Öpnna OSM filen
+file = fopen('Umea3'); %Öpnna OSM filen
 node_count = 0;
 way_count = 0;
+n_footways = 0;
 pknd_count = 0;
 A = fgets(file); %Läs in första raden
 map_created = 0;
@@ -20,7 +21,7 @@ while ischar(A) %Förstsätt läsa in rader tills allt har lästs in.
         node(node_count).traffic_signals = 0;
         node(node_count).traffic_calming = 0;
         node(node_count).name = 0;
-        node(node_count).parking = 0;
+        node(node_count).parking = [];
         node(node_count).intnd = 0;
         node(node_count).bus_stop = 0;
         id_index = findstr(A,'"');
@@ -59,7 +60,9 @@ while ischar(A) %Förstsätt läsa in rader tills allt har lästs in.
         if map_created == 0 %När 'way' lästs in första gången är alla noder inlästa och då skapas en map (?) för noderna. id_map returnerar nodens nummer i grafen, och inparametern till id_map är nodens globala OSM ID.
             id_map = containers.Map({node.id},1:node_count);
             map_created = 1; %Mappen skall inte skapas igen om den redan är skapad.
-            file_id=fopen('sorted_data_tabbed.txt', 'r', 'n', 'UTF-8');%Busshållplatser läggs in manuellt.
+      
+            % Läs in busshållplatsnoder från textfil och tagga nod som bushållplats.
+            file_id=fopen('sorted_data_tabbed.txt', 'r', 'n', 'UTF-8');
             Bu=fgetl(file_id);
             while ~feof(file_id)
                 Bu=fgetl(file_id);
@@ -67,13 +70,103 @@ while ischar(A) %Förstsätt läsa in rader tills allt har lästs in.
                 node(id_map(char(Bu(end)))).bus_stop = 1;
             end
             fclose(file_id);
-            %Lägger till extra hållplatser där det är enkelriktat.
-            node(id_map('2076294620')).bus_stop = 1; %Univeristetssjukhuset
-            node(id_map('281032452')).bus_stop = 1; %Nygatan
-            node(id_map('286123597')).bus_stop = 1; %Järnvägstorget
-            node(id_map('613411032')).bus_stop = 1; %Länsstyrelsen
-            node(id_map('613411034')).bus_stop = 1; %Järnvägsgatan
-            node(id_map('258354235')).bus_stop = 1; %varvsgatan
+            
+            park_nodes = [id_map('1775408093'),id_map('263187598'),...
+                id_map('1775408070'),id_map('1297207752'),...
+                id_map('318078744'),id_map('305950651'),...
+                id_map('260642814'),id_map('295216769'),...
+                id_map('181289601'),id_map('1350644029'),...
+                id_map('263186106'),id_map('3098329272'),...
+                id_map('286071667'),id_map('1638870005'),...
+                id_map('1401945196'),id_map('344683555'),...
+                id_map('247782748'),id_map('286595924'),...
+                id_map('1638870005'),id_map('1401945196'),...
+                id_map('344683555'),id_map('247782748'),...
+                id_map('286595924'),id_map('287777665'),...
+                id_map('2408111036'),id_map('269009712'),...
+                id_map('624184604'),id_map('286378645'),...
+                id_map('262875477'),id_map('1283370137'),...
+                id_map('3098329274'),id_map('1025732368'),...
+            id_map('305941849'),...
+            id_map('3098329537'),...
+            id_map('1568235704'),...
+            id_map('151216586'),...
+            id_map('262218353'),...
+            id_map('1301275265'),...
+            id_map('297623713'),...
+            id_map('297623761'),...
+            id_map('2561598512'),...
+            id_map('1058150029'),...
+            id_map('1058150209'),...
+            id_map('1058150606'),...
+            id_map('2378410241'),...
+            id_map('1021025238'),...
+            id_map('1021025212'),...
+            id_map('3098334657'),...
+            id_map('1021025142'),...
+            id_map('1117598050'),...
+            id_map('286166079'),...
+            id_map('1021025215'),...
+            id_map('283315384'),...
+            id_map('262217683'),...
+            id_map('2377367964'),...
+            id_map('1095001958')];
+            
+            node(id_map('1775408093')).parking = [400 6 0];
+            node(id_map('263187598')).parking = [30 7 0];
+            node(id_map('1775408070')).parking = [54 6 0];
+            node(id_map('1297207752')).parking = [345 10 0];
+            node(id_map('318078744')).parking = [23 6 0];
+            node(id_map('305950651')).parking = [50 10 0];
+            node(id_map('260642814')).parking = [800 7 0];
+            node(id_map('295216769')).parking = [394 6 0];
+            node(id_map('181289601')).parking = [29 18 0];
+            node(id_map('1350644029')).parking = [374 18 0];
+            node(id_map('263186106')).parking = [272 18 0];
+            node(id_map('3098329272')).parking = [131 19 0];
+            node(id_map('286071667')).parking = [96 7 0];
+            node(id_map('286123614')).parking = [25 7 0];
+            node(id_map('1638870005')).parking = [35 7 0];
+            node(id_map('1401945196')).parking = [58 20 0];
+            node(id_map('344683555')).parking = [86 18 0];
+            node(id_map('247782748')).parking = [19 7 0];
+            node(id_map('286595924')).parking = [525 18 0];
+            node(id_map('287777665')).parking = [16 18 0];
+            node(id_map('2408111036')).parking = [28 18 0];
+            node(id_map('269009712')).parking = [10 15 0];
+            node(id_map('624184604')).parking = [19 7 0];
+            node(id_map('286378645')).parking = [38 7 0];
+            node(id_map('262875477')).parking = [13 7 0];
+            node(id_map('1283370137')).parking = [200 6 0];
+            node(id_map('3098329274')).parking = [300 20 0];
+            node(id_map('1025732368')).parking = [33 20 0];
+            node(id_map('305941849')).parking = [105 20 0];
+            node(id_map('3098329537')).parking = [17 20 0];
+            node(id_map('1568235704')).parking = [129 12 0];
+            node(id_map('151216586')).parking = [113 21 0];
+            node(id_map('262218353')).parking = [128 21 0];
+            node(id_map('1301275265')).parking = [26 8 0];
+            node(id_map('297623713')).parking = [125 12 0];
+            node(id_map('297623761')).parking = [1000 12 0];
+            node(id_map('2561598512')).parking = [61 20 0];
+            node(id_map('1025732207')).parking = [72 20 0];
+            
+            node(id_map('1058150029')).parking = [70 8 0];
+            node(id_map('1058150209')).parking = [183 8 0];
+            node(id_map('1058150606')).parking = [178 8 0];
+            node(id_map('2378410241')).parking = [235 8 0];
+            node(id_map('1021025238')).parking = [86 8 0];
+            node(id_map('1021025212')).parking = [52 8 0];
+            node(id_map('3098334657')).parking = [95 8 0];
+            node(id_map('1021025142')).parking = [71 8 0];
+            node(id_map('1117598050')).parking = [24 8 0];
+            node(id_map('286166079')).parking = [88 8 0];
+            node(id_map('1021025215')).parking = [131 8 0];
+            node(id_map('128173965')).parking = [176 10 0];
+            node(id_map('262217683')).parking = [168 8 0];
+            node(id_map('2377367964')).parking = [420 10 0];
+            node(id_map('1095001958')).parking = [54 6 0];
+            
         end
         
         way_count = way_count + 1;
@@ -84,9 +177,8 @@ while ischar(A) %Förstsätt läsa in rader tills allt har lästs in.
         way(way_count).maxspeed = 30;
         way(way_count).bicycle = 1;
         way(way_count).oneway = 0;
-        way(way_count).parking = 0;
         way(way_count).cycleway = 0;
-        way(way_count).footway = 0;
+        way(way_count).bus_only = 0;
         
         A = fgets(file);
         
@@ -121,16 +213,14 @@ while ischar(A) %Förstsätt läsa in rader tills allt har lästs in.
                     way(way_count).oneway = 1;
                 end
                 
-                if strcmp(k,'amenity') && strcmp(v,'parking')
-                    way(way_count).parking = 1;
-                end
-                
                 if (strcmp(k,'highway')) %Endast kanter som är vägar skall sparas.
                     way(way_count).highway = 1;
                 end
                 
                 if (strcmp(k,'highway')*strcmp(v,'track')) || (strcmp(k,'highway')*strcmp(v,'path')) || (strcmp(k,'highway')*strcmp(v,'footway')) || (strcmp(k,'highway')*strcmp(v,'pedestrian')) || (strcmp(k,'highway')*strcmp(v,'platform')) %Kanter där man inte kan köra bil och/eller cykel skall inte sparas.
+                    n_footways = n_footways + 1;
                     way(way_count).highway = 0;
+                    foot_way(n_footways) = way(way_count);
                 end
                 
                 if (strcmp(k,'highway')*strcmp(v,'cycleway'))
@@ -139,7 +229,7 @@ while ischar(A) %Förstsätt läsa in rader tills allt har lästs in.
                 
                 A = fgets(file);
                 
-                if strcmp(A(4:7),'/way') && way(way_count).highway == 0 && way(way_count).parking == 0 %Om raden som lästs in innehåller '/way' betyder detta att alla taggar är inlästa och då skall kanten tas bort om den inte innehåller information som behövs.
+                if strcmp(A(4:7),'/way') && way(way_count).highway == 0 %Om raden som lästs in innehåller '/way' betyder detta att alla taggar är inlästa och då skall kanten tas bort om den inte innehåller information som behövs.
                     way(way_count) = [];
                     way_count = way_count - 1;
                 end
@@ -152,27 +242,11 @@ end
 
 for i = 1:way_count
     [x n_ndref] = size(way(i).ndref);
-    if way(i).parking == 0
-        for j = 1:n_ndref
-            node(id_map(way(i).ndref{j})).waynd = node(id_map(way(i).ndref{j})).waynd + 1;
-        end
-    end
-end
-
-for i = 1:way_count
-    [x n_ndref] = size(way(i).ndref);
-    if way(i).parking == 1
-        for j = 1:n_ndref
-            if node(id_map(way(i).ndref{j})).waynd > 0
-                node(id_map(way(i).ndref{j})).parking = 1;
-                pknd_count = pknd_count + 1;
-                park_nodes(pknd_count) = id_map(way(i).ndref{j});
-                way(i).parking = 0;
-            end
-        end
+    for j = 1:n_ndref
+        node(id_map(way(i).ndref{j})).waynd = node(id_map(way(i).ndref{j})).waynd + 1;
     end
 end
 
 fclose(file);
-
-save('data_umea.mat','node','way','id_map','park_nodes')
+config_graph = 0;
+save('data_umea.mat','node','way','foot_way','id_map','config_graph','park_nodes')
