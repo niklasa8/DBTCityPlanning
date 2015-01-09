@@ -1,6 +1,6 @@
 %  This script completes the busstables for all bus routes using existing
 %  data in the tables and the shortest path for cars between stops.
-%  Requires: data_umea, graph_data
+%  Requires loaded files: data_umea, graph_data
 
 % Read filenames in directory 'BussData'
 datafiles={};
@@ -14,7 +14,6 @@ for i=3:max(size(BussData))
         k=k+1;
     end
 end
-datafiles;
 
 % Functions
 TimeToMin=@(t)mod(t,1)*100+floor(t)*60; %t=7.56-> 7 h 56 min omvandlar detta till antal minuter från 00:00
@@ -32,7 +31,7 @@ for file=1:max(size(datafiles))
         from=table(k-1).id{1};
         to=table(k).id{1};
         time=car_all_shortest_path(intnd_map(id_map(from)),intnd_map(id_map(to)))*60;%time in minutes
-        table(k).travel_time=time*1.15;
+        table(k).travel_time=time;            
         
         if ~isempty(table(k).MT) & ~isempty(table(1).MT) %Om det finns XML data i table(k) -> beräkna väntetid utifrån föregånde XML data
             arr=TimeToMin(table(k).MT);  %arrivaltime according to XML files
@@ -40,6 +39,15 @@ for file=1:max(size(datafiles))
             ind=find(arr<dep);%Kontrollerar om man kliver över 23.59 isfall plussas det på ett dygn på arrival tiden.
             arr(ind)=arr(ind)+1440; 
             
+            % Om den beräknade restiden är större än den givna tiden från XMLfil
+            % sätts restiden till den givna XMLtiden.
+            if (arr-dep)-sum([table(l+1:k).travel_time]) < 0
+                rel = (arr-dep)/sum([table(l+1:k).travel_time]);
+                for i=l+1:k
+                    table(i).travel_time = (min(rel)-0.05)*table(i).travel_time;
+                end
+            end           
+                        
             wait_time=((arr-dep)-sum([table(l+1:k).travel_time]))/tt;
             ind=find(wait_time<0);  %negativ väntetid-> 0 väntetid. Ex linje 81
             wait_time(ind)=0;
@@ -52,6 +60,15 @@ for file=1:max(size(datafiles))
             dep=TimeToMin(table(l).F);  
             ind=find(arr<dep);
             arr(ind)=arr(ind)+1440;
+            
+            % Om den beräknade restiden är större än den givna tiden från XMLfil
+            % sätts restiden till den givna XMLtiden.
+            if (arr-dep)-sum([table(l+1:k).travel_time]) < 0
+                rel = (arr-dep)/sum([table(l+1:k).travel_time]);
+                for i=l+1:k
+                    table(i).travel_time = (min(rel)-0.05)*table(i).travel_time;
+                end
+            end
 
             wait_time=((arr-dep)-sum([table(l+1:k).travel_time]))/tt;
             ind=find(wait_time<0); 
@@ -64,7 +81,16 @@ for file=1:max(size(datafiles))
             arr=TimeToMin(table(k).L); 
             dep=TimeToMin(table(l).L);                       
             ind=find(arr<dep);
-            arr(ind)=arr(ind)+1440;           
+            arr(ind)=arr(ind)+1440; 
+            
+            % Om den beräknade restiden är större än den givna tiden från XMLfil
+            % sätts restiden till den givna XMLtiden.
+            if (arr-dep)-sum([table(l+1:k).travel_time]) < 0
+                rel = (arr-dep)/sum([table(l+1:k).travel_time]);
+                for i=l+1:k
+                    table(i).travel_time = (min(rel)-0.05)*table(i).travel_time;
+                end
+            end
 
             wait_time=((arr-dep)-sum([table(l+1:k).travel_time]))/tt;
             ind=find(wait_time<0);
@@ -78,6 +104,15 @@ for file=1:max(size(datafiles))
             dep=TimeToMin(table(l).S);
             ind=find(arr<dep);
             arr(ind)=arr(ind)+1440;
+            
+            % Om den beräknade restiden är större än den givna tiden från XMLfil
+            % sätts restiden till den givna XMLtiden.
+            if (arr-dep)-sum([table(l+1:k).travel_time]) < 0
+                rel = (arr-dep)/sum([table(l+1:k).travel_time]);
+                for i=l+1:k
+                    table(i).travel_time = (min(rel)-0.05)*table(i).travel_time;
+                end
+            end
             
             wait_time=((arr-dep)-sum([table(l+1:k).travel_time]))/tt;             
             ind=find(wait_time<0);  
