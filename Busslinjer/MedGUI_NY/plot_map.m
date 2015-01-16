@@ -4,7 +4,7 @@
 [umearesidential,~] = shaperead('umearesidential1');
 
 mapshow(umeafarm,'facecolor',[1 0.9 0.65],'edgecolor',[1 0.9 0.65]);
-title('Umeå med omnejd')
+title('City of Umeå')
 xlabel('° E')
 ylabel('° N')
 daspect([1 0.44 1])

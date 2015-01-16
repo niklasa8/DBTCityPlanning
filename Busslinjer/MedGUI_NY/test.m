@@ -99,7 +99,7 @@ handles.n_bus = 0;
 
 % win2 stuff
 handles.carDef = 1.0;
-handles.bikeDef = 7.0;
+handles.bikeDef = 15.0;
 handles.walkDef = 4.0;
 handles.parkDef = 1.0;
 
@@ -222,6 +222,11 @@ end
 fastest_trip = busTime(handles.current_node,handles.graph_data,travelTime,handles.current_day,handles.generalCost,handles.alpha,handles.beta);
 waitbar(0.5,h);
 axes(handles.axes1)
+[~,n_ways] = size(handles.data_umea.way);
+nr = handles.n_one + handles.n_footways;
+n = handles.graph_data.intnd_count;
+ax = axis(handles.axes1);
+set(handles.ch(n_ways+nr+1:n_ways + nr + n),'MarkerSize',min([45,2.5/(ax(4)-ax(3))]))
 plot_nodes3(fastest_trip,handles)%,generalCost,alpha,beta)
 handles = guidata(hObject);
 

@@ -12,7 +12,7 @@ hold on
 for i = 1:graph_data.intnd_count %Plottar itersection nodes och f�rgl�gger dem enligt snabbaste f�rds�ttet.
     lat = graph_data.intnd(i).lat;
     lon = graph_data.intnd(i).lon;
-    plot(lon,lat, '.')
+    plot(lon,lat, '.','MarkerSize',15)
      
         
 end
