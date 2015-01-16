@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<P4WTimetable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Type>L</Type>
+  <Path>Ultra/140929_150426/Ultra_81_140929_150426.xml</Path>
+  <FromDate>2014-09-29</FromDate>
+  <ToDate>2015-04-26</ToDate>
+  <TableName nr="81">81</TableName>
+  <ValidText>Giltig 2014-09-29 - 2015-04-26</ValidText>
+  <Revision>Skapad 2014-09-19 13:41:46</Revision>
+  <Directions>
+    <Direction>
+      <Head>Klockarbäcken - Vasaplan</Head>
+      <Cols>
+        <Col pos="0">
+          <StopName print="1">Klockarbäcken</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="1">
+          <StopName print="1">Paradisgränd</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="2">
+          <StopName print="1">Aspvägen</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="3">
+          <StopName print="1">Hartvigsgatan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="4">
+          <StopName print="1">Vasaplan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+      </Cols>
+      <DayTypes>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="1">
+                  <DepArrTime lsT="1">08:22:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">08:48:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>B</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="1">
+                  <DepArrTime lsT="1">08:52:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">09:18:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>B</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">10:08:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">10:12:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">10:38:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">11:28:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">11:32:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">11:58:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:48:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">13:52:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">14:18:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">15:08:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">15:12:00</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">15:38:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">16:01:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:05:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>A</TripFootnoteId>
+                </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>C</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">16:31:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">16:35:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>A</TripFootnoteId>
+                </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>C</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">17:01:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">17:05:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>A</TripFootnoteId>
+                </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>C</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">17:31:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">17:35:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>A</TripFootnoteId>
+                </TripFootnote>
+                <TripFootnote>
+                  <TripFootnoteId>C</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+      </DayTypes>
+      <Footnotes>
+        <Footnote>
+          <FootnoteId>A</FootnoteId>
+          <FootnoteText>Turen avslutas på hpl Paradisgränd</FootnoteText>
+        </Footnote>
+        <Footnote>
+          <FootnoteId>B</FootnoteId>
+          <FootnoteText>Turen startar på hpl Paradisgränd (Umedalen)</FootnoteText>
+        </Footnote>
+        <Footnote>
+          <FootnoteId>C</FootnoteId>
+          <FootnoteText>För resande till Vasaplan, bussbyte på hpl Paradisgränd</FootnoteText>
+        </Footnote>
+      </Footnotes>
+    </Direction>
+    <Direction>
+      <Head>Vasaplan - Klockarbäcken</Head>
+      <Cols>
+        <Col pos="0">
+          <StopName print="1">Vasaplan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="1">
+          <StopName print="1">Hartvigsgatan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="2">
+          <StopName print="1">Aspvägen</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="3">
+          <StopName print="1">Paradisgränd</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="4">
+          <StopName print="1">Klockarbäcken</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+      </Cols>
+      <DayTypes>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="3">
+                  <DepArrTime lsT="1">07:09:00</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">07:12:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>E</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">09:32:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="1">09:58:00</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">10:01:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">10:52:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="1">11:18:00</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">11:21:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">13:12:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="1">13:38:00</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">13:41:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:32:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="2">
+                  <DepArrTime lsT="0">x</DepArrTime>
+                </Time>
+                <Time pos="3">
+                  <DepArrTime lsT="1">14:58:00</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">15:01:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="3">
+                  <DepArrTime lsT="1">15:57:00</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">16:00:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>E</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="3">
+                  <DepArrTime lsT="1">16:27:00</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">16:30:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>E</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="3">
+                  <DepArrTime lsT="1">16:57:00</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">17:00:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>E</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>81</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="3">
+                  <DepArrTime lsT="1">17:27:00</DepArrTime>
+                </Time>
+                <Time pos="4">
+                  <DepArrTime lsT="1">17:30:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>E</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+      </DayTypes>
+      <Footnotes>
+        <Footnote>
+          <FootnoteId>E</FootnoteId>
+          <FootnoteText>Turen startar, vid angiven tid, på hållplats Paradisgränd. Bussen inväntar linje 1 med avg. fr. Vasaplan 6.51</FootnoteText>
+        </Footnote>
+      </Footnotes>
+    </Direction>
+  </Directions>
+</P4WTimetable>

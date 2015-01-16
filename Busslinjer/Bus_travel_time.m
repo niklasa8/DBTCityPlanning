@@ -1,4 +1,4 @@
-%  This script completes the busstables for all bus routes using existing
+%  This script completes the bustables for all bus routes using existing
 %  data in the tables and the shortest path for cars between stops.
 %  Requires loaded files: data_umea, graph_data
 

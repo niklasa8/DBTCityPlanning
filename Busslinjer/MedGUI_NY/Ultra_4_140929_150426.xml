@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<P4WTimetable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Type>L</Type>
+  <Path>Ultra/140929_150426/Ultra_4_140929_150426.xml</Path>
+  <FromDate>2014-09-29</FromDate>
+  <ToDate>2015-04-26</ToDate>
+  <TableName nr="4">4</TableName>
+  <ValidText>Giltig 2014-09-29 - 2015-04-26</ValidText>
+  <Revision>Skapad 2014-09-19 13:40:54</Revision>
+  <Directions>
+    <Direction>
+      <Head>Stöcksjö - Vasaplan</Head>
+      <Cols>
+        <Col pos="0">
+          <StopName print="1">Stöcksjö</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="1">
+          <StopName print="1">Vasaplan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+      </Cols>
+      <DayTypes>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>4</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:55:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">15:17:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>S</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>4</LineNo>
+              <Dir>1</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">17:45:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">18:07:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+      </DayTypes>
+      <Footnotes>
+        <Footnote>
+          <FootnoteId>S</FootnoteId>
+          <FootnoteText>Turen går endast skoldagar</FootnoteText>
+        </Footnote>
+      </Footnotes>
+    </Direction>
+    <Direction>
+      <Head>Vasaplan - Stöcksjö</Head>
+      <Cols>
+        <Col pos="0">
+          <StopName print="1">Vasaplan</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+        <Col pos="1">
+          <StopName print="1">Stöcksjö</StopName>
+          <AccessR>0</AccessR>
+          <AccessS>0</AccessS>
+          <AccessH>0</AccessH>
+        </Col>
+      </Cols>
+      <DayTypes>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>4</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">14:25:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">14:54:00</DepArrTime>
+                </Time>
+              </Times>
+              <TripFootnotes>
+                <TripFootnote>
+                  <TripFootnoteId>S</TripFootnoteId>
+                </TripFootnote>
+              </TripFootnotes>
+            </Row>
+          </Rows>
+        </DayType>
+        <DayType>
+          <DayName>måndag-fredag</DayName>
+          <Rows>
+            <Row>
+              <LineNo>4</LineNo>
+              <Dir>2</Dir>
+              <CallTrip>0</CallTrip>
+              <Times>
+                <Time pos="0">
+                  <DepArrTime lsT="1">17:10:00</DepArrTime>
+                </Time>
+                <Time pos="1">
+                  <DepArrTime lsT="1">17:44:00</DepArrTime>
+                </Time>
+              </Times>
+            </Row>
+          </Rows>
+        </DayType>
+      </DayTypes>
+      <Footnotes>
+        <Footnote>
+          <FootnoteId>S</FootnoteId>
+          <FootnoteText>Turen går endast skoldagar</FootnoteText>
+        </Footnote>
+      </Footnotes>
+    </Direction>
+  </Directions>
+</P4WTimetable>

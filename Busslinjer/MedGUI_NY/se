@@ -1,0 +1,5 @@
+figure
+
+plot(1:10)
+
+text(5,5,'\Sigma')
